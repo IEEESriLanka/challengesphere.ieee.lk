@@ -38,7 +38,7 @@ const Arduino = () => {
               href="https://forms.gle/JJng4zpyMuNNEUvM8"
               target="_blank"
               rel="noopener noreferrer"
-              className="border-green-600 border-2 shadow-md hover:bg-green-600 font-bold text-white py-3 px-6 rounded-lg shadow-md transition duration-300 text-lg bg-green-500"
+              className="border-green-600 border-2 shadow-md hover:bg-green-600 font-bold text-white py-3 px-6 rounded-lg transition duration-300 text-lg bg-green-500"
             >
               Register Now
             </a>
