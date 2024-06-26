@@ -97,11 +97,11 @@ const Navigation = () => {
             )}
           </li>
 
-          {/* <li className="text-white font-semibold hover:text-blue-700 transition duration-300">
+          <li className="text-white font-semibold hover:text-blue-700 transition duration-300">
             <Link to="schedule" smooth={true} duration={500}>
               Schedule
             </Link>
-          </li> */}
+          </li>
           <li className="text-white font-semibold hover:text-blue-700 transition duration-300">
             <Link to="sponsors" smooth={true} duration={500}>
               Sponsers

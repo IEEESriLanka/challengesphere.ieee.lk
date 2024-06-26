@@ -20,7 +20,7 @@ const Home = () => {
           <h1 className="text-5xl md:text-9xl font-bold text-left">
             <img
               className="w-25 h-20 absolute  bottom-4 left-6 "
-              src="/ieee-srilanka.svg"
+              src="/logo-transparent 3.svg"
               alt="Secondary Logo"
             />
             IEEE

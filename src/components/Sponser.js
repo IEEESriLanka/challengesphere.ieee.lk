@@ -2,18 +2,18 @@ import React from "react";
 
 const Sponsors = () => {
   return (
-    <div className="bg-gradient-to-tr from-blue-950 to-neutral-950 text-white py-8 px-4 sm:px-6 lg:px-8">
-      <h2 className="text-4xl  font-bold text-left mb-8">Sponsors</h2>
+    <div className="bg-gradient-to-b from-black via-sky-600 to-neutral-950 text-white py-8 px-4 sm:px-6 lg:px-8">
+      <h2 className="text-5xl text-center font-bold  mb-16">Sponsors</h2>
 
       {/* An Initiative By */}
       <div className="mb-8 flex flex-col items-center">
-        <div className="bg-gradient-to-b from-black via-zinc-900 to-neutral-950 rounded-lg p-4 hover:scale-110 shadow-md">
+        <div className="bg-gradient-to-b from-blue-900 via-violet-900 to-neutral-950 rounded-lg p-4 hover:scale-110 shadow-md">
           <h3 className="text-2xl text-amber-100 font-bold mb-4">
             An Initiative By
           </h3>
           <div className="flex justify-center">
             <img
-              src="/Sponsors/ieee-srilanka.svg"
+              src="/logo-transparent 3.svg"
               alt="IEEE SL Section"
               className="h-16"
             />
