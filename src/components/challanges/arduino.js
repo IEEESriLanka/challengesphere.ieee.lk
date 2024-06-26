@@ -2,57 +2,55 @@ import React from "react";
 
 const Arduino = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black via-gray-700 to-black">
-      <div className="max-w-5xl w-full md:flex bg-blue-1000 rounded-lg  overflow-hidden">
+    <div className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-100 via-slate-100 to-blue-100">
+      <div className="max-w-5xl w-full md:flex bg-white rounded-lg shadow-lg overflow-hidden">
         {/* Left Section */}
         <div className="md:w-1/2 p-8 md:p-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Arduino Challenge
           </h1>
-          <p className="text-lg  text-white mb-6">
-            The Sri Lanka Circuits Challenge of the IEEE Sri Lanka
-            ChallengeSphere 2024 is launched to facilitate innovation and
-            open-ended electronic product design targeting the IEEE CASS Student
-            Design Competition 2024-25.
+          <p className="text-lg text-gray-700 mb-6">
+            If you are an individual or a team who is interested in Arduino,
+            Here's your chance to showcase your innovative skills in Sri Lanka's
+            biggest Arduino competition.
           </p>
-          <p className="text-xl text-white font-bold mb-6">
-            Registration will open soon
+
+          <p className="text-lg text-gray-700 mb-6">
+            Registration is{" "}
+            <span className="text-xl text-gray-900 font-bold">open</span> for
+            the Arduino Challenge.
           </p>
-          {/* <p className="text-lg  text-white mb-6">
-            Registration is <p className="text-xl text-white font-bold">open</p>{" "}
-            for the Circuits Challenge.
-          </p>
-          <p className="text-lg text-white mb-6 flex items-center">
+          {/* <p className="text-lg text-gray-700 mb-6 flex items-center">
             <img
               src="/calender.png"
-              alt="calender icon"
+              alt="calendar icon"
               width={30}
               height={30}
-              className=" justify-center items-center"
+              className="justify-center items-center"
             />
             Registration deadline:{" "}
-            <p className="text-lg font-bold text-cyan-300 ">
+            <span className="text-lg font-bold text-green-600">
               28th July 2024, 11:59 PM IST
-            </p>
+            </span>
           </p> */}
-          {/* <div className="flex space-x-4">
+          <div className="">
             <a
-              href="https://bit.ly/CircuitsChallenge"
+              href="https://forms.gle/JJng4zpyMuNNEUvM8"
               target="_blank"
               rel="noopener noreferrer"
-              className=" border-blue-600 shadow-black hover:bg-blue-600 font-bold text-white py-3 px-6 rounded-lg shadow-md transition duration-300 text-lg"
+              className="border-green-600 border-2 shadow-md hover:bg-green-600 font-bold text-white py-3 px-6 rounded-lg shadow-md transition duration-300 text-lg bg-green-500"
             >
               Register Now
             </a>
-            <a
+            {/* <a
               href="https://docs.google.com/document/d/1XjbmKeflTUIaazvU5Zn0K2xnUtYCP9UL-uAFR0RdEqA/edit?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className="border-blue-600 shadow-black hover:bg-blue-600 font-bold text-white py-3 px-6 rounded-lg shadow-md transition duration-300 text-lg"
+              className="border-green-600 shadow-md hover:bg-green-600 font-bold text-white py-3 px-6 rounded-lg shadow-md transition duration-300 text-lg bg-green-500"
             >
               Problem Statement
-            </a>
-          </div> */}
+            </a> */}
+          </div>
         </div>
 
         {/* Right Section */}
@@ -60,7 +58,7 @@ const Arduino = () => {
           <img
             className="w-64 h-64 md:w-96 md:h-96 object-contain"
             src="/challanges/Arduno.svg"
-            alt="Circuit Logo"
+            alt="Arduino Logo"
           />
         </div>
       </div>

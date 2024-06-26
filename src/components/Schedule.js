@@ -9,7 +9,7 @@ import {
 
 const Schedule = () => {
   return (
-    <div className="schedule-section bg-gradient-to-b from-black via-blue-900 to-black text-white py-12 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center justify-center">
+    <div className="schedule-section bg-gradient-to-b from-blue-100 via-slate-100 to-blue-100 text-blue-900 py-12 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center justify-center">
       <div className="max-w-5xl w-full relative">
         <h2 className="text-5xl font-bold text-center mb-12">Schedule</h2>
 
@@ -24,7 +24,7 @@ const Schedule = () => {
 
           {/* Path Line */}
           <div className="relative">
-            <div className="absolute left-5 w-10  h-1 bg-green-500 top-1/2 transform -translate-y-1/2"></div>
+            <div className="absolute left-5 w-10 h-1 bg-green-500 top-1/2 transform -translate-y-1/2"></div>
           </div>
 
           {/* Elevate Session */}
@@ -32,7 +32,7 @@ const Schedule = () => {
             <FaCalendarAlt className="text-red-500 mb-2" size={32} />
             <div className=" p-2 rounded-lg text-center">
               <span className="block text-xs font-bold ">27th June</span>
-              <br />
+
               <span className="block text-xs">Elevate Session</span>
               <span className="block text-xs">[In-person Session]</span>
             </div>
@@ -40,7 +40,7 @@ const Schedule = () => {
 
           {/* Path Line */}
           <div className="relative">
-            <div className="absolute left-5 w-10  h-1 bg-green-500 top-1/2 transform -translate-y-1/2"></div>
+            <div className="absolute left-5 w-10 h-1 bg-green-500 top-1/2 transform -translate-y-1/2"></div>
           </div>
 
           {/* Workshops */}
@@ -55,7 +55,7 @@ const Schedule = () => {
 
           {/* Path Line */}
           <div className="relative">
-            <div className="absolute left-5 w-10  h-1 bg-green-500 top-1/2 transform -translate-y-1/2"></div>
+            <div className="absolute left-5 w-10 h-1 bg-green-500 top-1/2 transform -translate-y-1/2"></div>
           </div>
 
           {/* Semi Finals */}
@@ -70,7 +70,7 @@ const Schedule = () => {
 
           {/* Path Line */}
           <div className="relative">
-            <div className="absolute left-5 w-10  h-1 bg-green-500 top-1/2 transform -translate-y-1/2"></div>
+            <div className="absolute left-5 w-10 h-1 bg-green-500 top-1/2 transform -translate-y-1/2"></div>
           </div>
 
           {/* Final Ceremony */}

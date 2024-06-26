@@ -39,14 +39,9 @@ const About = () => {
   return (
     <div
       id="about"
-      className="relative flex items-center justify-center h-screen bg-gradient-to-t from-black via-blue-700 to-black text-white p-8"
+      className="relative flex items-center justify-center h-screen bg-gradient-to-b from-black via-blue-500 to-blue-100 text-blue-800 font-semibold p-8"
     >
       {/* Main Title */}
-      <div className="absolute top-8 left-8">
-        <h1 className="text-4xl md:text-5xl font-bold ">
-          2024 Focused Challenges
-        </h1>
-      </div>
 
       {/* Content */}
       <div className="flex flex-col items-center w-full max-w-5xl space-y-8">
