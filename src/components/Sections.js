@@ -3,6 +3,7 @@ import Sponsor from "./Sponser";
 import Home from "./Home";
 import About from "./About";
 import Schedule from "./Schedule";
+import Challanges from "./Challanges";
 
 const Sections = () => {
   //   Sponser array
@@ -17,31 +18,20 @@ const Sections = () => {
       <div id="home" style={{ height: "100vh", background: "black" }}>
         <Home />
       </div>
-      <div id="about" style={{ height: "100vh", background: "lightblue" }}>
+      <div id="about" style={{ height: "100vh" }}>
         <About />
       </div>
-
-      <div id="schedule" style={{ height: "100vh", background: "lightgreen" }}>
+      <div id="about" style={{ height: "500vh" }}>
+        <Challanges />
+      </div>
+      <div id="schedule" style={{ height: "100vh" }}>
         <Schedule />
       </div>
       <div id="contact" style={{ height: "100vh", background: "lightcoral" }}>
         <h1>Section 3</h1>
       </div>
-      <div id="sponsors" className="py-8 bg-gray-900">
-        <div className="container mx-auto">
-          <h1 className="text-3xl font-bold text-white mb-4">
-            Sponsored Companies
-          </h1>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {sponsors.map((sponsor) => (
-              <Sponsor
-                key={sponsor.id}
-                name={sponsor.name}
-                imageUrl={sponsor.imageUrl}
-              />
-            ))}
-          </div>
-        </div>
+      <div id="sponsors">
+        <Sponsor />
       </div>
     </>
   );

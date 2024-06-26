@@ -1,64 +1,82 @@
-// src/components/Sections.js
 import React from "react";
+import { Link } from "react-scroll";
 
 const About = () => {
-  // Example array of small logos
+  // Array of small logos with their respective labels and link targets
   const smallLogos = [
-    { id: 1, imageUrl: "/logo192.png" },
-    { id: 2, imageUrl: "/logo192.png" },
-    { id: 3, imageUrl: "/logo192.png" },
-    { id: 4, imageUrl: "/logo192.png" },
-    { id: 5, imageUrl: "/logo192.png" },
+    {
+      id: 1,
+      imageUrl: "/challanges/AI.svg",
+      label: "AI Challenge",
+      link: "ai",
+    },
+    {
+      id: 2,
+      imageUrl: "/challanges/Arduno.svg",
+      label: "Arduino Challenge",
+      link: "arduino",
+    },
+    {
+      id: 3,
+      imageUrl: "/challanges/Chips.svg",
+      label: "Chips Challenge",
+      link: "chips",
+    },
+    {
+      id: 4,
+      imageUrl: "/challanges/Citcuits.svg",
+      label: "Circuits Challenge",
+      link: "circuits",
+    },
+    {
+      id: 5,
+      imageUrl: "/challanges/Signal.svg",
+      label: "Signal Challenge",
+      link: "signal",
+    },
   ];
 
   return (
-    <>
-      <div
-        id="about"
-        className="flex items-center justify-center h-screen bg-gradient-to-r from-blue-900 to-black text-white p-8"
-      >
-        <div className="flex flex-col md:flex-row items-center md:items-start w-full max-w-5xl space-y-8 md:space-y-0 md:space-x-8">
-          {/* About Text */}
-          <div className="bg-blue-1000 text-white p-6 rounded-lg shadow-2xl shadow-black flex-1">
-            <h2 className="text-3xl font-bold mb-4">About</h2>
-            <p className="mb-4">
-              IEEE Education Week Sri Lanka is a unique opportunity for students
-              and undergraduates to connect with top professionals and educators
-              from the world of engineering and technology. It will be held at
-              TRACE Expert City on the 24th & 25th of April this year, and will
-              provide educational programs and resources for students,
-              educators, and technical professionals. This event is the perfect
-              chance to expand your knowledge, enhance your skills, and build
-              your network. IEEE Education Week Sri Lanka will feature a seminar
-              on higher education pathways for students, an open forum on
-              education, technical sessions, panel discussions, industry stalls,
-              IEEE awareness sessions, etc. This event is also a showcase of all
-              of the amazing work that IEEE volunteers and members do every day
-              to promote education at every level.
-            </p>
-          </div>
+    <div
+      id="about"
+      className="relative flex items-center justify-center h-screen bg-gradient-to-t from-blue-900 to-black text-white p-8"
+    >
+      {/* Main Title */}
+      <div className="absolute top-8 left-8">
+        <h1 className="text-4xl md:text-5xl font-bold ">
+          2024 Focused Challenges
+        </h1>
+      </div>
 
-          {/* Main Logo and Small Logos */}
-          <div className="flex flex-col items-center">
-            <img
-              className="w-48 h-48 mb-8"
-              src="/logo512.png"
-              alt="Main Logo"
-            />
-            <div className="flex space-x-4">
-              {smallLogos.map((logo) => (
+      {/* Content */}
+      <div className="flex flex-col items-center w-full max-w-5xl space-y-8">
+        {/* Main Logo */}
+        <img
+          className="w-56 h-56 mb-6 mt-8 "
+          src="/main-logo.svg"
+          alt="Main Logo"
+        />
+
+        {/* Small Logos */}
+        <div className="flex flex-wrap justify-center space-x-4">
+          {smallLogos.map((logo) => (
+            <div
+              key={logo.id}
+              className="flex flex-col items-center space-y-2 p-1  hover:font-semibold transition-transform transform hover:scale-110"
+            >
+              <Link to={logo.link} smooth={true} duration={500}>
                 <img
-                  key={logo.id}
-                  className="w-12 h-12"
+                  className="w-28 h-28 md:w-40 md:h-40 cursor-pointer "
                   src={logo.imageUrl}
-                  alt={`Small Logo ${logo.id}`}
+                  alt={logo.label}
                 />
-              ))}
+                <span className="text-center ">{logo.label}</span>
+              </Link>
             </div>
-          </div>
+          ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

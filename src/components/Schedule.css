@@ -1,0 +1,135 @@
+/* schedule.css */
+
+.ps-timeline-sec {
+  position: relative;
+  background: #fff;
+}
+
+.ps-timeline-sec .container {
+  position: relative;
+}
+
+.ps-timeline-sec ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ps-timeline-sec ol li {
+  float: left;
+  width: 25%;
+  padding-top: 30px;
+  position: relative;
+}
+
+.ps-timeline-sec ol li span {
+  width: 50px;
+  height: 50px;
+  margin-left: -25px;
+  background: #fff;
+  border: 4px solid #348e80;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0px #fff;
+  text-align: center;
+  line-height: 50px - 10;
+  color: #df8625;
+  font-size: 2em;
+  font-style: normal;
+  position: absolute;
+  top: -26px;
+  left: 50%;
+}
+
+.ps-timeline-sec ol li span.ps-sp-top:before {
+  content: "";
+  color: #348e80;
+  width: 2px;
+  height: 50px;
+  background: #348e80;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+}
+
+.ps-timeline-sec ol li span.ps-sp-top:after {
+  content: "";
+  color: #348e80;
+  width: 8px;
+  height: 8px;
+  background: #348e80;
+  position: absolute;
+  bottom: 90px;
+  left: 44%;
+  border-radius: 100%;
+}
+
+.ps-timeline-sec ol li span.ps-sp-bot:before {
+  content: "";
+  color: #348e80;
+  width: 2px;
+  height: 50px;
+  background: #348e80;
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+}
+
+.ps-timeline-sec ol li span.ps-sp-bot:after {
+  content: "";
+  color: #348e80;
+  width: 8px;
+  height: 8px;
+  background: #348e80;
+  position: absolute;
+  top: 90px;
+  left: 44%;
+  border-radius: 100%;
+}
+
+.ps-timeline-sec ol li .img-handler-top {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 130px;
+  width: 30%;
+  left: 0;
+}
+
+.ps-timeline-sec ol li .img-handler-top svg {
+  width: 100%;
+  height: auto;
+}
+
+.ps-timeline-sec ol li .img-handler-bot {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 130px;
+  width: 30%;
+  right: 0;
+}
+
+.ps-timeline-sec ol li .img-handler-bot svg {
+  width: 100%;
+  height: auto;
+}
+
+.ps-timeline-sec ol li p {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.ps-timeline-sec ol li .ps-top {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  width: 60%;
+  text-align: right;
+}
+
+.ps-timeline-sec ol li .ps-bot {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  width: 60%;
+  text-align: left;
+}

@@ -1,49 +1,78 @@
+// Schedule.js
+
 import React from "react";
+import {
+  FaCalendarAlt,
+  FaChalkboardTeacher,
+  FaMedal,
+  FaRegLightbulb,
+} from "react-icons/fa";
 
 const Schedule = () => {
-  // Example array of events
   const events = [
-    { id: 1, time: "10:00 AM", description: "Event 1 Description" },
-    { id: 2, time: "11:00 AM", description: "Event 2 Description" },
-    { id: 3, time: "12:00 PM", description: "Event 3 Description" },
-    { id: 4, time: "01:00 PM", description: "Event 4 Description" },
-    { id: 5, time: "02:00 PM", description: "Event 5 Description" },
-    { id: 6, time: "03:00 PM", description: "Event 6 Description" },
-    { id: 7, time: "04:00 PM", description: "Event 7 Description" },
-    { id: 8, time: "05:00 PM", description: "Event 8 Description" },
+    {
+      date: "27th June 2024",
+      title: "Elevate Session",
+      description: "[In-person Session]",
+      icon: <FaChalkboardTeacher className="w-6 h-6" />,
+    },
+    {
+      date: "July/ August",
+      title: "Workshops",
+      description: "",
+      icon: <FaRegLightbulb className="w-6 h-6" />,
+    },
+    {
+      date: "August",
+      title: "Semi Finals",
+      description: "",
+      icon: <FaMedal className="w-6 h-6" />,
+    },
+    {
+      date: "September",
+      title: "Final Ceremony",
+      description: "",
+      icon: <FaMedal className="w-6 h-6" />,
+    },
   ];
 
   return (
-    <div
-      id="schedule"
-      className="flex items-center justify-center h-screen bg-gradient-to-r from-black to-gray-900 text-white p-8"
-    >
-      <div className="flex flex-col items-center w-full max-w-full">
-        <h2 className="text-3xl font-bold mb-8">Schedule</h2>
+    <div className="relative flex items-center justify-center min-h-screen bg-gradient-to-t from-blue-900 to-black text-white p-8">
+      <div className="absolute top-8 left-8">
+        <h1 className="text-4xl md:text-5xl font-bold">
+          Challenge Sphere Timeline
+        </h1>
+      </div>
 
-        <div className="relative w-full overflow-x-auto">
-          <div className="flex space-x-8 h-full">
-            {/* Road */}
-            <div className="absolute top-1/2 transform -translate-y-1/2 h-2 bg-gray-700 w-full"></div>
+      {/* Road */}
+      <div className="absolute top-0 left-28 bg-blue-300 w-2 h-full transform -translate-x-1/2"></div>
 
-            {events.map((event, index) => (
-              <div
-                key={event.id}
-                className={`relative flex-shrink-0 flex flex-col items-center justify-center ${
-                  index % 2 === 0 ? "mt-4" : "mb-4"
-                } w-60`}
-              >
-                <div className="bg-blue-800 text-white p-4 rounded-lg shadow-lg">
-                  <p className="font-bold">{event.time}</p>
-                  <p>{event.description}</p>
-                </div>
-
-                {/* Circle on the road */}
-                <div className="absolute top-1/2 transform -translate-y-1/2 left-1/2 -translate-x-1/2 w-8 h-8 bg-gray-700 rounded-full border-4 border-white"></div>
-              </div>
-            ))}
+      {/* Icons */}
+      <div className="absolute top-0 left-20">
+        {events.map((event, index) => (
+          <div
+            key={index}
+            className="bg-blue-800 rounded-full w-10 h-10 flex items-center justify-center mb-12"
+            style={{ marginTop: index === 0 ? "0" : "24px" }}
+          >
+            {event.icon}
           </div>
-        </div>
+        ))}
+      </div>
+
+      {/* Events */}
+      <div className="relative w-full max-w-lg mx-auto">
+        <ul className="divide-y divide-gray-400">
+          {events.map((event, index) => (
+            <li key={index} className="py-8 relative">
+              <div className="ml-6">
+                <div className="text-lg font-bold">{event.date}</div>
+                <div className="text-lg font-semibold">{event.title}</div>
+                <div className="text-sm">{event.description}</div>
+              </div>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
