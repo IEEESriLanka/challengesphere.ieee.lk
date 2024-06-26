@@ -15,11 +15,14 @@ const Chips = () => {
             open-ended electronic product design targeting the IEEE CASS Student
             Design Competition 2024-25.
           </p>
-          <p className="text-lg  text-white mb-6">
+          {/* <p className="text-lg  text-white mb-6">
             Registration is <p className="text-xl text-white font-bold">open</p>{" "}
             for the Circuits Challenge.
+          </p> */}
+          <p className="text-xl text-white font-bold mb-6">
+            Registration will open soon
           </p>
-          <p className="text-lg text-white mb-6 flex items-center">
+          {/* <p className="text-lg text-white mb-6 flex items-center">
             <img
               src="/calender.png"
               alt="calender icon"
@@ -49,7 +52,7 @@ const Chips = () => {
             >
               Problem Statement
             </a>
-          </div>
+          </div> */}
         </div>
 
         {/* Right Section */}
