@@ -2,35 +2,61 @@ import React from "react";
 
 const Circuit = () => {
   return (
-    <div
-      id="about"
-      className="flex items-center justify-center h-screen bg-gradient-to-bl from-blue-900 to-black text-white p-8"
-    >
-      <div className="flex flex-col md:flex-row items-start w-full max-w-5xl space-y-8 md:space-y-0 md:space-x-7">
-        <div className="flex-1">
-          {/* Main Title */}
-          <h1 className="text-5xl text-left self-start font-bold mb-4">
+    <div className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black via-green-700 to-black">
+      <div className="max-w-5xl w-full md:flex bg-blue-1000 rounded-lg  overflow-hidden">
+        {/* Left Section */}
+        <div className="md:w-1/2 p-8 md:p-12">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Circuit Challenge
           </h1>
-
-          {/* About Text */}
-          <div className="bg-blue-1000 text-left text-white p-6 rounded-lg shadow-2xl shadow-black">
-            <p className="mb-4 text-lg">
-              The IEEE Sri Lanka Section, part of the world’s largest technical
-              professional society, promotes electrotechnology and related
-              disciplines for humanity's benefit. With 430,000+ members
-              globally, IEEE develops crucial standards and publishes over 100
-              peer-reviewed journals, contributing 30% of the world’s technical
-              literature.
+          <p className="text-lg  text-white mb-6">
+            The Sri Lanka Circuits Challenge of the IEEE Sri Lanka
+            ChallengeSphere 2024 is launched to facilitate innovation and
+            open-ended electronic product design targeting the IEEE CASS Student
+            Design Competition 2024-25.
+          </p>
+          <p className="text-lg  text-white mb-6">
+            Registration is <p className="text-xl text-white font-bold">open</p>{" "}
+            for the Circuits Challenge.
+          </p>
+          <p className="text-lg text-white mb-6 flex items-center">
+            <img
+              src="/calender.png"
+              alt="calender icon"
+              width={30}
+              height={30}
+              className=" justify-center items-center pr-1"
+            />
+            Registration deadline:{" "}
+            <p className="pl-3 text-lg font-bold text-cyan-300 ">
+              28th July 2024, 11:59 PM IST
             </p>
+          </p>
+          <div className="flex space-x-4">
+            <a
+              href="https://bit.ly/CircuitsChallenge"
+              target="_blank"
+              rel="noopener noreferrer"
+              className=" border-blue-600 shadow-black hover:bg-blue-600 font-bold text-white py-3 px-6 rounded-lg shadow-md transition duration-300 text-lg"
+            >
+              Register Now
+            </a>
+            <a
+              href="https://docs.google.com/document/d/1XjbmKeflTUIaazvU5Zn0K2xnUtYCP9UL-uAFR0RdEqA/edit?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-blue-600 shadow-black hover:bg-blue-600 font-bold text-white py-3 px-6 rounded-lg shadow-md transition duration-300 text-lg"
+            >
+              Problem Statement
+            </a>
           </div>
         </div>
 
-        {/* Main Logo */}
-        <div className="flex-shrink-0">
+        {/* Right Section */}
+        <div className="md:w-1/2 flex items-center justify-center">
           <img
-            className="w-56 h-56"
-            src="/challanges/Citcuits.svg"
+            className="w-64 h-64 md:w-96 md:h-96 object-contain"
+            src="/challanges/Circuits.svg"
             alt="Circuit Logo"
           />
         </div>

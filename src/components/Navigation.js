@@ -24,6 +24,11 @@ const Navigation = () => {
               Home
             </Link>
           </li>
+          <li className="text-white font-semibold hover:text-blue-700 transition duration-300">
+            <Link to="about" smooth={true} duration={500}>
+              2024
+            </Link>
+          </li>
           <li className="relative">
             <button
               onClick={toggleDropdown}
@@ -91,19 +96,15 @@ const Navigation = () => {
               </ul>
             )}
           </li>
-          <li className="text-white font-semibold hover:text-blue-700 transition duration-300">
-            <Link to="about" smooth={true} duration={500}>
-              About
-            </Link>
-          </li>
-          <li className="text-white font-semibold hover:text-blue-700 transition duration-300">
+
+          {/* <li className="text-white font-semibold hover:text-blue-700 transition duration-300">
             <Link to="schedule" smooth={true} duration={500}>
               Schedule
             </Link>
-          </li>
+          </li> */}
           <li className="text-white font-semibold hover:text-blue-700 transition duration-300">
-            <Link to="contact" smooth={true} duration={500}>
-              Contact
+            <Link to="sponsors" smooth={true} duration={500}>
+              Sponsers
             </Link>
           </li>
         </ul>

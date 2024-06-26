@@ -6,13 +6,6 @@ import Schedule from "./Schedule";
 import Challanges from "./Challanges";
 
 const Sections = () => {
-  //   Sponser array
-  const sponsors = [
-    { id: 1, name: "Company A", imageUrl: "/logo512.png" },
-    { id: 2, name: "Company B", imageUrl: "/logo512.png" },
-    { id: 3, name: "Company C", imageUrl: "/logo512.png" },
-  ];
-
   return (
     <>
       <div id="home" style={{ height: "100vh", background: "black" }}>
@@ -27,9 +20,9 @@ const Sections = () => {
       <div id="schedule" style={{ height: "100vh" }}>
         <Schedule />
       </div>
-      <div id="contact" style={{ height: "100vh", background: "lightcoral" }}>
+      {/* <div id="contact" style={{ height: "100vh", background: "lightcoral" }}>
         <h1>Section 3</h1>
-      </div>
+      </div> */}
       <div id="sponsors">
         <Sponsor />
       </div>

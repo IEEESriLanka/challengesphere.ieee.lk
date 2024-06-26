@@ -24,9 +24,9 @@ const About = () => {
     },
     {
       id: 4,
-      imageUrl: "/challanges/Citcuits.svg",
+      imageUrl: "/challanges/Circuits.svg",
       label: "Circuits Challenge",
-      link: "circuits",
+      link: "circuit",
     },
     {
       id: 5,
@@ -39,7 +39,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className="relative flex items-center justify-center h-screen bg-gradient-to-t from-blue-900 to-black text-white p-8"
+      className="relative flex items-center justify-center h-screen bg-gradient-to-t from-black via-blue-700 to-black text-white p-8"
     >
       {/* Main Title */}
       <div className="absolute top-8 left-8">
