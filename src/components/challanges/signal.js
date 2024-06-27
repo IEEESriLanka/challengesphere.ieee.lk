@@ -10,12 +10,11 @@ const Signal = () => {
             Signal Processing for Communications Challenge
           </h1>
           <p className="text-lg text-gray-700 mb-6">
-            The Signal Processing for Communication Challenge tests
-            participants' abilities in enhancing and analyzing communication
-            signals. Competitors will work on projects involving noise
-            reduction, signal encoding, and data transmission. This challenge is
-            perfect for those interested in telecommunications and the
-            optimization of communication systems.
+            This competition invites undergraduate students to present their
+            cutting-edge projects in the field of signal processing for
+            communications. The challenge aims to foster creativity and
+            technological advancement in signal processing for modern
+            communication applications.
           </p>
           <p className="text-xl text-gray-900 font-bold mb-6">
             Registration will open soon

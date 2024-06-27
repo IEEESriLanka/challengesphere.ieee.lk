@@ -19,12 +19,12 @@ const Navigation = () => {
           <img src="/main-logo.svg" alt="Logo" className="px-8 h-20 w-auto" />
         </Link>
         <ul className="flex space-x-4">
-          <li className=" hover:text-black  transition duration-300">
+          <li className=" hover:text-blue-900   transition duration-300">
             <Link to="home" smooth={true} duration={500}>
               Home
             </Link>
           </li>
-          <li className=" hover:text-black  transition duration-300">
+          <li className=" hover:text-blue-900   transition duration-300">
             <Link to="about" smooth={true} duration={500}>
               2024
             </Link>
@@ -32,7 +32,7 @@ const Navigation = () => {
           <li className="relative">
             <button
               onClick={toggleDropdown}
-              className=" px-3 hover:text-black  hover:border-white transition duration-300 focus:outline-none"
+              className=" px-3 hover:text-blue-900   hover:border-white transition duration-300 focus:outline-none"
             >
               Challenges
               <img

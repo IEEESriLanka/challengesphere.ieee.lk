@@ -10,12 +10,11 @@ const Chips = () => {
             Chips Challenge
           </h1>
           <p className="text-lg text-gray-700 mb-6">
-            The Chips Challenge centers on computer architecture and integrated
-            circuit design. Participants will design and optimize microchips for
-            various applications, focusing on performance, efficiency, and
-            innovation. This challenge is ideal for those passionate about
-            hardware design and eager to showcase their skills in creating
-            advanced microchip solutions.
+            This Challenge serves as the national selection for the
+            International Microelectronics Olympiad in Armenia. This inaugural
+            event in Sri Lanka allows students to demonstrate their knowledge in
+            microelectronics and EDA software development through a one-hour
+            closed-book exam.
           </p>
           {/* <p className="text-lg text-gray-700 mb-6">
             Registration is <span className="text-xl text-gray-900 font-bold">open</span>{" "}

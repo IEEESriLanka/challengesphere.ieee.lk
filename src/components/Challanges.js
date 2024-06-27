@@ -8,19 +8,19 @@ import Chips from "./challanges/chips";
 const Challanges = () => {
   return (
     <div>
-      <div id="circuit" style={{ height: "100vh", background: "lightblue" }}>
+      <div id="circuit" style={{ height: "90vh", background: "lightblue" }}>
         <Circuit />
       </div>
-      <div id="arduino" style={{ height: "100vh", background: "lightyellow" }}>
+      <div id="arduino" style={{ height: "90vh", background: "lightyellow" }}>
         <Arduino />
       </div>
-      <div id="ai" style={{ height: "100vh", background: "lightpink" }}>
+      <div id="ai" style={{ height: "90vh", background: "lightpink" }}>
         <Ai />
       </div>
-      <div id="signal" style={{ height: "100vh", background: "lightgray" }}>
+      <div id="signal" style={{ height: "90vh", background: "lightgray" }}>
         <Signal />
       </div>
-      <div id="chips" style={{ height: "100vh", background: "lightpurple" }}>
+      <div id="chips" style={{ height: "90vh", background: "lightpurple" }}>
         <Chips />
       </div>
     </div>

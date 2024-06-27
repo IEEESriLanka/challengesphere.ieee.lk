@@ -35,15 +35,15 @@ const Sponsors = () => {
               className="h-16"
             />
 
-            <img
+            {/* <img
               src="/Sponsors/1/ieee_comsoc_sl_logo-removebg-preview.svg"
               alt="IEEE SL YP"
               className="h-24"
-            />
+            /> */}
             <img
               src="/Sponsors/1/sps_sl_logo-removebg-preview.svg"
               alt="IEEE IES SL"
-              className="h-28"
+              className="h-28 px-4"
             />
             <img src="/Sponsors/1/ies.png" alt="Ies" className="h-24" />
             <img

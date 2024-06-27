@@ -4,6 +4,7 @@ import Home from "./Home";
 import About from "./About";
 import Schedule from "./Schedule";
 import Challanges from "./Challanges";
+import Organizing from "./organizing/Organizing";
 
 const Sections = () => {
   return (
@@ -14,10 +15,10 @@ const Sections = () => {
       <div id="about" style={{ height: "100vh" }}>
         <About />
       </div>
-      <div id="about" style={{ height: "500vh" }}>
+      <div id="about">
         <Challanges />
       </div>
-      <div id="schedule" style={{ height: "100vh" }}>
+      <div id="schedule" style={{ height: "90vh" }}>
         <Schedule />
       </div>
       {/* <div id="contact" style={{ height: "100vh", background: "lightcoral" }}>
@@ -26,6 +27,9 @@ const Sections = () => {
       <div id="sponsors">
         <Sponsor />
       </div>
+      {/* <div id="organizing">
+        <Organizing />
+      </div> */}
     </>
   );
 };
