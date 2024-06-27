@@ -10,10 +10,12 @@ const Signal = () => {
             Signal Processing for Communications Challenge
           </h1>
           <p className="text-lg text-gray-700 mb-6">
-            The Sri Lanka Circuits Challenge of the IEEE Sri Lanka
-            ChallengeSphere 2024 is launched to facilitate innovation and
-            open-ended electronic product design targeting the IEEE CASS Student
-            Design Competition 2024-25.
+            The Signal Processing for Communication Challenge tests
+            participants' abilities in enhancing and analyzing communication
+            signals. Competitors will work on projects involving noise
+            reduction, signal encoding, and data transmission. This challenge is
+            perfect for those interested in telecommunications and the
+            optimization of communication systems.
           </p>
           <p className="text-xl text-gray-900 font-bold mb-6">
             Registration will open soon

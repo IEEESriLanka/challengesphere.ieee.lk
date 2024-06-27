@@ -10,10 +10,12 @@ const Ai = () => {
             Artificial Intelligence Challenge
           </h1>
           <p className="text-lg text-gray-700 mb-6">
-            The Sri Lanka Circuits Challenge of the IEEE Sri Lanka
-            ChallengeSphere 2024 is launched to facilitate innovation and
-            open-ended electronic product design targeting the IEEE CASS Student
-            Design Competition 2024-25.
+            The Artificial Intelligence Challenge focuses on developing AI
+            algorithms and applications. Participants will work on projects
+            involving machine learning, data analysis, and predictive modeling.
+            This challenge is designed for individuals passionate about AI and
+            eager to push the boundaries of intelligent systems and their
+            real-world applications.
           </p>
           <p className="text-xl text-gray-900 font-bold mb-6">
             Registration will open soon

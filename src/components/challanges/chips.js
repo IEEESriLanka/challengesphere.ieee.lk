@@ -10,10 +10,12 @@ const Chips = () => {
             Chips Challenge
           </h1>
           <p className="text-lg text-gray-700 mb-6">
-            The Sri Lanka Circuits Challenge of the IEEE Sri Lanka
-            ChallengeSphere 2024 is launched to facilitate innovation and
-            open-ended electronic product design targeting the IEEE CASS Student
-            Design Competition 2024-25.
+            The Chips Challenge centers on computer architecture and integrated
+            circuit design. Participants will design and optimize microchips for
+            various applications, focusing on performance, efficiency, and
+            innovation. This challenge is ideal for those passionate about
+            hardware design and eager to showcase their skills in creating
+            advanced microchip solutions.
           </p>
           {/* <p className="text-lg text-gray-700 mb-6">
             Registration is <span className="text-xl text-gray-900 font-bold">open</span>{" "}
