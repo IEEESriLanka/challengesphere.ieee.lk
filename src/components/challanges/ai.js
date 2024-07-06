@@ -3,9 +3,9 @@ import React from "react";
 const Ai = () => {
   return (
     <div className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-100 via-slate-100 to-blue-100">
-      <div className="max-w-5xl w-full md:flex bg-white rounded-lg shadow-lg overflow-hidden">
+      <div className="max-w-5xl w-full flex flex-col md:flex-row bg-white rounded-lg shadow-lg overflow-hidden">
         {/* Left Section */}
-        <div className="md:w-1/2 p-8 md:p-12">
+        <div className="flex flex-col justify-center items-center md:w-1/2 p-8 md:p-12">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Artificial Intelligence Challenge
           </h1>
@@ -16,32 +16,28 @@ const Ai = () => {
             skills in AI technologies through a combination of workshops and a
             competitive hackathon.
           </p>
-          <p className="text-xl text-gray-900 font-bold mb-6">
-            Registration will open soon
+          <p className="text-xl text-red-700 font-bold mb-1 text-center">
+            Stay tuned, registrations will open soon!
           </p>
-          {/* <p className="text-lg text-gray-700 mb-6">
-            Registration is <span className="text-xl text-gray-900 font-bold">open</span>{" "}
-            for the Circuits Challenge.
-          </p>
-          <p className="text-lg text-gray-700 mb-6 flex items-center">
+          {/* <p className="text-lg text-gray-700 mb-6 flex flex-col items-center">
             <img
               src="/calender.png"
               alt="calendar icon"
               width={30}
               height={30}
-              className="justify-center items-center"
+              className="mb-2"
             />
-            Registration deadline:{" "}
-            <span className="text-lg font-bold text-cyan-300">
-              28th July 2024, 11:59 PM IST
+            Registration Deadline:
+            <span className="text-lg font-bold text-green-600">
+              28th July, 11:59 PM
             </span>
-          </p>
-          <div className="flex space-x-4">
+          </p> */}
+          {/* <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
             <a
               href="https://bit.ly/CircuitsChallenge"
               target="_blank"
               rel="noopener noreferrer"
-              className="border-blue-600 shadow-md hover:bg-blue-600 font-bold text-white py-3 px-6 rounded-lg shadow-md transition duration-300 text-lg bg-blue-500"
+              className="border-green-600 shadow-md hover:bg-green-600 font-bold text-white py-3 px-6 rounded-lg transition duration-300 text-lg bg-green-500 text-center"
             >
               Register Now
             </a>
@@ -49,7 +45,7 @@ const Ai = () => {
               href="https://docs.google.com/document/d/1XjbmKeflTUIaazvU5Zn0K2xnUtYCP9UL-uAFR0RdEqA/edit?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className="border-blue-600 shadow-md hover:bg-blue-600 font-bold text-white py-3 px-6 rounded-lg shadow-md transition duration-300 text-lg bg-blue-500"
+              className="border-green-600 shadow-md hover:bg-green-600 font-bold text-white py-3 px-6 rounded-lg transition duration-300 text-lg bg-green-500 text-center"
             >
               Problem Statement
             </a>
@@ -57,11 +53,11 @@ const Ai = () => {
         </div>
 
         {/* Right Section */}
-        <div className="md:w-1/2 flex items-center justify-center">
+        <div className="flex items-center justify-center md:w-1/2 p-8">
           <img
             className="w-64 h-64 md:w-96 md:h-96 object-contain"
             src="/challanges/AI.svg"
-            alt="AI Logo"
+            alt="Ai Logo"
           />
         </div>
       </div>

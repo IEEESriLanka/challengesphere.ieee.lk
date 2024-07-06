@@ -9,27 +9,21 @@ import Organizing from "./organizing/Organizing";
 const Sections = () => {
   return (
     <>
-      <div id="home" style={{ height: "100vh", background: "black" }}>
+      <div id="home">
         <Home />
       </div>
-      <div id="about" style={{ height: "100vh" }}>
+      <div id="about">
         <About />
       </div>
       <div id="about">
         <Challanges />
       </div>
-      <div id="schedule" style={{ height: "90vh" }}>
+      <div id="schedule">
         <Schedule />
       </div>
-      {/* <div id="contact" style={{ height: "100vh", background: "lightcoral" }}>
-        <h1>Section 3</h1>
-      </div> */}
       <div id="sponsors">
         <Sponsor />
       </div>
-      {/* <div id="organizing">
-        <Organizing />
-      </div> */}
     </>
   );
 };

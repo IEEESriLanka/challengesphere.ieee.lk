@@ -12,7 +12,7 @@ const About = () => {
     },
     {
       id: 2,
-      imageUrl: "/challanges/Arduno.svg",
+      imageUrl: "/challanges/Arduino.svg",
       label: "Arduino Challenge",
       link: "arduino",
     },

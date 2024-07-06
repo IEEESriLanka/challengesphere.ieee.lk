@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 
 const Navigation = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
@@ -12,99 +13,106 @@ const Navigation = () => {
     setDropdownOpen(false);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const firstSectionHeight = document.getElementById("home").offsetHeight;
+
+      if (scrollY >= firstSectionHeight) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header className="fixed w-full top-0 bg-blue-1000 z-50 text-blue-700 font-bold ">
-      <nav className="flex justify-between items-center p-4">
+    <header
+      className={`fixed w-full top-0 z-50 font-bold transition-all duration-300 ${
+        isScrolled
+          ? "bg-white text-blue-700 py-2"
+          : "bg-blue-1000 text-blue-700 py-4"
+      }`}
+    >
+      <nav className="flex justify-between items-center px-4">
         <Link to="home" smooth={true} duration={500} className="flex-shrink-0">
-          <img src="/main-logo.svg" alt="Logo" className="px-8 h-20 w-auto" />
+          <img
+            src="/main-logo.svg"
+            alt="Logo"
+            className={`transition-all duration-300 ${
+              isScrolled ? "h-12 w-auto" : "h-20 w-auto"
+            }`}
+          />
         </Link>
-        <ul className="flex space-x-4">
-          <li className=" hover:text-blue-900   transition duration-300">
-            <Link to="home" smooth={true} duration={500}>
+        <button
+          className="block lg:hidden text-blue-700 focus:outline-none"
+          onClick={toggleDropdown}
+        >
+          <svg
+            className="h-6 w-6"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+        <ul
+          className={`${
+            dropdownOpen ? "block" : "hidden"
+          } lg:flex lg:space-x-4 absolute lg:relative top-16 lg:top-0 left-0 w-full lg:w-auto ${
+            isScrolled ? "bg-white" : "bg-blue-1000"
+          } lg:bg-transparent lg:items-center p-4 lg:p-0`}
+        >
+          <li className="hover:text-blue-900 transition duration-300">
+            <Link
+              to="home"
+              smooth={true}
+              duration={500}
+              onClick={closeDropdown}
+            >
               Home
             </Link>
           </li>
-          <li className=" hover:text-blue-900   transition duration-300">
-            <Link to="about" smooth={true} duration={500}>
-              2024
-            </Link>
-          </li>
-          <li className="relative">
-            <button
-              onClick={toggleDropdown}
-              className=" px-3 hover:text-blue-900   hover:border-white transition duration-300 focus:outline-none"
+          <li className="hover:text-blue-900 transition duration-300">
+            <Link
+              to="about"
+              smooth={true}
+              duration={500}
+              onClick={closeDropdown}
             >
               Challenges
-              <img
-                src="/Sponsors/icons/icons8-play-button-96.png"
-                alt="Arrow Down"
-                className="inline-block w-4 h-4 ml-2 transform rotate-90"
-              />
-            </button>
-            {dropdownOpen && (
-              <ul className="absolute top-full left-0 bg-blue-100 shadow-lg mt-2">
-                <li className="px-4 py-1 hover:bg-slate-400  transition duration-300">
-                  <Link
-                    to="circuit"
-                    smooth={true}
-                    duration={500}
-                    onClick={closeDropdown}
-                  >
-                    Circuits Challenge
-                  </Link>
-                </li>
-                <li className="px-4 py-2 hover:bg-slate-400  transition duration-300">
-                  <Link
-                    to="arduino"
-                    smooth={true}
-                    duration={500}
-                    onClick={closeDropdown}
-                  >
-                    Arduino Challenge
-                  </Link>
-                </li>
-                <li className="px-4 py-2 hover:bg-slate-400  transition duration-300">
-                  <Link
-                    to="ai"
-                    smooth={true}
-                    duration={500}
-                    onClick={closeDropdown}
-                  >
-                    Artificial Intelligence Challenge
-                  </Link>
-                </li>
-                <li className="px-4 py-2 hover:bg-slate-400  transition duration-300">
-                  <Link
-                    to="signal"
-                    smooth={true}
-                    duration={500}
-                    onClick={closeDropdown}
-                  >
-                    Signal Processing for Communication Challenge
-                  </Link>
-                </li>
-                <li className="px-4 py-2 hover:bg-slate-400  transition duration-300">
-                  <Link
-                    to="chips"
-                    smooth={true}
-                    duration={500}
-                    onClick={closeDropdown}
-                  >
-                    Chips Challenge
-                  </Link>
-                </li>
-              </ul>
-            )}
+            </Link>
           </li>
-
-          <li className=" hover:text-blue-900  transition duration-300">
-            <Link to="schedule" smooth={true} duration={500}>
+          <li className="hover:text-blue-900 transition duration-300">
+            <Link
+              to="schedule"
+              smooth={true}
+              duration={500}
+              onClick={closeDropdown}
+            >
               Schedule
             </Link>
           </li>
-          <li className=" hover:text-blue-900   transition duration-300">
-            <Link to="sponsors" smooth={true} duration={500}>
-              Sponsers
+          <li className="hover:text-blue-900 transition duration-300">
+            <Link
+              to="sponsors"
+              smooth={true}
+              duration={500}
+              onClick={closeDropdown}
+            >
+              Sponsors
             </Link>
           </li>
         </ul>

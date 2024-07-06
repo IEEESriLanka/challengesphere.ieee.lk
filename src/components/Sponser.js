@@ -27,38 +27,32 @@ const Sponsors = () => {
           <h3 className="text-2xl text-yellow-200 font-bold mb-4">
             In Collaboration with
           </h3>
-
-          <div className="flex justify-center space-x-2">
+          <div className="flex flex-col sm:flex-row justify-center items-center space-y-4  sm:space-y-3 sm:space-x-4">
             <img
               src="/Sponsors/1/YPxAIDSL_Dark_nobg 3.svg"
               alt="IEEE SL SPS"
-              className="h-16"
+              className="h-14  mr-6 sm:h-14 sm:mr-4"
             />
-
-            {/* <img
-              src="/Sponsors/1/ieee_comsoc_sl_logo-removebg-preview.svg"
-              alt="IEEE SL YP"
-              className="h-24"
-            /> */}
             <img
               src="/Sponsors/1/sps_sl_logo-removebg-preview.svg"
               alt="IEEE IES SL"
-              className="h-28 px-4"
+              className="h-20 sm:h-24 sm:px-8"
             />
-            <img src="/Sponsors/1/ies.png" alt="Ies" className="h-24" />
+            <img src="/Sponsors/1/ies.png" alt="Ies" className="h-16 sm:h-20" />
             <img
               src="/Sponsors/1/ieee_comsoc_sl_logo-removebg-preview.svg"
               alt="IEEE SL YP"
-              className="h-24"
+              className="h-12 sm:h-16"
             />
             <img
               src="/Sponsors/1/YPxAIDSL_Dark_nobg 1.svg"
               alt="IEEE SL ComSoc"
-              className="h-18"
+              className="h-8  sm:h-12 sm:mr-6 mr-6 "
             />
           </div>
         </div>
       </div>
+
       {/* Platinum Sponsor */}
       <div className="flex-1 mb-8">
         <div className="bg-gradient-to-b from-gray-700 via-gray-800 to-gray-900 rounded-lg p-4 hover:scale-110 shadow-md">
@@ -135,13 +129,13 @@ const Sponsors = () => {
             <img
               src="/Sponsors/icons/Copy of IES  logo White.png"
               alt="IES Student Branch of SLTC"
-              width={300}
+              width={260}
               height={200}
             />
             <img
               src="/Sponsors/icons/IMG_2283.PNG"
               alt="IEEE Student Branch of IIT"
-              className="h-16 mt-14"
+              className="h-14 mt-14"
             />
           </div>
         </div>
