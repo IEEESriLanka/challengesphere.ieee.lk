@@ -20,6 +20,7 @@ const Circuit = () => {
             <span className="text-xl text-gray-900 font-bold">open</span> for
             the Circuits Challenge.
           </p>
+
           <p className="text-lg text-gray-700 mb-6 flex flex-col items-center">
             <img
               src="/calender.png"
@@ -33,7 +34,46 @@ const Circuit = () => {
               28th July, 11:59 PM
             </span>
           </p>
-          <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+          {/* Deadlines */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 ">
+            {/* <div className="flex flex-col items-center border p-2 bg-red-200 shadow-md rounded-lg hover:bg-red-500">
+              <img
+                src="/challanges/icons/deadline.png"
+                alt="calendar icon"
+                width={32}
+                height={30}
+                className="mb-2"
+              />
+              <p className="text-lg font-semibold text-gray-900">
+                Registration Deadline
+              </p>
+              <p className="text-lg font-bold text-red-700">July 28</p>
+            </div> */}
+            <div className="flex px-3 flex-col items-center border p-1 border-cyan-100 hover:bg-blue-200  shadow-md rounded-lg duration-1000">
+              <img
+                src="/challanges/icons/team.png"
+                alt="calendar icon"
+                width={32}
+                height={30}
+                className="mb-2"
+              />
+              <p className="text-lg font-semibold text-blue-800">Workshop 1</p>
+              <p className="text-lg font-bold text-blue-500">July 23</p>
+            </div>
+            <div className="flex px-3 flex-col items-center border p-1 border-cyan-100 shadow-md hover:bg-blue-200 rounded-lg duration-1000">
+              <img
+                src=" /challanges/icons/team.png"
+                alt="calendar icon"
+                width={32}
+                height={30}
+                className="mb-2"
+              />
+              <p className="text-lg font-semibold text-blue-800">Workshop 2</p>
+              <p className="text-lg font-bold text-blue-500">July 30</p>
+            </div>
+          </div>
+
+          <div className="flex pt-6 flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 mb-6">
             <a
               href="https://bit.ly/CircuitsChallenge"
               target="_blank"

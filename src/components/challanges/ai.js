@@ -10,11 +10,11 @@ const Ai = () => {
             Artificial Intelligence Challenge
           </h1>
           <p className="text-lg text-gray-700 mb-6">
-            The Sri Lanka Artificial Intelligence Challenge is a part of Sri
-            Lanka ChallengeSphere 2024 where it provides a structured pathway
-            for participants to gain hands-on experience and develop their
-            skills in AI technologies through a combination of workshops and a
-            competitive hackathon.
+            AICSL 2024, the premier AI Challenge in Sri Lanka hosted by
+            ChallengeSphere 2024, offers a structured pathway with hands-on
+            experience to develop AI agent-based applications. The event
+            features a series of workshops followed by a 24-hour event that
+            includes a workshop to develop an AI agent and a 12-hour hackathon.
           </p>
           <p className="text-xl text-red-700 font-bold mb-1 text-center">
             Stay tuned, registrations will open soon!

@@ -4,7 +4,8 @@ import Home from "./Home";
 import About from "./About";
 import Schedule from "./Schedule";
 import Challanges from "./Challanges";
-import Organizing from "./organizing/Organizing";
+
+import Footer from "./footer";
 
 const Sections = () => {
   return (
@@ -23,6 +24,9 @@ const Sections = () => {
       </div>
       <div id="sponsors">
         <Sponsor />
+      </div>
+      <div id="footer">
+        <Footer />
       </div>
     </>
   );

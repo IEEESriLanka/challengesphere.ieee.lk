@@ -3,8 +3,6 @@ import React from "react";
 const Sponsors = () => {
   return (
     <div className="bg-gradient-to-b from-blue-100 via-slate-100 to-blue-100 text-gray-900 py-8 px-4 sm:px-6 lg:px-8">
-      <h2 className="text-5xl text-center font-bold mb-16">Sponsors</h2>
-
       {/* An Initiative By */}
       <div className="mb-8 flex flex-col items-center">
         <div className="bg-gradient-to-b from-gray-700 via-gray-800 to-gray-900 rounded-lg p-4 hover:scale-110 shadow-md">

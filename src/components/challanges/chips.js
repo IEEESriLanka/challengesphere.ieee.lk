@@ -60,10 +60,51 @@ const Chips = () => {
             />
             Registration Deadline:
             <span className="text-lg font-bold text-green-600">
-              28th July, 11:59 PM
+              9th July, 11:59 PM
             </span>
           </p>
-          <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4">
+            {/* <div className="flex flex-col items-center border p-2 bg-red-200 shadow-md rounded-lg hover:bg-red-500">
+              <img
+                src="/challanges/icons/deadline.png"
+                alt="calendar icon"
+                width={32}
+                height={30}
+                className="mb-2"
+              />
+              <p className="text-lg font-semibold text-gray-900">
+                Registration Deadline
+              </p>
+              <p className="text-lg font-bold text-red-700">July 28</p>
+            </div> */}
+            <div className="flex px-3 flex-col items-center border p-1 border-cyan-100 hover:bg-blue-200  shadow-md rounded-lg duration-1000">
+              <img
+                src="/challanges/icons/team.png"
+                alt="calendar icon"
+                width={36}
+                height={30}
+                className="mb-2"
+              />
+              <p className="text-lg font-semibold text-blue-800">
+                Workshop (Seminar)
+              </p>
+              <p className="text-lg font-bold text-blue-500">July 21</p>
+            </div>
+            <div className="flex px-3 flex-col items-center border p-1 border-amber-200 shadow-md hover:bg-lime-200 rounded-lg duration-1000">
+              <img
+                src=" /challanges/icons/exam.png"
+                alt="calendar icon"
+                width={36}
+                height={30}
+                className="mb-2"
+              />
+              <p className="text-lg font-semibold text-lime-800 time">
+                Written Exam
+              </p>
+              <p className="text-lg font-bold text-lime-500">July 27</p>
+            </div>
+          </div>
+          <div className="flex mt-8 flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
             <a
               href="https://bit.ly/ChallengeSphereChipsChallenge"
               target="_blank"
@@ -87,7 +128,7 @@ const Chips = () => {
 
       {/* Powered By Section */}
       <div
-        className={`fixed bottom-4 right-4 p-4 bg-gradient-to-b from-sky-300 to-white rounded-lg shadow-xl transition-transform duration-500 ${
+        className={`fixed bottom-60 right-4 p-4 bg-gradient-to-b from-sky-300 to-white rounded-lg shadow-xl transition-transform duration-500 ${
           isVisible
             ? "transform translate-y-0 opacity-100"
             : "transform translate-y-20 opacity-0"

@@ -2,40 +2,6 @@ import React from "react";
 import { Link } from "react-scroll";
 
 const About = () => {
-  // Array of small logos with their respective labels and link targets
-  const smallLogos = [
-    {
-      id: 1,
-      imageUrl: "/challanges/AI.svg",
-      label: "AI Challenge",
-      link: "ai",
-    },
-    {
-      id: 2,
-      imageUrl: "/challanges/Arduino.svg",
-      label: "Arduino Challenge",
-      link: "arduino",
-    },
-    {
-      id: 3,
-      imageUrl: "/challanges/Chips.svg",
-      label: "Chips Challenge",
-      link: "chips",
-    },
-    {
-      id: 4,
-      imageUrl: "/challanges/Circuits.svg",
-      label: "Circuits Challenge",
-      link: "circuit",
-    },
-    {
-      id: 5,
-      imageUrl: "/challanges/Signal.svg",
-      label: "Signal Challenge",
-      link: "signal",
-    },
-  ];
-
   return (
     <div
       id="about"
@@ -47,28 +13,67 @@ const About = () => {
       <div className="flex flex-col items-center w-full max-w-5xl space-y-8">
         {/* Main Logo */}
         <img
-          className="w-56 h-56 mb-6 mt-8 "
+          className="w-56 h-56 mb-6 mt-8"
           src="/main-logo.svg"
           alt="Main Logo"
         />
 
         {/* Small Logos */}
         <div className="flex flex-wrap justify-center space-x-4">
-          {smallLogos.map((logo) => (
-            <div
-              key={logo.id}
-              className="flex flex-col items-center space-y-2 p-1  hover:font-semibold transition-transform transform hover:scale-110"
-            >
-              <Link to={logo.link} smooth={true} duration={500}>
-                <img
-                  className="w-28 h-28 md:w-40 md:h-40 cursor-pointer "
-                  src={logo.imageUrl}
-                  alt={logo.label}
-                />
-                <span className="text-center ">{logo.label}</span>
-              </Link>
-            </div>
-          ))}
+          <div className="flex flex-col items-center space-y-2 p-1 hover:font-semibold transition-transform transform hover:scale-110">
+            <Link to="circuit" smooth={true} duration={500}>
+              <img
+                className="w-28 h-28 ml-1 md:w-40 md:h-40 cursor-pointer"
+                src="/challanges/Circuits.svg"
+                alt="Circuits Challenge"
+              />
+              <span className="text-center">Circuits Challenge</span>
+            </Link>
+          </div>
+          <div className="flex flex-col items-center space-y-2 p-1 hover:font-semibold transition-transform transform hover:scale-110">
+            <Link to="arduino" smooth={true} duration={500}>
+              <img
+                className="w-28 h-28 ml-2 md:w-40 md:h-40 cursor-pointer"
+                src="/challanges/Arduino.svg"
+                alt="Arduino Challenge"
+              />
+              <span className="text-center">Arduino Challenge</span>
+            </Link>
+          </div>
+
+          <div className="flex flex-col items-center space-y-2 p-1 hover:font-semibold transition-transform transform hover:scale-110">
+            <Link to="ai" smooth={true} duration={500}>
+              <img
+                className="w-28 h-28 md:w-40 md:h-40 cursor-pointer"
+                src="/challanges/AI.svg"
+                alt="AI Challenge"
+              />
+              <span className="text-center">AI Challenge</span>
+            </Link>
+          </div>
+
+          <div className="flex flex-col items-center space-y-2 p-1 hover:font-semibold transition-transform transform hover:scale-110">
+            <Link to="signal" smooth={true} duration={500}>
+              <img
+                className="w-28 md:ml-5 ml-10 h-28 md:w-40 md:h-40 cursor-pointer"
+                src="/challanges/Signal.svg"
+                alt="Signal Challenge"
+              />
+              <span className="text-center ">
+                Signal Processing for <br /> Communications Challenge
+              </span>
+            </Link>
+          </div>
+          <div className="flex flex-col items-center space-y-2 p-1 hover:font-semibold transition-transform transform hover:scale-110">
+            <Link to="chips" smooth={true} duration={500}>
+              <img
+                className="w-28 h-28 md:w-40 md:h-40 cursor-pointer"
+                src="/challanges/Chips.svg"
+                alt="Chips Challenge"
+              />
+              <span className="text-center">Chips Challenge</span>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

@@ -30,10 +30,50 @@ const Arduino = () => {
             />
             Registration Deadline:
             <span className="text-lg font-bold text-green-600">
-              28th July, 11:59 PM
+              14th July, 11:59 PM
             </span>
           </p>
-          <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 gap-4">
+            {/* <div className="flex flex-col items-center border p-2 bg-red-200 shadow-md rounded-lg hover:bg-red-500">
+              <img
+                src="/challanges/icons/deadline.png"
+                alt="calendar icon"
+                width={32}
+                height={30}
+                className="mb-2"
+              />
+              <p className="text-lg font-semibold text-gray-900">
+                Registration Deadline
+              </p>
+              <p className="text-lg font-bold text-red-700">July 28</p>
+            </div> */}
+            <div className="flex px-3 flex-col items-center border p-2 border-purple-200 hover:bg-purple-400  shadow-md rounded-lg duration-1000">
+              <img
+                src="/challanges/icons/award.png"
+                alt="calendar icon"
+                width={40}
+                height={40}
+                className="mb-2"
+              />
+              <p className="text-xl font-semibold text-purple-800">
+                Final Competition
+              </p>
+              <p className="text-lg font-bold text-purple-600 ">July 19</p>
+            </div>
+            {/* <div className="flex px-3 flex-col items-center border p-1 border-cyan-100 shadow-md hover:bg-blue-200 rounded-lg">
+              <img
+                src=" /challanges/icons/team.png"
+                alt="calendar icon"
+                width={32}
+                height={30}
+                className="mb-2"
+              />
+              <p className="text-lg font-semibold text-blue-800">Workshop 2</p>
+              <p className="text-lg font-bold text-blue-500">July 30</p>
+            </div> */}
+          </div>
+
+          <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 pt-6 ">
             <a
               href="https://bit.ly/ChallengeSphereArduinoChallenge"
               target="_blank"
