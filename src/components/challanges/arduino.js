@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Arduino = () => {
+  const [isDisabled, setIsDisabled] = useState(true);
+
   return (
     <div className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-100 via-slate-100 to-blue-100">
       <div className="max-w-5xl w-full flex flex-col md:flex-row bg-white rounded-lg shadow-lg overflow-hidden">
@@ -17,10 +19,10 @@ const Arduino = () => {
 
           <p className="text-lg text-gray-700 mb-6">
             Registration is{" "}
-            <span className="text-xl text-gray-900 font-bold">open</span> for
+            <span className="text-xl text-gray-900 font-bold">CLOSED</span> for
             the Arduino Challenge.
           </p>
-          <p className="text-lg text-gray-700 mb-6 flex flex-col items-center">
+          {/* <p className="text-lg text-gray-700 mb-6 flex flex-col items-center">
             <img
               src="/calender.png"
               alt="calendar icon"
@@ -32,7 +34,7 @@ const Arduino = () => {
             <span className="text-lg font-bold text-green-600">
               14th July, 11:59 PM
             </span>
-          </p>
+          </p> */}
           <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 gap-4">
             {/* <div className="flex flex-col items-center border p-2 bg-red-200 shadow-md rounded-lg hover:bg-red-500">
               <img
@@ -58,7 +60,7 @@ const Arduino = () => {
               <p className="text-xl font-semibold text-purple-800">
                 Final Competition
               </p>
-              <p className="text-lg font-bold text-purple-600 ">July 19</p>
+              <p className="text-lg font-bold text-purple-600 ">July 22</p>
             </div>
             {/* <div className="flex px-3 flex-col items-center border p-1 border-cyan-100 shadow-md hover:bg-blue-200 rounded-lg">
               <img
@@ -78,10 +80,15 @@ const Arduino = () => {
               href="https://bit.ly/ChallengeSphereArduinoChallenge"
               target="_blank"
               rel="noopener noreferrer"
-              className="border-green-600 shadow-md hover:bg-green-600 font-bold text-white py-3 px-6 rounded-lg transition duration-300 text-lg bg-green-500 text-center"
+              className={`border-green-600 shadow-md font-bold text-white py-3 px-6 rounded-lg transition duration-300 text-lg bg-green-500 text-center ${
+                isDisabled
+                  ? "pointer-events-none opacity-50"
+                  : "hover:bg-green-600"
+              }`}
             >
               Register Now
             </a>
+
             {/* <a
               href="https://docs.google.com/document/d/1XjbmKeflTUIaazvU5Zn0K2xnUtYCP9UL-uAFR0RdEqA/edit?usp=sharing"
               target="_blank"

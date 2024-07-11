@@ -107,6 +107,16 @@ const Navigation = () => {
           </li>
           <li className="hover:text-blue-900 transition duration-300">
             <Link
+              to="organizing"
+              smooth={true}
+              duration={500}
+              onClick={closeDropdown}
+            >
+              Our Team
+            </Link>
+          </li>
+          <li className="hover:text-blue-900 transition duration-300">
+            <Link
               to="sponsors"
               smooth={true}
               duration={500}

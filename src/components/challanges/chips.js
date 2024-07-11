@@ -85,9 +85,7 @@ const Chips = () => {
                 height={30}
                 className="mb-2"
               />
-              <p className="text-lg font-semibold text-blue-800">
-                Workshop (Seminar)
-              </p>
+              <p className="text-lg font-semibold text-blue-800">Workshop</p>
               <p className="text-lg font-bold text-blue-500">July 21</p>
             </div>
             <div className="flex px-3 flex-col items-center border p-1 border-amber-200 shadow-md hover:bg-lime-200 rounded-lg duration-1000">

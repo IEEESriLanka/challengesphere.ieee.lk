@@ -24,14 +24,15 @@ const Sections = () => {
       <div id="schedule">
         <Schedule />
       </div>
-      <div id="sponsors">
-        <Sponsor />
-      </div>
+
       <div id="organizing">
         <Organizing />
       </div>
       <div id="leaders">
         <Leaders />
+      </div>
+      <div id="sponsors">
+        <Sponsor />
       </div>
       <div id="footer">
         <Footer />

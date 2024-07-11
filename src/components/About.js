@@ -19,59 +19,59 @@ const About = () => {
         />
 
         {/* Small Logos */}
-        <div className="flex flex-wrap justify-center space-x-4">
+        <div className="flex flex-wrap justify-center space-x-8">
           <div className="flex flex-col items-center space-y-2 p-1 hover:font-semibold transition-transform transform hover:scale-110">
             <Link to="circuit" smooth={true} duration={500}>
               <img
-                className="w-28 h-28 ml-1 md:w-40 md:h-40 cursor-pointer"
+                className="w-28 h-auto ml-1 md:w-40 md:h-auto cursor-pointer"
                 src="/challanges/Circuits.svg"
                 alt="Circuits Challenge"
               />
-              <span className="text-center">Circuits Challenge</span>
+              {/* <span className="text-center">Circuits Challenge</span> */}
             </Link>
           </div>
           <div className="flex flex-col items-center space-y-2 p-1 hover:font-semibold transition-transform transform hover:scale-110">
             <Link to="arduino" smooth={true} duration={500}>
               <img
-                className="w-28 h-28 ml-2 md:w-40 md:h-40 cursor-pointer"
+                className="w-28 h-auto ml-2 md:w-40 md:h-auto cursor-pointer"
                 src="/challanges/Arduino.svg"
                 alt="Arduino Challenge"
               />
-              <span className="text-center">Arduino Challenge</span>
+              {/* <span className="text-center">Arduino Challenge</span> */}
             </Link>
           </div>
 
           <div className="flex flex-col items-center space-y-2 p-1 hover:font-semibold transition-transform transform hover:scale-110">
             <Link to="ai" smooth={true} duration={500}>
               <img
-                className="w-28 h-28 md:w-40 md:h-40 cursor-pointer"
+                className="w-28 h-auto md:w-40 md:h-auto cursor-pointer"
                 src="/challanges/AI.svg"
                 alt="AI Challenge"
               />
-              <span className="text-center">AI Challenge</span>
+              {/* <span className="text-center">AI Challenge</span> */}
             </Link>
           </div>
 
           <div className="flex flex-col items-center space-y-2 p-1 hover:font-semibold transition-transform transform hover:scale-110">
             <Link to="signal" smooth={true} duration={500}>
               <img
-                className="w-28 md:ml-5 ml-10 h-28 md:w-40 md:h-40 cursor-pointer"
+                className="w-28 h-auto md:w-40 md:h-auto cursor-pointer"
                 src="/challanges/Signal.svg"
                 alt="Signal Challenge"
               />
-              <span className="text-center ">
+              {/* <span className="text-center ">
                 Signal Processing for <br /> Communications Challenge
-              </span>
+              </span> */}
             </Link>
           </div>
           <div className="flex flex-col items-center space-y-2 p-1 hover:font-semibold transition-transform transform hover:scale-110">
             <Link to="chips" smooth={true} duration={500}>
               <img
-                className="w-28 h-28 md:w-40 md:h-40 cursor-pointer"
-                src="/challanges/Chips.svg"
+                className="w-28 h-auto mb-2 md:w-36 md:h-auto cursor-pointer"
+                src="/challanges/chips logo.png"
                 alt="Chips Challenge"
               />
-              <span className="text-center">Chips Challenge</span>
+              {/* <span className="text-center">Chips Challenge</span> */}
             </Link>
           </div>
         </div>

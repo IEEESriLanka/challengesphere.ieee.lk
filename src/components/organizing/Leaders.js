@@ -47,7 +47,7 @@ const challenges = [
       },
       {
         name: "Dr. Samiru Gayan",
-        role: "IEEE Sri Lanka Section Signal Processing Society Chapter",
+        role: "Chair, IEEE Sri Lanka Section Signal Processing Society Chapter",
         photo: "/Leaders/Speaker Photo 19.png", // Replace with actual image URL
       },
     ],
