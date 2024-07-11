@@ -62,6 +62,11 @@ const challenges = [
         role: "Chair, IEEE AI-Driven Sri Lanka",
         photo: "/Leaders/Speaker Photo 17.png", // Replace with actual image URL
       },
+      {
+        name: "Sasanka Premaratne",
+        role: "Program Vice Chairperson AIDSL, Event Chair AICSL",
+        photo: "/challanges/Speaker Photo 17.png", // Replace with actual image URL
+      },
     ],
   },
   {
