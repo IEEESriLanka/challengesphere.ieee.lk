@@ -106,9 +106,9 @@ const Leaders = () => {
               {challenge.leaders.map((leader, index) => (
                 <div
                   key={index}
-                  className="border border-blue-300 rounded-lg p-2 text-center w-44 relative transition-transform duration-300 transform hover:scale-105 hover:bg-blue-200"
+                  className="border border-blue-300 rounded-lg p-2 mb-5 text-center w-44 relative transition-transform duration-300 transform hover:scale-105 hover:bg-blue-200"
                 >
-                  <div className="w-40 h-40 bg-blue-300 rounded-full mx-auto -mt-8 mb-2 relative border-4 border-white overflow-hidden">
+                  <div className="w-40 h-40 bg-blue-300 rounded-full mx-auto -mt-8 mb-4 relative border-4 border-white overflow-hidden">
                     <img
                       src={leader.photo}
                       alt={leader.name}
