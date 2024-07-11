@@ -2,18 +2,19 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-white text-gray-800 py-8">
+    <footer className="bg-blue-50 text-gray-800 py-8 shadow-md">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
         {/* Logo and Description */}
         <div className="flex flex-col md:flex-row items-center md:space-x-4">
           <img
-            className="w-20 h-20 "
+            className="w-20 h-20"
             src="/main-logo.svg"
             alt="Challengesphere Logo"
           />
           <p className="text-center md:text-left">
-            <p className="font-semibold text-lg">Challenge Sphere</p> Where
-            Limits Shatter and New Horizons Arise
+            <span className="font-semibold text-lg">Challenge Sphere</span>
+            <br />
+            Where Limits Shatter and New Horizons Arise
           </p>
         </div>
 
@@ -31,11 +32,10 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img className="w-8 h-8" src="/social/insta.png" alt="Insta" />
+            <img className="w-8 h-8" src="/social/insta.png" alt="Instagram" />
           </a>
           <a
-            href="#0"
-            onClick={(e) => e.preventDefault()}
+            href="https://www.linkedin.com/in/chalana-gayan/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -51,6 +51,17 @@ const Footer = () => {
       {/* Copyright Information */}
       <div className="mt-8 text-center border-t pt-4">
         <p>&copy; 2024 IEEE Sri Lanka Challengsphere | All Rights Reserved</p>
+        <p className="mt-2">
+          Design & Developed{" "}
+          <a
+            href="https://www.linkedin.com/in/chalana-gayan-b6b60212a/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline"
+          >
+            Chalana Gayan
+          </a>
+        </p>
       </div>
     </footer>
   );

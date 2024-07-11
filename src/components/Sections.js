@@ -6,6 +6,8 @@ import Schedule from "./Schedule";
 import Challanges from "./Challanges";
 
 import Footer from "./footer";
+import Organizing from "./organizing/Organizing";
+import Leaders from "./organizing/Leaders";
 
 const Sections = () => {
   return (
@@ -24,6 +26,12 @@ const Sections = () => {
       </div>
       <div id="sponsors">
         <Sponsor />
+      </div>
+      <div id="organizing">
+        <Organizing />
+      </div>
+      <div id="leaders">
+        <Leaders />
       </div>
       <div id="footer">
         <Footer />
