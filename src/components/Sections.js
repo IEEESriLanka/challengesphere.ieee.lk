@@ -21,9 +21,10 @@ const Sections = () => {
       <div id="about">
         <Challanges />
       </div>
-      <div id="schedule">
+
+      {/* <div id="schedule">
         <Schedule />
-      </div>
+      </div> */}
 
       <div id="organizing">
         <Organizing />

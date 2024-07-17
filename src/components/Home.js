@@ -4,13 +4,11 @@ import "./Home.css";
 const Home = () => {
   return (
     <div className="relative h-screen overflow-hidden">
-      {/* Background Video */}
-      <video
+      {/* Background Image */}
+      <img
         className="absolute top-0 left-0 w-full h-full object-cover"
-        src="/background.mp4"
-        autoPlay
-        loop
-        muted
+        src="/Background_Image.jpeg"
+        alt="Background"
       />
 
       {/* Overlay for content */}
@@ -27,7 +25,7 @@ const Home = () => {
             </div>
           </h1>
           <img
-            className=" h-10 absolute  bottom-1 left-9 md:h-30"
+            className="h-10 absolute bottom-1 left-9 md:h-30"
             src="/logo-transparent 3.svg"
             alt="Secondary Logo"
           />

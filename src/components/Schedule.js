@@ -1,89 +1,78 @@
-import React from "react";
-import {
-  FaCalendarAlt,
-  FaChalkboardTeacher,
-  FaTrophy,
-  FaFlagCheckered,
-  FaFlag,
-} from "react-icons/fa";
+import React from 'react';
 
-const Schedule = () => {
-  return (
-    <div className="schedule-section bg-gradient-to-b from-blue-100 via-slate-100 to-blue-100 text-blue-900 py-12 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center justify-center">
-      <div className="max-w-5xl w-full relative">
-        <h2 className="text-5xl font-bold text-center mb-16">Schedule</h2>
+const timelineData = [
+  {
+    text: 'Started learning React',
+    date: 'January 01 2020',
+    category: {
+      tag: 'education',
+      color: 'bg-teal-500' // Tailwind teal
+    },
+    link: {
+      url: 'https://reactjs.org/',
+      text: 'Learn more'
+    }
+  },
+  {
+    text: 'Got my first job as a developer',
+    date: 'June 15 2020',
+    category: {
+      tag: 'work',
+      color: 'bg-blue-400' // Tailwind light blue
+    },
+    link: {
+      url: 'https://www.example.com',
+      text: 'Company website'
+    }
+  },
+  {
+    text: 'Completed a major project',
+    date: 'December 20 2020',
+    category: {
+      tag: 'achievement',
+      color: 'bg-cyan-500' // Tailwind cyan
+    },
+    link: {
+      url: 'https://www.example.com/project',
+      text: 'View project'
+    }
+  }
+];
 
-        <div className=" mt-1 md:mt-48 md:grid md:grid-cols-9 md:items-center flex flex-col space-y-8 md:space-y-0">
-          {/* Start Event */}
-          <div className="flex flex-col mb-14 items-center">
-            <FaFlag className="text-green-500 mb-2" size={50} />
-            <div className="p-2 rounded-lg text-center">
-              <span className="block text-xl font-bold">Start</span>
-            </div>
-          </div>
-
-          {/* Path Line */}
-          <div className="hidden md:block relative">
-            <div className="absolute left-8 w-10 h-1  top-1/2 transform -translate-y-1/2"></div>
-          </div>
-
-          {/* Elevate Session */}
-          <div className="flex flex-col  items-center">
-            <FaCalendarAlt className="text-red-500 mb-2" size={50} />
-            <div className="p-2 rounded-lg text-center">
-              <span className="block text-xl font-bold">27th June</span>
-              <span className="block text-lg">Elevate Session</span>
-            </div>
-          </div>
-
-          {/* Path Line */}
-          <div className="hidden md:block relative">
-            <div className="absolute left-8 w-10 h-1  top-1/2 transform -translate-y-1/2"></div>
-          </div>
-
-          {/* Workshops */}
-          <div className="flex flex-col items-center">
-            <FaChalkboardTeacher className="text-red-500 mb-2" size={50} />
-            <div className="p-2 rounded-lg text-center">
-              <span className="block text-xl font-bold">July</span>
-              <br />
-              <span className="block text-lg">Workshops</span>
-            </div>
-          </div>
-
-          {/* Path Line */}
-          <div className="hidden md:block relative">
-            <div className="absolute left-8 w-10 h-1  top-1/2 transform -translate-y-1/2"></div>
-          </div>
-
-          {/* Semi Finals */}
-          <div className="flex flex-col items-center">
-            <FaTrophy className="text-red-500 mb-2" size={50} />
-            <div className="p-2 rounded-lg text-center">
-              <span className="block text-lg font-bold">August</span>
-              <br />
-              <span className="block text-lg">Semi Finals</span>
-            </div>
-          </div>
-
-          {/* Path Line */}
-          <div className="hidden md:block relative">
-            <div className="absolute left-8 w-10 h-1  top-1/2 transform -translate-y-1/2"></div>
-          </div>
-
-          {/* Final Ceremony */}
-          <div className="flex flex-col  items-center">
-            <FaFlagCheckered className="text-red-500 mb-2" size={50} />
-            <div className="p-2 rounded-lg text-center">
-              <span className="block text-lg font-bold">September</span>
-
-              <span className="block text-lg">Final Ceremony</span>
-            </div>
-          </div>
-        </div>
-      </div>
+const TimelineItem = ({ data }) => (
+  <div className="flex justify-end odd:self-end odd:justify-start relative w-1/2 pr-8 odd:pl-8 odd:pr-0 my-4">
+    <div className="relative bg-blue-100 rounded-lg shadow-lg p-4 w-96 max-w-full text-right odd:text-left flex flex-col items-end odd:items-start">
+      <span className={`absolute top-1 left-1 odd:left-auto odd:right-1 px-2 py-1 text-white text-xs font-bold uppercase rounded ${data.category.color}`}>
+        {data.category.tag}
+      </span>
+      <time className="text-gray-600 text-xs font-bold">{data.date}</time>
+      <p className="text-gray-800 text-sm my-4">{data.text}</p>
+      {data.link && (
+        <a
+          href={data.link.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-500 text-sm font-bold"
+        >
+          {data.link.text} <span className="text-xs">►</span>
+        </a>
+      )}
+      <span className="absolute bg-white border-4 border-teal-500 rounded-full w-5 h-5 top-1/2 right-0 transform -translate-y-1/2 translate-x-2.5 odd:right-auto odd:left-0 odd:-translate-x-2.5"></span>
     </div>
-  );
-};
+  </div>
+);
+
+const Schedule = () => (
+  <div className="relative my-16 bg-gradient-to-r from-light-blue-50 via-white to-white">
+    <div className="absolute left-1/2 w-1 h-full bg-teal-300 transform -translate-x-1/2"></div>
+    {timelineData.length > 0 && (
+      <div className="flex flex-col">
+        {timelineData.map((data, idx) => (
+          <TimelineItem data={data} key={idx} />
+        ))}
+      </div>
+    )}
+  </div>
+);
 
 export default Schedule;

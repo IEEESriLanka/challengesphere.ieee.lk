@@ -33,20 +33,18 @@ const Navigation = () => {
 
   return (
     <header
-      className={`fixed w-full  top-0 z-50 font-bold transition-all duration-300 ${
-        isScrolled
-          ? "bg-white text-blue-700 py-2 shadow-md "
-          : "bg-blue-1000 text-blue-700 py-4"
-      }`}
+      className={`fixed w-full  top-0 z-50 font-bold transition-all duration-300 ${isScrolled
+        ? "bg-white text-blue-700 py-2 shadow-md "
+        : "bg-blue-1000 text-blue-700 py-4"
+        }`}
     >
       <nav className="flex justify-between items-center px-4">
         <Link to="home" smooth={true} duration={500} className="flex-shrink-0">
           <img
             src="/main-logo.svg"
             alt="Logo"
-            className={`transition-all duration-300 ${
-              isScrolled ? "h-12 w-auto" : "h-20 w-auto"
-            }`}
+            className={`transition-all duration-300 ${isScrolled ? "h-12 w-auto" : "h-20 w-auto"
+              }`}
           />
         </Link>
         <button
@@ -69,11 +67,9 @@ const Navigation = () => {
           </svg>
         </button>
         <ul
-          className={`${
-            dropdownOpen ? "block" : "hidden"
-          } lg:flex lg:space-x-4 cursor-pointer  absolute lg:relative top-16 lg:top-0 left-0 w-full lg:w-auto ${
-            isScrolled ? "bg-white" : "bg-blue-1000"
-          } lg:bg-transparent cursor-pointer lg:items-center p-4 lg:p-0`}
+          className={`${dropdownOpen ? "block" : "hidden"
+            } lg:flex lg:space-x-4 cursor-pointer  absolute lg:relative top-16 lg:top-0 left-0 w-full lg:w-auto ${isScrolled ? "bg-white" : "bg-blue-1000"
+            } lg:bg-transparent cursor-pointer lg:items-center p-4 lg:p-0`}
         >
           <li className="hover:text-blue-900 transition duration-300">
             <Link
@@ -95,7 +91,7 @@ const Navigation = () => {
               Challenges
             </Link>
           </li>
-          <li className="hover:text-blue-900 transition duration-300">
+          {/* <li className="hover:text-blue-900 transition duration-300">
             <Link
               to="schedule"
               smooth={true}
@@ -104,7 +100,7 @@ const Navigation = () => {
             >
               Schedule
             </Link>
-          </li>
+          </li> */}
           <li className="hover:text-blue-900 transition duration-300">
             <Link
               to="organizing"
