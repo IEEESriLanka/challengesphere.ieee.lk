@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className="relative flex items-center justify-center h-screen bg-gradient-to-b from-black via-blue-500 to-blue-100 text-blue-800 font-semibold p-8"
+      className="relative pt-16 flex items-center justify-center h-screen bg-gradient-to-b from-black via-blue-500 to-blue-100 text-blue-800 font-semibold p-8"
     >
       {/* Main Title */}
 

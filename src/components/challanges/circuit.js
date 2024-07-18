@@ -36,19 +36,6 @@ const Circuit = () => {
           </p>
           {/* Deadlines */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 ">
-            {/* <div className="flex flex-col items-center border p-2 bg-red-200 shadow-md rounded-lg hover:bg-red-500">
-              <img
-                src="/challanges/icons/deadline.png"
-                alt="calendar icon"
-                width={32}
-                height={30}
-                className="mb-2"
-              />
-              <p className="text-lg font-semibold text-gray-900">
-                Registration Deadline
-              </p>
-              <p className="text-lg font-bold text-red-700">July 28</p>
-            </div> */}
             <div className="flex px-3 flex-col items-center border p-1 border-cyan-100 hover:bg-blue-200  shadow-md rounded-lg duration-1000">
               <img
                 src="/challanges/icons/team.png"
@@ -69,7 +56,7 @@ const Circuit = () => {
                 className="mb-2"
               />
               <p className="text-lg font-semibold text-blue-800">Workshop 2</p>
-              <p className="text-lg font-bold text-blue-500">July 30</p>
+              <p className="text-lg font-bold text-blue-500">Aug 3</p>
             </div>
           </div>
 
@@ -89,6 +76,22 @@ const Circuit = () => {
               className="border-green-600 shadow-md hover:bg-green-600 font-bold text-white py-3 px-6 rounded-lg transition duration-300 text-lg bg-green-500 text-center"
             >
               Problem Statement
+            </a>
+          </div>
+          {/* Contact Button */}
+          <div className="flex justify-centre">
+            <a
+              href="mailto:anujayavidmal@gmail.com"
+              className="inline-flex items-end border-black border-2 shadow-md hover:bg-blue-600 font-bold text-black py-2 px-3 rounded-lg transition duration-300 text-lg bg-white text-center"
+            >
+              <img
+                src="/pngwing.com.png" // replace with the correct path to your email icon
+                alt="email icon"
+                width={36}
+                height={36}
+                className="mr-2"
+              />
+              Contact for More Details
             </a>
           </div>
         </div>

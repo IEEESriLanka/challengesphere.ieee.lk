@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -35,18 +36,18 @@ const Navigation = () => {
     <header
       className={`fixed w-full  top-0 z-50 font-bold transition-all duration-300 ${isScrolled
         ? "bg-white text-blue-700 py-2 shadow-md "
-        : "bg-blue-1000 text-blue-700 py-4"
+        : "bg-blue-1000 text-blue-700 py-4 shadow-md"
         }`}
     >
       <nav className="flex justify-between items-center px-4">
-        <Link to="home" smooth={true} duration={500} className="flex-shrink-0">
+        <ScrollLink to="home" smooth={true} duration={500} className="flex-shrink-0">
           <img
             src="/main-logo.svg"
             alt="Logo"
             className={`transition-all duration-300 ${isScrolled ? "h-12 w-auto" : "h-20 w-auto"
               }`}
           />
-        </Link>
+        </ScrollLink>
         <button
           className="block lg:hidden text-blue-700 focus:outline-none"
           onClick={toggleDropdown}
@@ -72,54 +73,62 @@ const Navigation = () => {
             } lg:bg-transparent cursor-pointer lg:items-center p-4 lg:p-0`}
         >
           <li className="hover:text-blue-900 transition duration-300">
-            <Link
+            <ScrollLink
               to="home"
               smooth={true}
               duration={500}
               onClick={closeDropdown}
             >
               Home
-            </Link>
+            </ScrollLink>
           </li>
           <li className="hover:text-blue-900 transition duration-300">
-            <Link
+            <ScrollLink
               to="about"
               smooth={true}
               duration={500}
               onClick={closeDropdown}
             >
               Challenges
+            </ScrollLink>
+          </li>
+          <li className="hover:text-blue-900 transition duration-300">
+            <Link
+              to="/elevate"
+              onClick={closeDropdown}
+            >
+              Elevate Session
             </Link>
           </li>
           {/* <li className="hover:text-blue-900 transition duration-300">
-            <Link
+            <ScrollLink
               to="schedule"
               smooth={true}
               duration={500}
               onClick={closeDropdown}
             >
               Schedule
-            </Link>
+            </ScrollLink>
           </li> */}
           <li className="hover:text-blue-900 transition duration-300">
-            <Link
+            <ScrollLink
               to="organizing"
               smooth={true}
               duration={500}
               onClick={closeDropdown}
             >
               Our Team
-            </Link>
+            </ScrollLink>
           </li>
           <li className="hover:text-blue-900 transition duration-300">
-            <Link
+            <ScrollLink
               to="sponsors"
               smooth={true}
               duration={500}
               onClick={closeDropdown}
             >
               Sponsors
-            </Link>
+            </ScrollLink>
           </li>
         </ul>
       </nav>

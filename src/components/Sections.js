@@ -4,10 +4,9 @@ import Home from "./Home";
 import About from "./About";
 import Schedule from "./Schedule";
 import Challanges from "./Challanges";
-
-import Footer from "./footer";
 import Organizing from "./organizing/Organizing";
 import Leaders from "./organizing/Leaders";
+import Background from "three/examples/jsm/renderers/common/Background.js";
 
 const Sections = () => {
   return (
@@ -22,7 +21,7 @@ const Sections = () => {
         <Challanges />
       </div>
 
-      {/* <div id="schedule">
+      {/* <div id="schedule" >
         <Schedule />
       </div> */}
 
@@ -35,9 +34,7 @@ const Sections = () => {
       <div id="sponsors">
         <Sponsor />
       </div>
-      <div id="footer">
-        <Footer />
-      </div>
+
     </>
   );
 };

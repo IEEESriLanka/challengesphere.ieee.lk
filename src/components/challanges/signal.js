@@ -10,11 +10,7 @@ const Signal = () => {
             Signal Processing for Communications Challenge
           </h1>
           <p className="text-lg text-gray-700 mb-6">
-            This competition invites undergraduate students to present their
-            cutting-edge projects in the field of signal processing for
-            communications. The challenge aims to foster creativity and
-            technological advancement in signal processing for modern
-            communication applications.
+            The IEEE Signal Processing for Communications Challenge of the IEEE Sri Lanka ChallengeSphere 2024 is launched to facilitate innovation and cutting-edge technology development in telecommunications and signal processing, targeting undergraduate students. This competition invites participants to present their pioneering projects in the field of signal processing for communications, encouraging exploration and advancement in this critical area of technology.
           </p>
 
           <p className="text-lg text-gray-700 mb-6 text-center">

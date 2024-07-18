@@ -55,7 +55,7 @@ const Chips = () => {
               <p className="text-lg font-bold text-lime-500">July 27</p>
             </div>
           </div>
-          <div className="flex mt-8 flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+          <div className="flex mt-8 pb-5 flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
             <a
               href="https://bit.ly/ChallengeSphereChipsChallenge"
               target="_blank"
@@ -63,6 +63,21 @@ const Chips = () => {
               className="border-green-600 shadow-md hover:bg-green-600 font-bold text-white py-3 px-6 rounded-lg transition duration-300 text-lg bg-green-500 text-center"
             >
               Register Now
+            </a>
+          </div>
+          <div className="flex justify-centre">
+            <a
+              href="mailto:deshithagallage@ieee.org"
+              className="inline-flex items-end border-black border-2 shadow-md hover:bg-blue-600 font-bold text-black py-2 px-3 rounded-lg transition duration-300 text-lg bg-white text-center"
+            >
+              <img
+                src="/pngwing.com.png" // replace with the correct path to your email icon
+                alt="email icon"
+                width={36}
+                height={36}
+                className="mr-2"
+              />
+              Contact for More Details
             </a>
           </div>
         </div>
