@@ -2,6 +2,17 @@ import React, { Fragment } from 'react';
 
 const timelineData = [
   {
+    title: 'Elevate Session',
+    description: 'Challenge sphere Elevate',
+    date: '27th June',
+    category: {
+      tag: 'event',
+      color: 'shadow-red-700',
+      icon: 'fas fa-star' // Example icon class for workshop using Font Awesome
+    },
+    direction: 'left'
+  },
+  {
     title: 'Workshop Seminar',
     description: 'Chips Challenge',
     date: '21st July',
@@ -10,7 +21,7 @@ const timelineData = [
       color: 'shadow-blue-700',
       icon: 'fas fa-tools' // Example icon class for workshop using Font Awesome
     },
-    direction: 'left'
+    direction: 'right'
   },
   {
     title: 'Final Competition',
@@ -21,7 +32,7 @@ const timelineData = [
       color: 'shadow-green-800',
       icon: 'fas fa-trophy' // Example icon class for competition using Font Awesome
     },
-    direction: 'right'
+    direction: 'left'
   },
   {
     title: 'Workshop 01',
@@ -32,7 +43,7 @@ const timelineData = [
       color: 'shadow-blue-700',
       icon: 'fas fa-tools' // Example icon class for workshop using Font Awesome
     },
-    direction: 'left'
+    direction: 'right'
   },
   {
     title: 'Final Competition',
@@ -43,7 +54,7 @@ const timelineData = [
       color: 'shadow-green-800',
       icon: 'fas fa-trophy' // Example icon class for competition using Font Awesome
     },
-    direction: 'right'
+    direction: 'left'
   },
   {
     title: 'Workshop 02',
@@ -54,29 +65,29 @@ const timelineData = [
       color: 'shadow-blue-700',
       icon: 'fas fa-tools' // Example icon class for workshop using Font Awesome
     },
+    direction: 'right'
+  },
+  {
+    title: 'Challenge Sphere Spotlight',
+    description: 'Semi Finals',
+    date: 'September',
+    category: {
+      tag: 'event',
+      color: 'shadow-red-700',
+      icon: 'fas fa-star' // Example icon class for event using Font Awesome
+    },
     direction: 'left'
   },
   {
-    title: 'Spotlight',
-    description: 'Semi Finals',
-    date: '7th or 8th September',
+    title: 'Challenge Sphere Triumph',
+    description: ' Final Competition/ Awarding Ceremony ',
+    date: 'September',
     category: {
       tag: 'event',
       color: 'shadow-red-700',
       icon: 'fas fa-star' // Example icon class for event using Font Awesome
     },
     direction: 'right'
-  },
-  {
-    title: 'Triumph',
-    description: 'Finals',
-    date: '21st or 22nd September',
-    category: {
-      tag: 'event',
-      color: 'shadow-red-700',
-      icon: 'fas fa-star' // Example icon class for event using Font Awesome
-    },
-    direction: 'left'
   }
 ];
 
@@ -93,15 +104,15 @@ const EventCard = ({ icon, heading, title, description, color }) => (
     <div className={`text-4xl -mt-1 -ml-4 mr-4 ${icon}`} style={{ minWidth: '1rem', color: 'blue' }}></div>
     <div className='flex flex-col gap-y-1'>
       <div className='text-gray-700 font-bold text-start text-2xl '>{heading}</div>
-      <div className='pl-4 pt-4 text-2xl text-start font-bold text-black'>{title}</div>
-      <div className='pl-4 -pt-1 text-2xl text-start font-semibold text-green-700'>{description}</div>
+      <div className='pt-4 text-xl text-start font-bold text-black'>{title}</div>
+      <div className=' -pt-1 text-2xl text-start font-semibold text-green-700'>{description}</div>
     </div>
   </div>
 );
 
 const Schedule = () => (
   <div className='flex flex-col gap-y-3 w-full py-10 bg-blue-100 p-8'>
-    <h1 className='text-center text-5xl font-bold text-blue-900 mb-8'>Schedule</h1>
+    <h1 className='text-center text-5xl font-bold text-blue-900 mb-16'>Schedule</h1>
     <Circle />
     {timelineData.map((event, key) => (
       <Fragment key={key}>

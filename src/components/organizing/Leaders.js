@@ -8,12 +8,12 @@ const challenges = [
     leaders: [
       {
         name: "Dr. Subhoda Charles",
-        role: "Chair, Educational Activities Committee IEEE Sri Lanka Section",
+        role: "Chair, Educational Activities Committee, IEEE Sri Lanka Section",
         photo: "/Leaders/Speaker Photo 15.png", // Replace with actual image URL
       },
       {
         name: "Shani Fernando",
-        role: "Member, Educational Activities Committee IEEE Sri Lanka Section",
+        role: "Member, Educational Activities Committee, IEEE Sri Lanka Section",
         photo: "/OC/Speaker Photo 2.webp", // Replace with actual image URL
       },
     ],
@@ -25,12 +25,12 @@ const challenges = [
     leaders: [
       {
         name: "Kavinga Ekanayake",
-        role: "Chair, IEEE Industrial Electronics Society Sri Lanka Chapter",
+        role: "Chair, IEEE Industrial Electronics Society, Sri Lanka Chapter",
         photo: "/Leaders/Speaker Photo 16.png", // Replace with actual image URL
       },
       {
         name: "Tharushi Liyanage",
-        role: "Chair, IEEE Industrial Electronics Society Student Branch Chapter of SLTC",
+        role: "Chair, IEEE Industrial Electronics Society, Student Branch Chapter of SLTC",
         photo: "/Leaders/Speaker Photo 20.png", // Replace with actual image URL
       },
     ],
@@ -42,7 +42,7 @@ const challenges = [
     leaders: [
       {
         name: "Yasitha Wickramage",
-        role: "Chair, IEEE Communications Society Sri Lanka Chapter",
+        role: "Chair, IEEE Communications Society, Sri Lanka Chapter",
         photo: "/Leaders/Speaker Photo 18.png", // Replace with actual image URL
       },
       {

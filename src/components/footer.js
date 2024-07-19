@@ -32,14 +32,14 @@ const Footer = () => {
             />
           </a>
           <a
-            href="https://www.facebook.com/ChallengeSphere/"
+            href="https://www.facebook.com/IEEESriLanka"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img className="w-10 h-10" src="/social/fb.png" alt="Facebook" />
           </a>
           <a
-            href="https://www.instagram.com/challenge_sphere/"
+            href="https://www.instagram.com/ieeesrilanka/"
             target="_blank"
             rel="noopener noreferrer"
           >

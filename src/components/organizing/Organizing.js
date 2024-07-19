@@ -3,7 +3,7 @@ import React from "react";
 const mainCommittee = [
   {
     name: "Dr. Subodha Charles",
-    role: "Chair, Educational Activities Committee IEEE Sri Lanka Section",
+    role: "Chair, Educational Activities Committee, IEEE Sri Lanka Section",
     photo: "/OC/Speaker Photo 1.webp", // Replace with actual image URL
   },
   {
@@ -51,7 +51,7 @@ const members = [
 
 const Organizing = () => {
   return (
-    <div className="flex bg-gradient-to-b from-blue-100 to-white flex-col items-center bg-blue-50 p-8">
+    <div className="flex bg-gradient-to-b from-blue-100 to-white flex-col items-center bg-blue-50 p-8 pt-16">
       <div className="mb-10 w-full">
         <h2 className="text-center text-5xl font-semibold font-sans text-blue-900 mb-5 pb-10">
           Organizing Committee
