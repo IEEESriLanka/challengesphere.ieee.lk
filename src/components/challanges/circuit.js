@@ -31,7 +31,7 @@ const Circuit = () => {
             />
             Registration Deadline:
             <span className="text-lg font-bold text-green-600">
-              28th July, 11:59 PM
+              31st August, 11:59 PM
             </span>
           </p>
           {/* Deadlines */}
@@ -79,20 +79,25 @@ const Circuit = () => {
             </a>
           </div>
           {/* Contact Button */}
-          <div className="flex justify-centre">
-            <a
-              href="mailto:anujayavidmal@gmail.com"
-              className="inline-flex items-end border-black border-2 shadow-md hover:bg-blue-600 font-bold text-black py-2 px-3 rounded-lg transition duration-300 text-lg bg-white text-center"
-            >
-              <img
-                src="/pngwing.com.png" // replace with the correct path to your email icon
-                alt="email icon"
-                width={36}
-                height={36}
-                className="mr-2"
-              />
-              Contact for More Details
-            </a>
+          <div className="flex flex-col items-start mt-5 -ml-28 ">
+            <p className=" text-black  font-bold ">For more Information, please contact:</p>
+            <div className="inline-flex mt-2">
+              <a
+                href="mailto:anujayavidmal@gmail.com"
+                className="inline-flex items-end border-black  shadow-md shadow-blue-300 hover:bg-blue-200 font-bold text-black py-2 px-3 rounded-lg transition duration-300 text-lg bg-white text-center"
+              >
+                <img
+                  src="/pngwing.com.png" // replace with the correct path to your email icon
+                  alt="email icon"
+                  width={24}
+                  height={24}
+                  className="mr-2 pb-1"
+                />
+
+
+                <p className="text-start text-xl">Anujaya</p>
+              </a>
+            </div>
           </div>
         </div>
 

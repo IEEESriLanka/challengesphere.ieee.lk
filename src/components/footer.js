@@ -21,30 +21,41 @@ const Footer = () => {
         {/* Social Media Links */}
         <div className="flex space-x-4">
           <a
+            href="https://chat.whatsapp.com/I5vOXfOmzMG3REUXzCBBwd"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              className="w-10 h-10"
+              src="/social/whatsapp.png"
+              alt="Whatsapp"
+            />
+          </a>
+          <a
             href="https://www.facebook.com/ChallengeSphere/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img className="w-8 h-8" src="/social/fb.png" alt="Facebook" />
+            <img className="w-10 h-10" src="/social/fb.png" alt="Facebook" />
           </a>
           <a
             href="https://www.instagram.com/challenge_sphere/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img className="w-8 h-8" src="/social/insta.png" alt="Instagram" />
+            <img className="w-10 h-10" src="/social/insta.png" alt="Instagram" />
           </a>
-          <a
+          {/* <a
             href="https://www.linkedin.com/in/chalana-gayan/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img
-              className="w-8 h-8"
+              className="w-10 h-10"
               src="/social/linkedin.png"
               alt="LinkedIn"
             />
-          </a>
+          </a> */}
         </div>
       </div>
 
@@ -52,7 +63,7 @@ const Footer = () => {
       <div className="mt-8 text-center border-t pt-4">
         <p>&copy; 2024 IEEE Sri Lanka Challengsphere | All Rights Reserved</p>
         <p className="mt-2">
-          Design & Developed{" "}
+          Designed & Developed{" "}
           <a
             href="https://www.linkedin.com/in/chalana-gayan-b6b60212a/"
             target="_blank"

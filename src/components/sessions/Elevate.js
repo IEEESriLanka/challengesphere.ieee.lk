@@ -4,24 +4,36 @@ import "react-image-gallery/styles/css/image-gallery.css";
 
 const galleryImages = [
     {
-        original: "/sessions/elevate/image.png",
-        thumbnail: "/sessions/elevate/image.png",
+        original: "/sessions/elevate/11zon_compressed/DSC_3171_4_11zon.webp",
+        thumbnail: "/sessions/elevate/11zon_compressed/DSC_3171_4_11zon.webp",
+
     },
     {
-        original: "/sessions/elevate/image1.png",
-        thumbnail: "/sessions/elevate/image1.png",
+        original: "/sessions/elevate/11zon_compressed/DSC09392_3_11zon.webp",
+        thumbnail: "/sessions/elevate/11zon_compressed/DSC09392_3_11zon.webp",
+
     },
     {
-        original: "/sessions/elevate/image copy.png",
-        thumbnail: "/sessions/elevate/image copy.png",
+        original: "/sessions/elevate/11zon_compressed/DSC_3124_5_11zon.webp",
+        thumbnail: "/sessions/elevate/11zon_compressed/DSC_3124_5_11zon.webp",
+
     },
     {
-        original: "/sessions/elevate/image copy 3.png",
-        thumbnail: "/sessions/elevate/image copy 3.png",
+        original: "/sessions/elevate/11zon_compressed/DSC_3154_6_11zon.webp",
+        thumbnail: "/sessions/elevate/11zon_compressed/DSC_3154_6_11zon.webp",
+
+    },
+
+
+    {
+        original: "/sessions/elevate/11zon_compressed/DSC09397_1_11zon.webp",
+        thumbnail: "/sessions/elevate/11zon_compressed/DSC09397_1_11zon.webp",
+
     },
     {
-        original: "/sessions/elevate/image copy 2.png",
-        thumbnail: "/sessions/elevate/image copy 2.png",
+        original: "/sessions/elevate/11zon_compressed/DSC09413_2_11zon.webp",
+        thumbnail: "/sessions/elevate/11zon_compressed/DSC09413_2_11zon.webp",
+
     },
 ];
 
@@ -29,8 +41,8 @@ const Elevate = () => {
     return (
         <div className="pt-36 bg-light-blue-50 p-8">
             <div className="max-w-5xl mx-auto">
-                <h1 className="text-3xl font-bold text-center text-light-blue-900 mb-6">
-                    IEEE Sri Lanka – Challenge Sphere Elevate Session
+                <h1 className="text-5xl font-bold text-center text-light-blue-600 mb-6">
+                    IEEE Sri Lanka – <br />Challenge Sphere Elevate Session
                 </h1>
                 <ImageGallery items={galleryImages} />
                 <p className="text-lg text-light-blue-700 mb-4">

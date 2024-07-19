@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Chips = () => {
+  const [isDisabled, setIsDisabled] = useState(true);
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-100 via-slate-100 to-blue-100">
       <div className="max-w-5xl w-full flex flex-col md:flex-row bg-white rounded-lg shadow-lg overflow-hidden">
@@ -57,28 +58,38 @@ const Chips = () => {
           </div>
           <div className="flex mt-8 pb-5 flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
             <a
-              href="https://bit.ly/ChallengeSphereChipsChallenge"
+              href="https://bit.ly/ChallengeSphereArduinoChallenge"
               target="_blank"
               rel="noopener noreferrer"
-              className="border-green-600 shadow-md hover:bg-green-600 font-bold text-white py-3 px-6 rounded-lg transition duration-300 text-lg bg-green-500 text-center"
+              className={`border-green-600 shadow-md font-bold text-white py-3 px-6 rounded-lg transition duration-300 text-lg bg-green-500 text-center ${isDisabled
+                ? "pointer-events-none opacity-50"
+                : "hover:bg-green-600"
+                }`}
             >
               Register Now
             </a>
           </div>
-          <div className="flex justify-centre">
-            <a
-              href="mailto:deshithagallage@ieee.org"
-              className="inline-flex items-end border-black border-2 shadow-md hover:bg-blue-600 font-bold text-black py-2 px-3 rounded-lg transition duration-300 text-lg bg-white text-center"
-            >
-              <img
-                src="/pngwing.com.png" // replace with the correct path to your email icon
-                alt="email icon"
-                width={36}
-                height={36}
-                className="mr-2"
-              />
-              Contact for More Details
-            </a>
+
+          {/* email button */}
+          <div className="flex flex-col items-start mt-5 ">
+            <p className=" text-black  font-bold ">For more Information, please contact:</p>
+            <div className="inline-flex mt-2">
+              <a
+                href="mailto:deshithagallage@ieee.org"
+                className="inline-flex items-end border-black  shadow-md shadow-blue-300 hover:bg-blue-200 font-bold text-black py-2 px-3 rounded-lg transition duration-300 text-lg bg-white text-center"
+              >
+                <img
+                  src="/pngwing.com.png" // replace with the correct path to your email icon
+                  alt="email icon"
+                  width={24}
+                  height={24}
+                  className="mr-2 pb-1"
+                />
+
+
+                <p className="text-start text-xl">Deshitha</p>
+              </a>
+            </div>
           </div>
         </div>
 

@@ -21,9 +21,9 @@ const Sections = () => {
         <Challanges />
       </div>
 
-      {/* <div id="schedule" >
+      <div id="schedule" >
         <Schedule />
-      </div> */}
+      </div>
 
       <div id="organizing">
         <Organizing />

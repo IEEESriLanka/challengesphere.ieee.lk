@@ -1,90 +1,129 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 const timelineData = [
   {
-    text: 'Workshop Seminar - Chips Challenge',
+    title: 'Workshop Seminar',
+    description: 'Chips Challenge',
     date: '21st July',
     category: {
       tag: 'workshop',
-      color: 'bg-light-blue-400' // Tailwind light blue for workshops
-    }
+      color: 'shadow-blue-700',
+      icon: 'fas fa-tools' // Example icon class for workshop using Font Awesome
+    },
+    direction: 'left'
   },
   {
-    text: 'Final Competition of Arduino Challenge',
+    title: 'Final Competition',
+    description: 'Arduino Challenge',
     date: '22nd July',
     category: {
       tag: 'competition',
-      color: 'bg-blue-700' // Tailwind dark blue for competitions
-    }
+      color: 'shadow-green-800',
+      icon: 'fas fa-trophy' // Example icon class for competition using Font Awesome
+    },
+    direction: 'right'
   },
   {
-    text: 'Workshop 01 - Circuits Challenge',
+    title: 'Workshop 01',
+    description: 'Circuits Challenge',
     date: '23rd July',
     category: {
       tag: 'workshop',
-      color: 'bg-light-blue-600' // Tailwind light blue for workshops
-    }
+      color: 'shadow-blue-700',
+      icon: 'fas fa-tools' // Example icon class for workshop using Font Awesome
+    },
+    direction: 'left'
   },
   {
-    text: 'Final Competition - Chips Challenge',
+    title: 'Final Competition',
+    description: 'Chips Challenge',
     date: '27th July',
     category: {
       tag: 'competition',
-      color: 'bg-blue-700' // Tailwind dark blue for competitions
-    }
+      color: 'shadow-green-800',
+      icon: 'fas fa-trophy' // Example icon class for competition using Font Awesome
+    },
+    direction: 'right'
   },
   {
-    text: 'Workshop 02 - Circuits Challenge',
+    title: 'Workshop 02',
+    description: 'Circuits Challenge',
     date: '3rd August',
     category: {
       tag: 'workshop',
-      color: 'bg-light-blue-600' // Tailwind light blue for workshops
-    }
+      color: 'shadow-blue-700',
+      icon: 'fas fa-tools' // Example icon class for workshop using Font Awesome
+    },
+    direction: 'left'
   },
   {
-    text: 'Spotlight (Semi Finals)',
+    title: 'Spotlight',
+    description: 'Semi Finals',
     date: '7th or 8th September',
     category: {
       tag: 'event',
-      color: 'bg-orange-500' // Tailwind dark orange and blue mix for semi-finals and finals
-    }
+      color: 'shadow-red-700',
+      icon: 'fas fa-star' // Example icon class for event using Font Awesome
+    },
+    direction: 'right'
   },
   {
-    text: 'Triumph (Finals)',
+    title: 'Triumph',
+    description: 'Finals',
     date: '21st or 22nd September',
     category: {
       tag: 'event',
-      color: 'bg-orange-500' // Tailwind dark orange and blue mix for semi-finals and finals
-    }
+      color: 'shadow-red-700',
+      icon: 'fas fa-star' // Example icon class for event using Font Awesome
+    },
+    direction: 'left'
   }
 ];
 
-const TimelineItem = ({ data }) => (
-  <div className="flex  justify-end odd:self-end odd:justify-start relative w-1/2 pr-8 odd:pl-8 odd:pr-0 my-4">
-    <div className="relative bg-blue-300 rounded-lg shadow-lg p-4 w-96 max-w-full text-right odd:text-left flex flex-col items-end odd:items-start">
-      <span className={`absolute top-1 left-1 odd:left-auto odd:right-1 px-2 py-1 text-white text-xs font-bold uppercase rounded ${data.category.color}`}>
-        {data.category.tag}
-      </span>
-      <time className="text-gray-600 text-xs font-bold">{data.date}</time>
-      <p className="text-gray-800 text-sm my-4">{data.text}</p>
-      <span className="absolute bg-white border-4 border-teal-500 rounded-full w-5 h-5 top-1/2 right-0 transform -translate-y-1/2 translate-x-2.5 odd:right-auto odd:left-0 odd:-translate-x-2.5"></span>
+const Circle = () => (
+  <div className='bg-gradient-to-b from-blue-300 to-blue-800 rounded-full w-5 h-5 bg-blue-500 mx-auto' />
+);
+
+const Pillar = () => (
+  <div className='bg-gradient-to-b from-blue-300 to-blue-800 rounded-t-full rounded-b-full w-2 h-40 bg-blue-500 mx-auto' />
+);
+
+const EventCard = ({ icon, heading, title, description, color }) => (
+  <div className={`transition duration-300 ease-in-out transform hover:-translate-y-1 ${color}   flex flex-row gap-x-2 border shadow-lg rounded-xl hover:shadow-2xl py-3 px-16 mx-4`}>
+    <div className={`text-4xl -mt-1 -ml-4 mr-4 ${icon}`} style={{ minWidth: '1rem', color: 'blue' }}></div>
+    <div className='flex flex-col gap-y-1'>
+      <div className='text-gray-700 font-bold text-start text-2xl '>{heading}</div>
+      <div className='pl-4  pt-4 text-2xl text-start font-bold text-black'>{title}</div>
+      <div className='pl-4  -pt-1 text-2xl text-start font-semibold text-green-700'>{description}</div>
     </div>
   </div>
 );
 
 const Schedule = () => (
-  <div className="relative my-16">
-    <div className="absolute top-16 left-1/2 w-1 h-full bg-teal-300 transform -translate-x-1/2"></div>
-    <div className="text-center mb-8">
-      <h2 className="text-4xl font-bold text-blue-800">Schedule</h2>
-    </div>
-    {timelineData.length > 0 && (
-      <div className="flex flex-col">
-        {timelineData.map((data, idx) => (
-          <TimelineItem data={data} key={idx} />
-        ))}
-      </div>
-    )}
+  <div className='flex flex-col gap-y-3 w-full py-10 bg-blue-100 p-8'>
+    <h1 className='text-center text-5xl font-bold text-blue-900 mb-8'>Schedule</h1>
+    <Circle />
+    {timelineData.map((event, key) => (
+      <Fragment key={key}>
+        <div className='grid grid-cols-[1fr_auto_1fr] gap-x-2 items-center mx-auto'>
+          {event.direction === 'left' ? (
+            <EventCard icon={event.category.icon} heading={event.date} title={event.title} description={event.description} color={event.category.color} />
+          ) : (
+            <div></div>
+          )}
+
+          <Pillar />
+
+          {event.direction === 'right' ? (
+            <EventCard icon={event.category.icon} heading={event.date} title={event.title} description={event.description} color={event.category.color} />
+          ) : (
+            <div></div>
+          )}
+        </div>
+        {key < timelineData.length - 1 && <Circle />}
+      </Fragment>
+    ))}
+    <Circle />
   </div>
 );
 

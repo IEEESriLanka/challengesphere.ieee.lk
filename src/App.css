@@ -1,3 +1,6 @@
+@import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-layouts/styles/material3.css';
+
 .App {
   text-align: center;
 }

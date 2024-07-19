@@ -49,6 +49,26 @@ const Signal = () => {
               Problem Statement
             </a> */}
           </div>
+          <div className="flex flex-col items-start mt-5 -ml-28 ">
+            <p className=" text-black  font-bold ">For more Information, please contact:</p>
+            <div className="inline-flex mt-2">
+              <a
+                href="mailto:samirug@uom.lk"
+                className="inline-flex items-end border-black  shadow-md shadow-blue-300 hover:bg-blue-200 font-bold text-black py-2 px-3 rounded-lg transition duration-300 text-lg bg-white text-center"
+              >
+                <img
+                  src="/pngwing.com.png" // replace with the correct path to your email icon
+                  alt="email icon"
+                  width={24}
+                  height={24}
+                  className="mr-2 pb-1"
+                />
+
+
+                <p className="text-start text-xl">Dr. Samiru</p>
+              </a>
+            </div>
+          </div>
         </div>
 
         {/* Right Section */}

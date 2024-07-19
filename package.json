@@ -6,6 +6,9 @@
   "dependencies": {
     "@react-three/drei": "^9.107.0",
     "@react-three/fiber": "^8.16.8",
+    "@syncfusion/ej2-react-buttons": "^26.1.40",
+    "@syncfusion/ej2-react-dropdowns": "^26.1.42",
+    "@syncfusion/ej2-react-layouts": "^26.1.38",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
