@@ -85,16 +85,16 @@ const Circle = () => (
 );
 
 const Pillar = () => (
-  <div className='bg-gradient-to-b from-blue-300 to-blue-800 rounded-t-full rounded-b-full w-2 h-40 bg-blue-500 mx-auto' />
+  <div className='bg-gradient-to-b from-blue-300 to-blue-800 rounded-t-full rounded-b-full w-2 h-40 bg-blue-500 mx-auto hidden md:block' />
 );
 
 const EventCard = ({ icon, heading, title, description, color }) => (
-  <div className={`transition duration-300 ease-in-out transform hover:-translate-y-1 ${color}   flex flex-row gap-x-2 border shadow-lg rounded-xl hover:shadow-2xl py-3 px-16 mx-4`}>
+  <div className={`transition duration-300 ease-in-out transform hover:-translate-y-1 ${color} flex flex-row gap-x-2 border shadow-lg rounded-xl hover:shadow-2xl py-3 px-16 mx-4`}>
     <div className={`text-4xl -mt-1 -ml-4 mr-4 ${icon}`} style={{ minWidth: '1rem', color: 'blue' }}></div>
     <div className='flex flex-col gap-y-1'>
       <div className='text-gray-700 font-bold text-start text-2xl '>{heading}</div>
-      <div className='pl-4  pt-4 text-2xl text-start font-bold text-black'>{title}</div>
-      <div className='pl-4  -pt-1 text-2xl text-start font-semibold text-green-700'>{description}</div>
+      <div className='pl-4 pt-4 text-2xl text-start font-bold text-black'>{title}</div>
+      <div className='pl-4 -pt-1 text-2xl text-start font-semibold text-green-700'>{description}</div>
     </div>
   </div>
 );
@@ -105,7 +105,7 @@ const Schedule = () => (
     <Circle />
     {timelineData.map((event, key) => (
       <Fragment key={key}>
-        <div className='grid grid-cols-[1fr_auto_1fr] gap-x-2 items-center mx-auto'>
+        <div className='grid md:grid-cols-[1fr_auto_1fr] grid-cols-1 gap-x-2 items-center mx-auto'>
           {event.direction === 'left' ? (
             <EventCard icon={event.category.icon} heading={event.date} title={event.title} description={event.description} color={event.category.color} />
           ) : (

@@ -14,7 +14,7 @@ const challenges = [
       {
         name: "Shani Fernando",
         role: "Member, Educational Activities Committee IEEE Sri Lanka Section",
-        photo: "/OC/Speaker Photo 2.png", // Replace with actual image URL
+        photo: "/OC/Speaker Photo 2.webp", // Replace with actual image URL
       },
     ],
   },
