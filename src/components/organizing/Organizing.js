@@ -4,12 +4,12 @@ const mainCommittee = [
   {
     name: "Dr. Subodha Charles",
     role: "Chair, Educational Activities Committee IEEE Sri Lanka Section",
-    photo: "/OC/Speaker Photo 1.png", // Replace with actual image URL
+    photo: "/OC/Speaker Photo 1.webp", // Replace with actual image URL
   },
   {
     name: "Shani Fernando",
     role: "Project Chair",
-    photo: "/OC/Speaker Photo 2.png", // Replace with actual image URL
+    photo: "/OC/Speaker Photo 2.webp", // Replace with actual image URL
   },
 ];
 
@@ -17,36 +17,36 @@ const viceCommittee = [
   {
     name: "Kulunu Chakshana",
     role: "Vice Chair, Finance and Partnership",
-    photo: "/OC/Speaker Photo 5.png", // Replace with actual image URL
+    photo: "/OC/Speaker Photo 5.webp", // Replace with actual image URL
   },
   {
     name: "Chamodi Indrajith",
     role: "Vice Chair, Program and Delivery",
-    photo: "/OC/Speaker Photo 4.png", // Replace with actual image URL
+    photo: "/OC/Speaker Photo 4.webp", // Replace with actual image URL
   },
   {
     name: "Kaveen Pasindumal",
     role: "Vice Chair, Public Visibility",
-    photo: "/OC/Speaker Photo 6.png", // Replace with actual image URL
+    photo: "/OC/Speaker Photo 6.webp", // Replace with actual image URL
   },
   {
     name: "Malkini Medhavi",
     role: "Secretary",
-    photo: "/OC/Speaker Photo 3.png", // Replace with actual image URL
+    photo: "/OC/Speaker Photo 3.webp", // Replace with actual image URL
   },
 ];
 
 const members = [
-  { name: "Thinuki Weerasinghe", photo: "/OC/Speaker Photo 7.png" },
-  { name: "Deshitha Gallage", photo: "/OC/Speaker Photo 8.png" },
-  { name: "Hiranya Hashini", photo: "/OC/Speaker Photo 9.png" },
-  { name: "Salina Sandinu", photo: "/OC/Speaker Photo 10.png" },
-  { name: "Anujaya Vidmal", photo: "/OC/Speaker Photo 11.png" },
-  { name: "Pasindu Nimesh", photo: "/OC/Speaker Photo 15.png" },
-  { name: "Akila Dhambure", photo: "/OC/Speaker Photo 16.png" },
-  { name: "Thisuri Peiris", photo: "/OC/Speaker Photo 12.png" },
-  { name: "Kavin Gunasekara", photo: "/OC/Speaker Photo 13.png" },
-  { name: "Chalana Gayan", photo: "/OC/Speaker Photo 14.png" },
+  { name: "Thinuki Weerasinghe", photo: "/OC/Speaker Photo 7.webp" },
+  { name: "Deshitha Gallage", photo: "/OC/Speaker Photo 8.webp" },
+  { name: "Hiranya Hashini", photo: "/OC/Speaker Photo 9.webp" },
+  { name: "Salina Sandinu", photo: "/OC/Speaker Photo 10.webp" },
+  { name: "Anujaya Vidmal", photo: "/OC/Speaker Photo 11.webp" },
+  { name: "Pasindu Nimesh", photo: "/OC/Speaker Photo 15.webp" },
+  { name: "Akila Dhambure", photo: "/OC/Speaker Photo 16.webp" },
+  { name: "Thisuri Peiris", photo: "/OC/Speaker Photo 12.webp" },
+  { name: "Kavin Gunasekara", photo: "/OC/Speaker Photo 13.webp" },
+  { name: "Chalana Gayan", photo: "/OC/Speaker Photo 14.webp" },
 ];
 
 const Organizing = () => {
