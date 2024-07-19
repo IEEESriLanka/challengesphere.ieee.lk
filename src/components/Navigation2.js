@@ -34,12 +34,12 @@ const Navigation2 = () => {
                     >
                         Challenges
                     </li>
-                    {/* <li
-            className="hover:text-blue-900 transition duration-300"
-            onClick={() => handleNavigation("schedule")}
-          >
-            Schedule
-          </li> */}
+                    <li
+                        className="hover:text-blue-900 transition duration-300"
+                        onClick={() => handleNavigation("schedule")}
+                    >
+                        Schedule
+                    </li>
                     <li
                         className="hover:text-blue-900 transition duration-300"
                         onClick={() => handleNavigation("organizing")}

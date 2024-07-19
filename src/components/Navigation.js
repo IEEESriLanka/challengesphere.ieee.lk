@@ -100,7 +100,7 @@ const Navigation = () => {
               Elevate Session
             </Link>
           </li>
-          {/* <li className="hover:text-blue-900 transition duration-300">
+          <li className="hover:text-blue-900 transition duration-300">
             <ScrollLink
               to="schedule"
               smooth={true}
@@ -109,7 +109,7 @@ const Navigation = () => {
             >
               Schedule
             </ScrollLink>
-          </li> */}
+          </li>
           <li className="hover:text-blue-900 transition duration-300">
             <ScrollLink
               to="organizing"
