@@ -60,7 +60,7 @@ const Arduino = () => {
               <p className="text-xl font-semibold text-purple-800">
                 Final Competition
               </p>
-              <p className="text-lg font-bold text-purple-600 ">July 22</p>
+              <p className="text-lg font-bold text-purple-600 ">July 30</p>
             </div>
             {/* <div className="flex px-3 flex-col items-center border p-1 border-cyan-100 shadow-md hover:bg-blue-200 rounded-lg">
               <img
@@ -97,7 +97,7 @@ const Arduino = () => {
               Problem Statement
             </a> */}
           </div>
-          <div className="flex flex-col items-start mt-5 -ml-28 ">
+          <div className="flex flex-col items-center mt-5  ">
             <p className=" text-black  font-bold ">For more Information, please contact:</p>
             <div className="inline-flex mt-2">
               <a

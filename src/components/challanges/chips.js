@@ -71,7 +71,7 @@ const Chips = () => {
           </div>
 
           {/* email button */}
-          <div className="flex flex-col items-start mt-5 -ml-28 ">
+          <div className="flex flex-col items-center mt-5  ">
             <p className=" text-black  font-bold ">For more Information, please contact:</p>
             <div className="inline-flex mt-2">
               <a

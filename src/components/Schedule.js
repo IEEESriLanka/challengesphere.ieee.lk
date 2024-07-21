@@ -23,17 +23,7 @@ const timelineData = [
     },
     direction: 'right'
   },
-  {
-    title: 'Final Competition',
-    description: 'Arduino Challenge',
-    date: '22nd July',
-    category: {
-      tag: 'competition',
-      color: 'shadow-green-800',
-      icon: 'fas fa-trophy' // Example icon class for competition using Font Awesome
-    },
-    direction: 'left'
-  },
+
   {
     title: 'Workshop 01',
     description: 'Circuits Challenge',
@@ -43,12 +33,23 @@ const timelineData = [
       color: 'shadow-blue-700',
       icon: 'fas fa-tools' // Example icon class for workshop using Font Awesome
     },
-    direction: 'right'
+    direction: 'left'
   },
   {
     title: 'Final Competition',
     description: 'Chips Challenge',
     date: '27th July',
+    category: {
+      tag: 'competition',
+      color: 'shadow-green-800',
+      icon: 'fas fa-trophy' // Example icon class for competition using Font Awesome
+    },
+    direction: 'right'
+  },
+  {
+    title: 'Final Competition',
+    description: 'Arduino Challenge',
+    date: '30th July',
     category: {
       tag: 'competition',
       color: 'shadow-green-800',

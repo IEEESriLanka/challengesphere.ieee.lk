@@ -2,7 +2,7 @@ import React from "react";
 
 const Circuit = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-100 via-slate-100 to-blue-100">
+    <div className="min-h-screen flex items-center justify-center pt-20 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-100 via-slate-100 to-blue-100">
       <div className="max-w-5xl w-full flex flex-col md:flex-row bg-white rounded-lg shadow-lg overflow-hidden">
         {/* Left Section */}
         <div className="flex flex-col justify-center items-center md:w-1/2 p-8 md:p-12">
@@ -79,8 +79,8 @@ const Circuit = () => {
             </a>
           </div>
           {/* Contact Button */}
-          <div className="flex flex-col items-start mt-5 -ml-28 ">
-            <p className=" text-black  font-bold ">For more Information, please contact:</p>
+          <div className="flex flex-col  items-center mt-5  ">
+            <p className=" text-black font-bold ">For more Information, please contact:</p>
             <div className="inline-flex mt-2">
               <a
                 href="mailto:anujayavidmal@gmail.com"
