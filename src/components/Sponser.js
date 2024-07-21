@@ -21,11 +21,11 @@ const Sponsors = () => {
 
       {/* In Collaboration with */}
       <div className="mb-8">
-        <div className="bg-gradient-to-b from-blue-950 via-black to-blue-900 rounded-lg p-4 hover:scale-110 shadow-md">
-          <h3 className="text-3xl text-blue-400 shadow-md shadow-blue-700 rounded-lg  font-bold mb-4">
+        <div className="bg-gradient-to-b from-blue-950 via-black to-blue-900 rounded-lg p-4 w-full hover:scale-110 shadow-md">
+          <h3 className="text-3xl text-blue-400 shadow-md shadow-blue-700 rounded-lg  font-bold mb-4 ">
             In Collaboration with
           </h3>
-          <div className="flex flex-col sm:flex-row justify-center items-center space-y-4  sm:space-y-3 sm:space-x-4">
+          <div className="flex flex-col  sm:flex-row justify-center items-center space-y-4  sm:space-y-3 sm:space-x-4">
             <img
               src="/Sponsors/1/YPxAIDSL_Dark_nobg 3.svg"
               alt="IEEE SL SPS"

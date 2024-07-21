@@ -17,7 +17,7 @@ const About = () => {
         />
 
         {/* Small Logos */}
-        <div className="flex flex-col md:flex-row md:flex-wrap justify-center space-y-4 md:space-y-0 md:space-x-8">
+        <div className="flex flex-col md:flex-row md:flex-wrap justify-center space-y-2 md:space-y-0 md:space-x-1">
           <div className="flex flex-row justify-center space-x-8 md:space-x-0">
             <div className="flex flex-col items-center space-y-2 p-1 hover:font-semibold transition-transform transform hover:scale-110">
               <Link to="circuit" smooth={true} duration={500}>
