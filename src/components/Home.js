@@ -1,28 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Home.css";
 
 const Home = () => {
-  const [videoError, setVideoError] = useState(false);
-
   return (
     <div className="relative h-screen overflow-hidden">
-      {/* Background Video or Image */}
-      {videoError ? (
-        <img
-          className="absolute top-0 left-0 w-full h-full object-cover"
-          src="/Background_Image.jpeg"
-          alt="Background"
-        />
-      ) : (
-        <video
-          className="absolute top-0 left-0 w-full h-full object-cover"
-          src="https://storage.cloud.google.com/ieee-challenge-sphere/1851190-uhd_3840_2160_25fps.mp4?authuser=2"
-          autoPlay
-          loop
-          muted
-          onError={() => setVideoError(true)}
-        />
-      )}
+      {/* Background Image */}
+      <img
+        className="absolute top-0 left-0 w-full h-full object-cover"
+        src="/Background_Image.jpeg"
+        alt="Background"
+      />
 
       {/* Overlay for content */}
       <div className="relative z-2 flex flex-col justify-center h-full bg-black bg-opacity-50 text-white">
