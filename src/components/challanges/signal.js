@@ -33,7 +33,7 @@ const Signal = () => {
           </p>
           <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
             <a
-              href="https://bit.ly/SLSPCC"
+              href="https://docs.google.com/forms/d/1MYCNEO3HeTWMPGd8Q8WONkTE6kq1T6DZkXELlVoFYhw/edit?usp=drivesdk"
               target="_blank"
               rel="noopener noreferrer"
               className="border-green-600 shadow-md hover:bg-green-600 font-bold text-white py-3 px-6 rounded-lg transition duration-300 text-lg bg-green-500 text-center"
