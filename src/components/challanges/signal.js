@@ -28,7 +28,7 @@ const Signal = () => {
             />
             Registration Deadline:
             <span className="text-lg font-bold text-green-600">
-              28th July, 11:59 PM
+              15th August, 11:59 PM
             </span>
           </p>
           <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
