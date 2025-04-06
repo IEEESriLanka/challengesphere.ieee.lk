@@ -19,7 +19,7 @@ pnpm-lock.yaml
 /out/
 
 # production
-/build
+/dist
 
 # misc
 .DS_Store
