@@ -36,7 +36,7 @@ const challenges = {
     description:
       "This Challenge serves as the national selection for the International Microelectronics Olympiad in Armenia. This event in Sri Lanka allows students to demonstrate their knowledge in microelectronics and EDA software development through a one-hour closed-book exam.",
     status: "opened",
-    deadline: "30th April 2025, 11:59 PM",
+    deadline: "31st May 2025, 11:59 PM",
     form_link: "https://forms.gle/aDNVoEYeSbQUWRsG8",
   },
   "/circuitschallenge": {
@@ -68,7 +68,7 @@ const challenges = {
     description:
       "If you're passionate about robotics and automation and eager to make a real-world impact, the IEEE Challenge Sphere 2025 -  Robotics Challenge is the perfect opportunity for you. This challenge recognizes IEEE Student and Graduate Student Members who demonstrate outstanding engineering skills in robotics to solve real-world challenges.",
       status: "opened",
-    deadline: "27th April 2025, 11:59 PM",
+    deadline: "23rd May 2025, 11:59 PM",
     form_link: "https://forms.gle/K98SZn7BpNLiDen48",
   },
 };
