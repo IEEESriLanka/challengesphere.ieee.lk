@@ -5,7 +5,24 @@
     "description": "AICSL 2025, the premier AI Challenge in Sri Lanka hosted by ChallengeSphere 2025, offers a structured pathway with hands-on experience to develop AI agent-based applications. The event features a series of workshops followed by a 24-hour event that includes a workshop to develop an AI agent and a 12-hour hackathon.",
     "status": "opened",
     "deadline": "7th June 2025, 11:59 PM",
-    "form_link": "https://forms.gle/5uyq8YtART2pSnwK6"
+    "form_link": "https://forms.gle/5uyq8YtART2pSnwK6",
+    "contact": [
+      {
+        "name": "Athsara Fernando",
+        "position": "Challenge Lead",
+        "email": "athsarafernando470@gmail.com"
+      },
+      {
+        "name": "Sisila Dhevasirinarayana",
+        "position": "Delegate Coordinator",
+        "email": "sisila@ieee.org"
+      },
+      {
+        "name": "Subajanani Swaminathan",
+        "position": "Delegate Coordinator",
+        "email": "subajanani@gmail.com"
+      }
+    ]
   },
   "/arduinochallenge": {
     "title": "Arduino Challenge",
@@ -13,7 +30,19 @@
     "description": "If you are an individual or a team who is interested in Arduino, here's your chance to showcase your innovative skills in Sri Lanka's biggest Arduino competition. This challenge recognizes school students and undergraduate students who demonstrate exceptional skills in Arduino-based projects to solve real-world challenges.",
     "status": "opened",
     "deadline": "31st May 2025, 11:59 PM",
-    "form_link": "https://forms.gle/XVze5EtW6uBntHug9"
+    "form_link": "https://forms.gle/XVze5EtW6uBntHug9",
+    "contact": [
+      {
+        "name": "Mr.Thimira Chandrasekara",
+        "position": "Challenge Lead",
+        "email": "thimira@ieee.org"
+      },
+      {
+        "name": "Mr.Lakshitha Bandara",
+        "position": "Challenge Lead",
+        "email": "luckylakshitha@ieee.org"
+      }
+    ]
   },
   "/chipschallenge": {
     "title": "Chips Challenge",
@@ -21,7 +50,19 @@
     "description": "This Challenge serves as the national selection for the International Microelectronics Olympiad in Armenia. This event in Sri Lanka allows students to demonstrate their knowledge in microelectronics and EDA software development through a one-hour closed-book exam.",
     "status": "opened",
     "deadline": "31st May 2025, 11:59 PM",
-    "form_link": "https://forms.gle/aDNVoEYeSbQUWRsG8"
+    "form_link": "https://forms.gle/aDNVoEYeSbQUWRsG8",
+    "contact": [
+      {
+        "name": "Dr. Achintha Iroshan",
+        "position": "Challenge Lead",
+        "email": "k.achintha.i@ieee.org"
+      },
+      {
+        "name": "Ms. Warunika Hippola",
+        "position": "Challenge Lead",
+        "email": "waru.hippola@ieee.org"
+      }
+    ]
   },
   "/circuitschallenge": {
     "title": "Circuits Challenge",
@@ -41,7 +82,19 @@
     "description": "If you're passionate about healthcare innovation and eager to make a positive impact on the world, the IEEE SL Challenge Sphere 2025 - Healthcare Challenge is the perfect opportunity for you. The IEEE Sri Lanka Challenge Sphere, a new initiative by the IEEE Sri Lanka Section, gathers students and recent graduates for a series of tech-oriented competitions designed to inspire and innovate.",
     "status": "opened",
     "deadline": "31st May 2025, 11:59 PM",
-    "form_link": "https://forms.gle/1oEGGrM55io9DLsj8"
+    "form_link": "https://forms.gle/1oEGGrM55io9DLsj8",
+    "contact": [
+      {
+        "name": "Mr. Manjitha Kularatne",
+        "position": "Challenge Lead",
+        "email": "manjitha456@gmail.com "
+      },
+      {
+        "name": "Mr. Kavindu Nirmana",
+        "position": "",
+        "email": "kavindu.weerasinghe3@ieee.org"
+      }
+    ]
   },
   "/roboticschallenge": {
     "title": "Robotics Challenge",
@@ -49,6 +102,18 @@
     "description": "If you're passionate about robotics and automation and eager to make a real-world impact, the IEEE Challenge Sphere 2025 -  Robotics Challenge is the perfect opportunity for you. This challenge recognizes IEEE Student and Graduate Student Members who demonstrate outstanding engineering skills in robotics to solve real-world challenges.",
     "status": "opened",
     "deadline": "23rd May 2025, 11:59 PM",
-    "form_link": "https://forms.gle/K98SZn7BpNLiDen48"
+    "form_link": "https://forms.gle/K98SZn7BpNLiDen48",
+    "contact": [
+      {
+        "name": "Mr. Sachintha Bhanuka",
+        "position": "Challenge Lead",
+        "email": "bhanuka@ieee.org"
+      },
+      {
+        "name": "Mr. Ramudu Thirasara",
+        "position": "Challenge Lead",
+        "email": "ramuduwelikala@ieee.org"
+      }
+    ]
   }
 }
