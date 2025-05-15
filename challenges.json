@@ -1,0 +1,54 @@
+{
+  "/aichallenge": {
+    "title": "Artificial Intelligence Challenge",
+    "image": "AI_Challenge.png",
+    "description": "AICSL 2025, the premier AI Challenge in Sri Lanka hosted by ChallengeSphere 2025, offers a structured pathway with hands-on experience to develop AI agent-based applications. The event features a series of workshops followed by a 24-hour event that includes a workshop to develop an AI agent and a 12-hour hackathon.",
+    "status": "opened",
+    "deadline": "7th June 2025, 11:59 PM",
+    "form_link": "https://forms.gle/5uyq8YtART2pSnwK6"
+  },
+  "/arduinochallenge": {
+    "title": "Arduino Challenge",
+    "image": "Arduino_Challenge.png",
+    "description": "If you are an individual or a team who is interested in Arduino, here's your chance to showcase your innovative skills in Sri Lanka's biggest Arduino competition. This challenge recognizes school students and undergraduate students who demonstrate exceptional skills in Arduino-based projects to solve real-world challenges.",
+    "status": "opened",
+    "deadline": "31st May 2025, 11:59 PM",
+    "form_link": "https://forms.gle/XVze5EtW6uBntHug9"
+  },
+  "/chipschallenge": {
+    "title": "Chips Challenge",
+    "image": "Chips_Challenge.png",
+    "description": "This Challenge serves as the national selection for the International Microelectronics Olympiad in Armenia. This event in Sri Lanka allows students to demonstrate their knowledge in microelectronics and EDA software development through a one-hour closed-book exam.",
+    "status": "opened",
+    "deadline": "31st May 2025, 11:59 PM",
+    "form_link": "https://forms.gle/aDNVoEYeSbQUWRsG8"
+  },
+  "/circuitschallenge": {
+    "title": "Circuits Challenge",
+    "image": "Circuits_Challenge.png",
+    "description": "The Sri Lanka Circuits Challenge of the IEEE Sri Lanka ChallengeSphere 2025 is launched to facilitate innovation and open-ended electronic product design targeting the IEEE CASS Student Design Competition 2025-26.",
+    "status": "soon"
+  },
+  "/communicationschallenge": {
+    "title": "Communications Challenge",
+    "image": "Commnunication_Challenge.png",
+    "description": "The IEEE Communications Challenge of the IEEE Sri Lanka ChallengeSphere 2025 is launched to facilitate innovation and cutting-edge technology development in telecommunications, targeting undergraduate students. This competition invites participants to present their pioneering projects in the field of signal processing for communications, encouraging exploration and advancement in this critical area of technology.",
+    "status": "soon"
+  },
+  "/healthcareinnovationchallenge": {
+    "title": "Healthcare Innovation Challenge",
+    "image": "Healthcare_Challenge.png",
+    "description": "If you're passionate about healthcare innovation and eager to make a positive impact on the world, the IEEE SL Challenge Sphere 2025 - Healthcare Challenge is the perfect opportunity for you. The IEEE Sri Lanka Challenge Sphere, a new initiative by the IEEE Sri Lanka Section, gathers students and recent graduates for a series of tech-oriented competitions designed to inspire and innovate.",
+    "status": "opened",
+    "deadline": "31st May 2025, 11:59 PM",
+    "form_link": "https://forms.gle/1oEGGrM55io9DLsj8"
+  },
+  "/roboticschallenge": {
+    "title": "Robotics Challenge",
+    "image": "Robotics_Challenge.png",
+    "description": "If you're passionate about robotics and automation and eager to make a real-world impact, the IEEE Challenge Sphere 2025 -  Robotics Challenge is the perfect opportunity for you. This challenge recognizes IEEE Student and Graduate Student Members who demonstrate outstanding engineering skills in robotics to solve real-world challenges.",
+    "status": "opened",
+    "deadline": "23rd May 2025, 11:59 PM",
+    "form_link": "https://forms.gle/K98SZn7BpNLiDen48"
+  }
+}
