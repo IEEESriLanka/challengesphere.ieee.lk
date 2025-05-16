@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { GoArrowLeft } from "react-icons/go";
 import { useNavigate, useLocation, Link } from "react-router-dom";
+import { IoCalendarSharp } from "react-icons/io5";
 
+// Import logos
 import AIChallengeLogo from "../../assets/logos/challenges/AI_Challenge.png";
 import ArduinoChallengeLogo from "../../assets/logos/challenges/Arduino_Challenge.png";
 import CircuitsChallengeLogo from "../../assets/logos/challenges/Circuits_Challenge.png";
@@ -9,68 +11,15 @@ import ChipsChallengeLogo from "../../assets/logos/challenges/Chips_Challenge.pn
 import CommunicationsChallengeLogo from "../../assets/logos/challenges/Commnunication_Challenge.png";
 import HealthcareChallengeLogo from "../../assets/logos/challenges/Healthcare_Challenge.png";
 import RoboticsChallengeLogo from "../../assets/logos/challenges/Robotics_Challenge.png";
-import { IoCalendarSharp } from "react-icons/io5";
 
-const challenges = {
-  "/aichallenge": {
-    title: "Artificial Intelligence Challenge",
-    image: AIChallengeLogo,
-    description:
-      "AICSL 2025, the premier AI Challenge in Sri Lanka hosted by ChallengeSphere 2025, offers a structured pathway with hands-on experience to develop AI agent-based applications. The event features a series of workshops followed by a 24-hour event that includes a workshop to develop an AI agent and a 12-hour hackathon.",
-    status: "opened",
-    deadline: "7th June 2025, 11:59 PM",
-    form_link: "https://forms.gle/5uyq8YtART2pSnwK6",
-  },
-  "/arduinochallenge": {
-    title: "Arduino Challenge",
-    image: ArduinoChallengeLogo,
-    description:
-      "If you are an individual or a team who is interested in Arduino, here's your chance to showcase your innovative skills in Sri Lanka's biggest Arduino competition. This challenge recognizes school students and undergraduate students who demonstrate exceptional skills in Arduino-based projects to solve real-world challenges.",
-    status: "opened",
-    deadline: "31st May 2025, 11:59 PM",
-    form_link: "https://forms.gle/XVze5EtW6uBntHug9",
-  },
-  "/chipschallenge": {
-    title: "Chips Challenge",
-    image: ChipsChallengeLogo,
-    description:
-      "This Challenge serves as the national selection for the International Microelectronics Olympiad in Armenia. This event in Sri Lanka allows students to demonstrate their knowledge in microelectronics and EDA software development through a one-hour closed-book exam.",
-    status: "opened",
-    deadline: "31st May 2025, 11:59 PM",
-    form_link: "https://forms.gle/aDNVoEYeSbQUWRsG8",
-  },
-  "/circuitschallenge": {
-    title: "Circuits Challenge",
-    image: CircuitsChallengeLogo,
-    description:
-      "The Sri Lanka Circuits Challenge of the IEEE Sri Lanka ChallengeSphere 2025 is launched to facilitate innovation and open-ended electronic product design targeting the IEEE CASS Student Design Competition 2025-26.",
-    status: "soon",
-  },
-  "/communicationschallenge": {
-    title: "Communications Challenge",
-    image: CommunicationsChallengeLogo,
-    description:
-      "The IEEE Communications Challenge of the IEEE Sri Lanka ChallengeSphere 2025 is launched to facilitate innovation and cutting-edge technology development in telecommunications, targeting undergraduate students. This competition invites participants to present their pioneering projects in the field of signal processing for communications, encouraging exploration and advancement in this critical area of technology.",
-    status: "soon",
-  },
-  "/healthcareinnovationchallenge": {
-    title: "Healthcare Innovation Challenge",
-    image: HealthcareChallengeLogo,
-    description:
-      "If you're passionate about healthcare innovation and eager to make a positive impact on the world, the IEEE SL Challenge Sphere 2025 - Healthcare Challenge is the perfect opportunity for you. The IEEE Sri Lanka Challenge Sphere, a new initiative by the IEEE Sri Lanka Section, gathers students and recent graduates for a series of tech-oriented competitions designed to inspire and innovate.",
-      status: "opened",
-    deadline: "31st May 2025, 11:59 PM",
-    form_link: "https://forms.gle/1oEGGrM55io9DLsj8",
-  },
-  "/roboticschallenge": {
-    title: "Robotics Challenge",
-    image: RoboticsChallengeLogo,
-    description:
-      "If you're passionate about robotics and automation and eager to make a real-world impact, the IEEE Challenge Sphere 2025 -  Robotics Challenge is the perfect opportunity for you. This challenge recognizes IEEE Student and Graduate Student Members who demonstrate outstanding engineering skills in robotics to solve real-world challenges.",
-      status: "opened",
-    deadline: "23rd May 2025, 11:59 PM",
-    form_link: "https://forms.gle/K98SZn7BpNLiDen48",
-  },
+const logoMap = {
+  "AI_Challenge.png": AIChallengeLogo,
+  "Arduino_Challenge.png": ArduinoChallengeLogo,
+  "Circuits_Challenge.png": CircuitsChallengeLogo,
+  "Chips_Challenge.png": ChipsChallengeLogo,
+  "Commnunication_Challenge.png": CommunicationsChallengeLogo,
+  "Healthcare_Challenge.png": HealthcareChallengeLogo,
+  "Robotics_Challenge.png": RoboticsChallengeLogo,
 };
 
 const getChallengeColors = (title) => {
@@ -97,22 +46,39 @@ const getChallengeColors = (title) => {
 const ChallengePage = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const [challenges, setChallenges] = useState({});
+  const [loading, setLoading] = useState(true);
+  const [hover, setHover] = useState(false);
+
+  const url =
+    "https://raw.githubusercontent.com/IEEESriLanka/challengesphere.ieee.lk/refs/heads/challenges/challenges.json";
+
+  useEffect(() => {
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+        setChallenges(data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("Error fetching challenges:", err);
+        setLoading(false);
+      });
+  }, []);
 
   const challenge = challenges[location.pathname];
 
-  const [hover, setHover] = useState(false);
-
   useEffect(() => {
-    if (!challenge) {
-      navigate("");
+    if (!loading && !challenge) {
+      navigate("/");
     }
-  }, [challenge, navigate]);
+  }, [loading, challenge, navigate]);
 
-  if (!challenge) {
-    return null;
-  }
+  if (loading || !challenge) return null;
 
   const { bgColor, hoverColor } = getChallengeColors(challenge.title);
+  const imageSrc = logoMap[challenge.image];
+  const contact = challenge.contact;
 
   return (
     <div className="flex flex-col w-full h-full px-[5%] pt-20 lg:pt-28 pb-14 lg:px-[10%] cursor-default">
@@ -128,16 +94,16 @@ const ChallengePage = () => {
           {challenge.title}
         </p>
         <img
-          src={challenge.image}
+          src={imageSrc}
           alt={`${challenge.title} Logo`}
           className="w-auto md:h-60 h-52 mb-4 md:mb-5"
         />
         <p className="text-center text-lg md:text-xl md:px-[15%] mb-4 md:mb-5">
           {challenge.description}
         </p>
-        <div className="text-center text-lg md:text-xl md:px-[15%] pt-[1%]">
+        <div className="text-center text-lg md:text-xl md:px-[15%] pt-[1%] w-full">
           {challenge.status === "opened" && (
-            <div className="flex flex-col items-center gap-y-8">
+            <div className="flex flex-col items-center gap-y-8 w-full">
               <p>
                 Registration is <b>open</b> for the {challenge.title}.
               </p>
@@ -152,6 +118,46 @@ const ChallengePage = () => {
                   </p>
                 </div>
               )}
+              <div className="text-left w-full flex flex-col px-10 xl:px-0">
+                <p>For more information, please contact:</p>
+                {contact.map((details, index) => (
+                  <div
+                    className="xl:px-0 xl:pl-14 flex xl:flex-row flex-col px-20 pt-2"
+                    key={index}
+                  >
+                    <p>{details.name}</p>
+                    <p className="hidden xl:block xl:pl-1">
+                      {details.position && " - " + details.position}
+                    </p>
+                    <p className="block xl:hidden">
+                      {details.position && details.position}
+                    </p>
+                    <p className="hidden xl:block">
+                      {details.email && (
+                        <>
+                          {" - "}
+                          <a
+                            href={`mailto:${details.email}`}
+                            className="text-light-blue hover:text-light-blue-hover underline"
+                          >
+                            {details.email}
+                          </a>
+                        </>
+                      )}
+                    </p>
+                    <p className="block xl:hidden pb-5">
+                      {details.email && (
+                        <a
+                          href={`mailto:${details.email}`}
+                          className="text-light-blue hover:text-light-blue-hover underline"
+                        >
+                          {details.email}
+                        </a>
+                      )}
+                    </p>
+                  </div>
+                ))}
+              </div>
               <Link
                 to={challenge.form_link}
                 target="_blank"

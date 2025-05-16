@@ -112,9 +112,10 @@ const NavLinks = ({ whiteColor }) => {
                   }`}
                 >
                   {link.subLinks.map((subLinkGroup, subIndex) => (
-                    <div>
-                      {subLinkGroup.sublink.map((sub) => (
+                    <div key={subIndex}>
+                      {subLinkGroup.sublink.map((sub, index) => (
                         <div
+                          key={index}
                           className={`py-2 ${
                             whiteColor
                               ? "hover:text-background-white-2"
