@@ -2,7 +2,17 @@
   "/aichallenge": {
     "title": "Artificial Intelligence Challenge",
     "image": "AI_Challenge.png",
-    "description": "AICSL 2025, the premier AI Challenge in Sri Lanka hosted by ChallengeSphere 2025, offers a structured pathway with hands-on experience to develop AI agent-based applications. The event features a series of workshops followed by a 24-hour event that includes a workshop to develop an AI agent and a 12-hour hackathon.",
+    "description": [
+      {
+        "blocks": [
+          { "type": "bold", "value": "The Sri Lanka AI Challenge (SLAIC)" },
+          {
+            "type": "text",
+            "value": " was a national AI hackathon for undergraduates, organized by AI-Driven Sri Lanka, engaging over 500 participants to develop real-world AI solutions. Ahead of the competition, four expert-led sessions on AI agents were conducted by industry practitioners to upskill participants. The challenge took place in two stages: an initial round followed by a final round, with teams evaluated by experienced mentors and judges for technical depth and real-world applicability."
+          }
+        ]
+      }
+    ],
     "status": "closed",
     "deadline": "16th June 2025, 11:59 PM",
     "form_link": "https://forms.gle/88h4HapYL2MZEqfF6",
@@ -27,7 +37,52 @@
   "/arduinochallenge": {
     "title": "Arduino Challenge",
     "image": "Arduino_Challenge.png",
-    "description": "If you are an individual or a team who is interested in Arduino, here's your chance to showcase your innovative skills in Sri Lanka's biggest Arduino competition. This challenge recognizes school students and undergraduate students who demonstrate exceptional skills in Arduino-based projects to solve real-world challenges.",
+    "description": [
+      {
+        "blocks": [
+          { "type": "bold", "value": "The Arduino Challenge" },
+          {
+            "type": "text",
+            "value": " is an open-ended innovation-driven competition designed to foster creativity and hands-on engineering skills among participants. Teams are required to select a specific sub-theme under the main challenge theme and conduct research to identify a real-world problem. Based on their findings, participants will design and develop a "
+          },
+          {
+            "type": "bold",
+            "value": "groundbreaking Arduino-based solution"
+          },
+          {
+            "type": "text",
+            "value": " that demonstrates technical feasibility, innovation, and societal impact."
+          }
+        ]
+      },
+      {
+        "blocks": [
+          {
+            "type": "text",
+            "value": "This challenge aligns with and prepares participants for the "
+          },
+          { "type": "bold", "value": "IEEE SSCS Arduino Contest" },
+          {
+            "type": "text",
+            "value": ", offering early exposure to international competition standards. Through problem identification, system design, and prototype development, students gain practical experience that bridges theoretical knowledge with real-world applications."
+          }
+        ]
+      },
+      {
+        "blocks": [
+          {
+            "type": "text",
+            "value": "Open to "
+          },
+          { "type": "bold", "value": "school students and undergraduates" },
+          {
+            "type": "text",
+            "value": ", the Arduino Challenge encourages technological innovation while equipping participants with the skills, confidence, and experience required to excel in "
+          },
+          { "type": "bold", "value": "global IEEE competitions." }
+        ]
+      }
+    ],
     "status": "closed",
     "deadline": "31st May 2025, 11:59 PM",
     "form_link": "https://forms.gle/XVze5EtW6uBntHug9",
