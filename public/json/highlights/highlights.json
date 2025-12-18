@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "title": "Award Ceremony",
+    "heading": "IEEE Challenge Sphere 2024 Award Ceremony",
+    "images": [
+      "assets/highlights/awardceremony/00.jpg",
+      "assets/highlights/awardceremony/01.jpg",
+      "assets/highlights/awardceremony/02.jpg",
+      "assets/highlights/awardceremony/03.jpg",
+      "assets/highlights/awardceremony/04.jpg",
+      "assets/highlights/awardceremony/05.jpg",
+      "assets/highlights/awardceremony/06.jpg",
+      "assets/highlights/awardceremony/07.jpg",
+      "assets/highlights/awardceremony/08.jpg",
+      "assets/highlights/awardceremony/09.jpg",
+      "assets/highlights/awardceremony/10.jpg"
+    ],
+    "cardImage": "assets/highlights/awardceremony/00.jpg",
+    "cardDescription": "Celebrate innovation and talent at the IEEE Challenge Sphere 2024 Awards Ceremony, held on 22nd October at Hotel Ramada Colombo. A night of recognition and connection for brilliant minds and industry leaders.",
+    "description": [
+      "Held on 22nd October at Hotel Ramada Colombo, the IEEE Challenge Sphere 2024 Awards Ceremony celebrated innovation, talent, and collaboration. The evening brought together brilliant minds, industry leaders, and rising changemakers in a vibrant atmosphere of recognition and connection.",
+      "Swipe through the gallery to revisit the moments that made it unforgettable!"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Achievement of ChallengeSphere",
+    "heading": "Recognized as the Best Sectional Project in IEEE Sri Lanka Section for 2024",
+    "images": ["assets/highlights/award/award.png"],
+    "cardImage": "assets/highlights/award/award.png",
+    "cardDescription": "IEEE Challenge Sphere 2024 was recognized as the Best Sectional Project by the IEEE Sri Lanka Section, celebrating innovation and empowering the next generation of engineers and technologists.",
+    "description": [
+      "IEEE Challenge Sphere 2024 has been honored as the Best Sectional Project by the IEEE Sri Lanka Section, recognizing its significant contribution to empowering undergraduates and school students in engineering and technology. As Sri Lanka’s largest national competition series of its kind, the initiative bridges gaps in national contests, fostering innovation, collaboration, and skill development. With five unique challenges and expert mentorship, it creates a sustainable ecosystem for future engineers, preparing them for global success while advancing technological excellence."
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Elevate Session",
+    "heading": "IEEE Sri Lanka – Challenge Sphere Elevate Session 2024",
+    "images": [
+      "assets/highlights/elevate_session/DSC_3124_5_11zon.webp",
+      "assets/highlights/elevate_session/DSC_3154_6_11zon.webp",
+      "assets/highlights/elevate_session/DSC_3171_4_11zon.webp",
+      "assets/highlights/elevate_session/DSC09392_3_11zon.webp",
+      "assets/highlights/elevate_session/DSC09397_1_11zon.webp",
+      "assets/highlights/elevate_session/DSC09413_2_11zon.webp"
+    ],
+    "cardImage": "assets/highlights/elevate_session/DSC_3171_4_11zon.webp",
+    "cardDescription": "The IEEE Challenge Sphere Elevate Session 2024 brought together over 200 delegates for an electrifying day of learning. Participants gained insights into Arduino, Circuit Design, AI, Signal Processing, and Microelectronics through expert-led sessions and hands-on activities.",
+    "description": [
+      "On June 27th, 2024, the IEEE Sri Lanka Section proudly hosted an electrifying event, the Challenge Sphere Elevate Session, attracting over 200 enthusiastic delegates from various fields. This unforgettable session, held with great enthusiasm, aimed to equip participants with insights and preparation techniques for tackling challenges in cutting-edge technological areas such as Arduino, Circuit Design, Artificial Intelligence, Signal Processing, and Microelectronics.",
+      "The day was packed with engaging activities and informative sessions led by experts in the field. Participants had the opportunity to delve deep into the intricacies of each domain, gaining valuable knowledge and hands-on experience. The session not only highlighted the importance of these technologies but also provided practical guidance on how to approach and solve related challenges effectively.",
+      "The success of the event was evident in the active participation and positive feedback from the delegates. The atmosphere was charged with curiosity, learning, and collaboration, reflecting the true spirit of IEEE's mission to foster technological innovation and excellence for the benefit of humanity.",
+      "A heartfelt thank you goes out to everyone who participated and contributed to making this event a resounding success. Your enthusiasm and dedication were truly inspiring, and we look forward to many more such successful collaborations and advancements in the future."
+    ]
+  }
+]

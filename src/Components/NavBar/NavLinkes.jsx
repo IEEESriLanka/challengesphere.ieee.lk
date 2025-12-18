@@ -6,6 +6,7 @@ const NavLinks = ({ whiteColor }) => {
   const navigate = useNavigate();
   const links = [
     { name: "Home", link: "/#home" },
+    { name: "About Us", link: "/aboutus" },
     {
       name: "Challenges",
       icon: <FaChevronDown className="ml-2 mt-1 text-base" />,
@@ -43,38 +44,10 @@ const NavLinks = ({ whiteColor }) => {
     },
     {
       name: "Our Highlights",
-      icon: <FaChevronDown className="ml-2 mt-1 text-base" />,
-      subLinks: [
-        {
-          sublink: [
-            {
-              name: "Achievements",
-              link: "/highlights/achievements",
-            },
-            {
-              name: "Elevate Session",
-              link: "/highlights/elevatesession",
-            },
-            {
-              name: "Award Ceremony",
-              link: "/highlights/awardceremony",
-            },
-          ],
-        },
-      ],
+      link: "/highlights",
+      // icon: <FaChevronDown className="ml-2 mt-1 text-base" />,
     },
-    {
-      name: "Our Team",
-      icon: <FaChevronDown className="ml-2 mt-1 text-base" />,
-      subLinks: [
-        {
-          sublink: [
-            { name: "2025", link: "/#ourteam" },
-            { name: "2024", link: "/organitioncommittee2024" },
-          ],
-        },
-      ],
-    },
+    { name: "Our Team", link: "/ourteam" },
     { name: "Sponsors", link: "/#sponsor" },
   ];
 

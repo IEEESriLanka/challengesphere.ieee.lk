@@ -1,5 +1,3 @@
-import React from "react";
-import Award from "../../assets/award/award.png";
 import { useNavigate } from "react-router-dom";
 import { GoArrowLeft } from "react-icons/go";
 
@@ -19,7 +17,7 @@ const Achievements = () => {
           Recognized as the Best Sectional Project in IEEE Sri Lanka Section for
           2024
         </h1>
-        <img src={Award} alt="award" className="w-auto mb-5" />
+        <img src="assets/award/award.png" alt="award" className="w-auto mb-5" />
         <p className="text-lg text-text-black mb-4 text-justify">
           IEEE Challenge Sphere 2024 has been honored as the Best Sectional
           Project by the IEEE Sri Lanka Section, recognizing its significant

@@ -1,16 +1,10 @@
-import React from "react";
-import logo from "../../assets/logos/logo.png";
-import facebookIcon from "../../assets/socialMedia/facebook.png";
-import instagramIcon from "../../assets/socialMedia/instagram.svg";
-import whatsappIcon from "../../assets/socialMedia/whatsapp.svg";
-
 const Footer = () => {
   return (
-    <div className="flex flex-col w-full h-fit bg-background-white-2 md:px-[10%] pt-[4%] pb-[1%] px-[0.75%] mt-1">
+    <div className="flex flex-col w-full h-fit bg-background-white-2 md:px-[15%] pt-[4%] pb-[1%] px-[0.75%] mt-1">
       <div className="w-full flex flex-col md:flex-row items-center justify-between">
         <div className="flex flex-col md:flex-row items-center w-full md:w-[70%] lg:w-[80%]">
           <img
-            src={logo}
+            src="assets/logos/logo.png"
             alt="challengesphere logo"
             className="w-[12%] md:w-[12%] lg:w-[8%]"
           />
@@ -30,7 +24,7 @@ const Footer = () => {
             className="w-[10%] md:w-[18%] lg:w-[16%]"
           >
             <img
-              src={facebookIcon}
+              src="assets/socialMedia/facebook.png"
               className="transition-transform transform hover:scale-125 duration-200 cursor-pointer"
             />
           </a>
@@ -40,17 +34,17 @@ const Footer = () => {
             className="w-[10%] md:w-[18%] lg:w-[16%]"
           >
             <img
-              src={instagramIcon}
+              src="assets/socialMedia/instagram.svg"
               className="transition-transform transform hover:scale-125 duration-200 cursor-pointer"
             />
           </a>
           <a
-            href="https://chat.whatsapp.com/I5vOXfOmzMG3REUXzCBBwd"
+            href="https://whatsapp.com/channel/0029VbB4dM4GzzKKkF8V1Z16"
             target="_blank"
             className="w-[10%] md:w-[18%] lg:w-[16%]"
           >
             <img
-              src={whatsappIcon}
+              src="assets/socialMedia/whatsapp.svg"
               className="transition-transform transform hover:scale-125 duration-200 cursor-pointer"
             />
           </a>

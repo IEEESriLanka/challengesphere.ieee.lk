@@ -1,0 +1,178 @@
+{
+  "2025": [
+    {
+      "title": "Artificial Intelligence Challenge",
+      "badge": "assets/logos/challenges/design/AI_Challenge.png",
+      "leads": [
+        {
+          "name": "Sasanka Premaratne",
+          "position": "Chair - AI-Driven Sri Lanka",
+          "image": "assets/team/2025/challenges_leads/ai_01.png",
+          "in_link": "https:www.linkedin.com/in/sasanka-udana"
+        },
+        {
+          "name": "Athsara Fernando",
+          "position": "AI Challenge Co-Chair - AI-Driven Sri Lanka",
+          "image": "assets/team/2025/challenges_leads/ai_02.png",
+          "in_link": "https:www.linkedin.com/in/athsara-fernando"
+        }
+      ]
+    },
+    {
+      "title": "Arduino Challenge",
+      "badge": "assets/logos/challenges/design/Arduino_Challenge.png",
+      "leads": [
+        {
+          "name": "Thimira Chandrasekara",
+          "position": "Secretary - IEEE Industrial Electronics Society Sri Lanka Chapter",
+          "image": "assets/team/2025/challenges_leads/arduino_01.png",
+          "in_link": "https:www.linkedin.com/in/thimirachandrasekara"
+        },
+        {
+          "name": "Lakshitha Abeywickrama ",
+          "position": "Chair - IEEE Industrial Electronics Society Student Branch Chapter of SLTC",
+          "image": "assets/team/2025/challenges_leads/arduino_02.png",
+          "in_link": "https:www.linkedin.com/in/lakshitha-abeywickrama-47b9a6303?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+        }
+      ]
+    },
+    {
+      "title": "Chips Challenge",
+      "badge": "assets/logos/challenges/design/Chips_Challenge.png",
+      "leads": [
+        {
+          "name": "Achintha Kondarage",
+          "position": "Chair - IEEE Sri Lanka Section Circuits and Systems Society & Council on Electronic Design Automation Joint Chapter",
+          "image": "assets/team/2025/challenges_leads/chips_01.png",
+          "in_link": "https:www.linkedin.com/in/achintha-iroshan-kondarage/"
+        },
+        {
+          "name": "Warunika Hippola",
+          "position": "Secretary - IEEE Sri Lanka Section Circuits and Systems Society & Council on Electronic Design Automation Joint Chapter",
+          "image": "assets/team/2025/challenges_leads/chips_02.png",
+          "in_link": "https:www.linkedin.com/in/warunika-hippola"
+        }
+      ]
+    },
+    {
+      "title": "Circuits Challenge",
+      "badge": "assets/logos/challenges/design/Circuits_Challenge.png",
+      "leads": [
+        {
+          "name": "Thimira Chandrasekara",
+          "position": "Treasurer -  IEEE Sri Lanka Section Circuits and Systems Society & Council on Electronic Design Automation Joint Chapter",
+          "image": "assets/team/2025/challenges_leads/circuits_01.png",
+          "in_link": "https:www.linkedin.com/in/thimirachandrasekara"
+        }
+      ]
+    },
+    {
+      "title": "Healthcare Innovation Challenge",
+      "badge": "assets/logos/challenges/design/Healthcare_Challenge.png",
+      "leads": [
+        {
+          "name": "Manjitha Kularatne",
+          "position": "Webmaster - IEEE Engineering in Medicine and Biology Society Sri Lanka Chapter",
+          "image": "assets/team/2025/challenges_leads/healthcare_01.png",
+          "in_link": "https:www.linkedin.com/in/manjitha-kularatne/"
+        }
+      ]
+    },
+    {
+      "title": "Robotics Challenge",
+      "badge": "assets/logos/challenges/design/Robotics_Challenge.png",
+      "leads": [
+        {
+          "name": "Bhanuka Dayawansa",
+          "position": "Vice-Chair - IEEE Industry Applications Society Sri Lanka Chapter",
+          "image": "assets/team/2025/challenges_leads/robotics_01.png",
+          "in_link": "https:www.linkedin.com/in/bhanuka-dayawansa"
+        },
+        {
+          "name": "Ramudu Welikala",
+          "position": "Committee Member - IEEE Industry Applications Society Sri Lanka Chapter",
+          "image": "assets/team/2025/challenges_leads/robotics_02.png",
+          "in_link": "https:www.linkedin.com/in/ramudu-welikala-434788230"
+        }
+      ]
+    }
+  ],
+
+  "2024": [
+    {
+      "title": "Artificial Intelligence Challenge",
+      "badge": "assets/logos/challenges/design/AI_Challenge.png",
+      "leads": [
+        {
+          "name": "Sanuda Kannangara",
+          "position": "Chair, IEEE AI-Driven Sri Lanka",
+          "image": "assets/team/2024/challenges_leads/AI01.png"
+        },
+        {
+          "name": "Sasanka Premaratne",
+          "position": "Program Vice Chairperson AIDSL, Event Chair AICSL",
+          "image": "assets/team/2024/challenges_leads/AI02.png"
+        }
+      ]
+    },
+    {
+      "title": "Arduino Challenge",
+      "badge": "assets/logos/challenges/design/Arduino_Challenge.png",
+      "leads": [
+        {
+          "name": "Kavinga Ekanayake",
+          "position": "Chair, IEEE Industrial Electronics Society, Sri Lanka Chapter",
+          "image": "assets/team/2024/challenges_leads/Arduino01.png"
+        },
+        {
+          "name": "Tharushi Liyanage",
+          "position": "Chair, IEEE Industrial Electronics Society, Student Branch Chapter of SLTC",
+          "image": "assets/team/2024/challenges_leads/Arduino02.png"
+        }
+      ]
+    },
+    {
+      "title": "Chips Challenge",
+      "badge": "assets/logos/challenges/design/Chips_Challenge.png",
+      "leads": [
+        {
+          "name": "Dr. Achintha Kondarage",
+          "position": "Synopsys",
+          "image": "assets/team/2024/challenges_leads/Chips01.png"
+        }
+      ]
+    },
+    {
+      "title": "Circuits Challenge",
+      "badge": "assets/logos/challenges/design/Circuits_Challenge.png",
+      "leads": [
+        {
+          "name": "Dr. Subhoda Charles",
+          "position": "Chair, Educational Activities Committee, IEEE Sri Lanka Section",
+          "image": "assets/team/2024/challenges_leads/Circuits01.png"
+        },
+        {
+          "name": "Shani Fernando",
+          "position": "Member, Educational Activities Committee, IEEE Sri Lanka Section",
+          "image": "assets/team/2024/challenges_leads/Circuits02.png"
+        }
+      ]
+    },
+    {
+      "title": "Signal Processing for Communications Challenge",
+      "badge": "assets/logos/challenges/design/Commnunication_Challenge.png",
+      "leads": [
+        {
+          "name": "Yasitha Wickramage",
+          "position": "Chair, IEEE Communications Society, Sri Lanka Chapter",
+          "image": "assets/team/2024/challenges_leads/Signal01.png"
+        },
+        {
+          "name": "Dr. Samiru Gayan",
+          "position": "Chair, IEEE Sri Lanka Section Signal Processing Society Chapter",
+          "image": "assets/team/2024/challenges_leads/Signal02.png"
+        }
+      ]
+    }
+  ]
+}

@@ -72,7 +72,8 @@ const SideBar = ({ open, close, whiteColor }) => {
                 setHeading(heading !== key ? key : "");
               }}
             >
-              {key} <FaChevronDown className="ml-2 mt-1 text-base" />
+              {key} 
+              <FaChevronDown className="ml-2 mt-1 text-base" />
             </a>
             <div className={`${heading !== key && "hidden"} py-3 pl-6`}>
               {menuItem[key].map(({ name, link }) => (

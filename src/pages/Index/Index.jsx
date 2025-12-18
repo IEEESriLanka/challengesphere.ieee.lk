@@ -1,10 +1,9 @@
-import React, { useEffect } from "react";
-import Home from "../../Components/Home/Home";
-import Challenges from "../../Components/Challenges/Challenges";
-import OutTeam from "../../Components/OurTeam/OurTeam";
-import ChallengeLeads from "../../Components/ChallengeLeads/ChallengeLeads";
+import { useEffect } from "react";
+import { Home } from "../../Components/Home/Home";
+import { Challenges } from "../../Components/Challenges/Challenges";
 import SponsorBar from "../../Components/SponsorBar/SponsorBar";
 import { useLocation } from "react-router-dom";
+import { OurHighlights } from "../../Components/OurHighlights/OurHighlights";
 
 const Index = () => {
   const location = useLocation();
@@ -57,8 +56,7 @@ const Index = () => {
     <div className="relative flex flex-col">
       <Home />
       <Challenges />
-      <OutTeam />
-      <ChallengeLeads />
+      <OurHighlights />
       <SponsorBar />
     </div>
   );

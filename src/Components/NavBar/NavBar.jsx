@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import logo from "../../assets/logos/logo.png";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { RxCross2 } from "react-icons/rx";
 import SideBar from "../SideBar/SideBar";
@@ -50,7 +49,7 @@ const NavBar = () => {
     <>
       {/* Desktop Navbar */}
       <div
-        className={`hidden lg:flex flex-row justify-between items-center w-full h-24 px-[10%] fixed z-10 ${
+        className={`hidden lg:flex flex-row justify-between items-center w-full h-24 px-[15%] fixed z-10 ${
           whiteColor
             ? "backdrop-blur-lg bg-background-white-1 bg-opacity-40 text-text-black"
             : color
@@ -59,7 +58,7 @@ const NavBar = () => {
         }`}
       >
         <div>
-          <img src={logo} alt="challengesphere logo" className="h-18 w-20" />
+          <img src="assets/logos/logo.png" alt="challengesphere logo" className="h-18 w-20" />
         </div>
         <div className="flex flex-row gap-x-6 xl:gap-x-10 font-medium text-xl items-center">
           <NavLinks whiteColor={whiteColor} color={color} />
@@ -77,7 +76,7 @@ const NavBar = () => {
         }`}
       >
         <div className="flex flex-row justify-between items-center w-full">
-          <img src={logo} alt="challengesphere logo" className="h-14 w-18" />
+          <img src="assets/logos/logo.png" alt="challengesphere logo" className="h-14 w-18" />
           <div>
             {navBarShow ? (
               <RxCross2
@@ -97,6 +96,7 @@ const NavBar = () => {
           </div>
         </div>
       </div>
+      
       <SideBar
         open={navBarShow}
         close={setNavBarShow}

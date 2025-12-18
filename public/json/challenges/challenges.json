@@ -1,0 +1,63 @@
+{
+  "designChallenges": [
+    {
+      "image": "assets/logos/challenges/design/AI_Challenge.png",
+      "challengeRedirectLink": "#AIChallenge",
+      "navigate": "/aichallenge",
+      "description": "A national AI hackathon engaging undergraduates to build real-world AI solutions, guided by industry experts and evaluated by leading practitioners."
+    },
+    {
+      "image": "assets/logos/challenges/design/Circuits_Challenge.png",
+      "challengeRedirectLink": "#CircuitsChallenge",
+      "navigate": "/circuitschallenge",
+      "description": "A national-level design competition encouraging undergraduates to innovate in circuit design through creative, real-world electronic solutions."
+    },
+    {
+      "image": "assets/logos/challenges/design/Arduino_Challenge.png",
+      "challengeRedirectLink": "#ArduinoChallenge",
+      "navigate": "/arduinochallenge",
+      "description": "An open-ended innovation challenge empowering school students and undergraduates to design impactful Arduino-based solutions for real-world problems."
+    },
+    {
+      "image": "assets/logos/challenges/design/Robotics_Challenge.png",
+      "challengeRedirectLink": "#RoboticsChallenge",
+      "navigate": "/roboticschallenge",
+      "description": "A platform for innovative robotics solutions addressing real-world challenges in automation, industry, and community impact."
+    },
+    {
+      "image": "assets/logos/challenges/design/Healthcare_Challenge.png",
+      "challengeRedirectLink": "#HealthcareChallenge",
+      "navigate": "/healthcareinnovationchallenge",
+      "description": "A biomedical innovation challenge focused on intelligent healthcare solutions using ECG and physiological signal processing."
+    },
+    {
+      "image": "assets/logos/challenges/design/Commnunication_Challenge.png",
+      "challengeRedirectLink": "#CommnunicationsChallenge",
+      "navigate": "/communicationschallenge",
+      "description": "A technology-driven challenge exploring next-generation communication systems, including 5G, IoT connectivity, and secure networks."
+    },
+    {
+      "image": "assets/logos/challenges/design/Chips_Challenge.png",
+      "challengeRedirectLink": "#ChipsChallenge",
+      "navigate": "/chipschallenge",
+      "description": "Sri Lanka’s national gateway to the International Microelectronics Olympiad, identifying top talent in IC design, microelectronics, and chip technologies."
+    }
+  ],
+  "codingChallenges": [
+    {
+      "image": "assets/logos/challenges/coding/xtreme.png",
+      "navigate": "https://xtreme.ieee.lk/",
+      "description": "A national AI hackathon engaging undergraduates to build real-world AI solutions, guided by industry experts and evaluated by leading practitioners."
+    },
+    {
+      "image": "assets/logos/challenges/coding/noi.png",
+      "navigate": "https://www.noi.lk/",
+      "description": "A national-level design competition encouraging undergraduates to innovate in circuit design through creative, real-world electronic solutions."
+    },
+    {
+      "image": "assets/logos/challenges/coding/icpc.png",
+      "navigate": "https://icpc.global/",
+      "description": "An open-ended innovation challenge empowering school students and undergraduates to design impactful Arduino-based solutions for real-world problems."
+    }
+  ]
+}
