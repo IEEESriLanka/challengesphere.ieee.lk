@@ -22,16 +22,16 @@ const OutTeam = () => {
   const Leads = [
     {
       img: Chair,
-      name: "Dilini Ekanayake",
+      name: "Dr. Sidath Ravindra Liyanage",
       position:
         "Chair, Educational Activities Committee, IEEE Sri Lanka Section",
-      in_link: "https://www.linkedin.com/in/dilini-ekanayaka/",
+      in_link: "https://www.linkedin.com/in/sidathliyanage",
     },
     {
       img: ProjectChair,
-      name: "Chamodi Hansika",
+      name: "Neranjana Rashmi",
       position: "Project Chair",
-      in_link: "https://www.linkedin.com/in/chamodi-hansika",
+      in_link: "https://www.linkedin.com/in/neranjana-rashmi",
     },
   ];
 
@@ -56,9 +56,9 @@ const OutTeam = () => {
     },
     {
       img: Secretary,
-      name: "Maheshika Madubashani",
+      name: "Methara Hewavithana",
       position: "Secretary",
-      in_link: "https://www.linkedin.com/in/maheshikahbm",
+      in_link: "https://www.linkedin.com/in/methara",
     },
   ];
 

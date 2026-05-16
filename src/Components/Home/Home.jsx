@@ -1,5 +1,5 @@
 import React from "react";
-import BG from "../../assets/home/bg.svg";
+import BG from "../../assets/home/bg.png";
 import IEEELogo from "../../assets/logos/ieeesls.svg";
 
 const Home = () => {
@@ -11,7 +11,7 @@ const Home = () => {
           <div className="flex flex-col lg:text-[110px] text-7xl font-bold text-white text-center">
             <p>IEEE</p>
             <p>Challenge Sphere</p>
-            <p className="pt-2">2025</p>
+            <p className="pt-2">2026</p>
           </div>
           <img src={IEEELogo} alt="" className="mt-8 w-[40%] lg:w-[13%]" />
         </div>
