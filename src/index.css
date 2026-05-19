@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* GSAP ScrollTrigger pin wrapper — keep hero clipped and sized to one viewport */
+.pin-spacer {
+  overflow: hidden !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.pin-spacer > #home {
+  max-height: 100vh;
+  overflow: hidden;
+}
+
 .timeline {
     position: relative;
     max-width: 1200px;

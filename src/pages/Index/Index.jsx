@@ -54,12 +54,15 @@ const Index = () => {
   }, [location]);
 
   return (
-    <div className="relative flex flex-col">
+    <div className="relative flex flex-col bg-[#020511]">
       <Home />
-      <Challenges />
-      <OutTeam />
-      <ChallengeLeads />
-      <SponsorBar />
+
+      <div className="relative z-30 bg-[#020511] shadow-[0_-20px_50px_rgba(2,5,17,0.9)]">
+        <Challenges />
+        <OutTeam />
+        <ChallengeLeads />
+        <SponsorBar />
+      </div>
     </div>
   );
 };

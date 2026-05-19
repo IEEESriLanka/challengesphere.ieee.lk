@@ -59,16 +59,16 @@ const Footer = () => {
       <div className="h-1 w-full bg-background-white-1 mt-6" />
       <div className="w-full text-center mt-2 text-base font-normal">
         <p className="font-medium text-[80%] md:text-[100%] cursor-default">
-          © 2025 IEEE Sri Lanka Challenge Sphere | All Rights Reserved
+          © 2026 IEEE Sri Lanka Challenge Sphere | All Rights Reserved
         </p>
         <p className="text-[80%] md:text-[100%] -mt-1 md:mt-0 pb-1 cursor-default">
-          Designed & Developed{" "}
+          Designed & Developed by {" "}
           <a
-            href="https://www.linkedin.com/in/raveeshavishwajith/"
+            href="https://www.rusirasandul.online/"
             className="font-medium"
             target="_blank"
           >
-            Raveesha Vishwajith
+            Rusira Sandul
           </a>
         </p>
       </div>
