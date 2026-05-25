@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { GoArrowLeft } from "react-icons/go";
 
-import TeamCard from "../TeamCard/TeamCard";
+import TeamCard from "../../Components/TeamCard/TeamCard";
 import {
   normalizeMemberLink,
   oc2026Coordinators,
@@ -10,7 +11,8 @@ import {
   oc2026ViceChairs,
 } from "../../data/oc2026Data";
 
-const OutTeam = () => {
+const OrganizingCommitee2026 = () => {
+  const navigate = useNavigate();
   const [topLeadHoveredIndex, setTopLeadHoveredIndex] = useState();
   const [subLeadHoveredIndex, setSubLeadHoveredIndex] = useState();
   const [vcHoveredIndex, setVcHoveredIndex] = useState();
@@ -20,6 +22,7 @@ const OutTeam = () => {
     img: member.img,
     name: member.name,
     position: member.position,
+    university: member.university,
     in_link: normalizeMemberLink(member.linkedin),
   });
 
@@ -29,26 +32,27 @@ const OutTeam = () => {
   const coordinators = oc2026Coordinators.map(mapToCard);
 
   return (
-    <section id="ourteam" className="relative bg-chess-bg-2">
+    <div className="relative min-h-screen bg-chess-bg-2 text-text-white">
       <div className="absolute inset-0 chess-grid-overlay" aria-hidden />
-      <div className="relative flex flex-col w-full h-fit px-[5%] lg:px-[10%] py-16 sm:py-20 cursor-default">
-        <p className="text-white font-bold text-[200%] sm:text-[250%] lg:text-[350%] text-center chess-heading-underline self-center">
-          Our Team
-        </p>
-        <p className="text-center pb-10 pt-4">
-          <Link
-            to="/organitioncommittee2026"
-            className="text-chess-cyan font-semibold text-base sm:text-lg hover:text-chess-cyan-soft hover:underline"
-          >
-            View full 2026 organizing committee profiles →
-          </Link>
+      <div className="relative flex flex-col w-full px-[5%] pt-24 lg:pt-32 pb-14 lg:px-[10%] cursor-default">
+        <button
+          type="button"
+          className="flex items-center font-semibold text-lg md:text-xl text-text-white hover:text-chess-cyan transition-colors"
+          onClick={() => navigate("/#home")}
+        >
+          <GoArrowLeft className="text-base md:text-2xl mr-2" />
+          Back to home page
+        </button>
+
+        <p className="text-white font-bold text-[200%] sm:text-[250%] lg:text-[350%] text-center mt-10 chess-heading-underline self-center">
+          Organizing Committee 2026
         </p>
 
-        <h2 className="md:hidden text-center font-bold text-[175%] text-white">
-          Chairs
+        <h2 className="text-center font-bold text-[150%] md:text-[175%] text-chess-cyan mt-10 mb-6">
+          Core Leads
         </h2>
 
-        <div className="grid grid-cols-1 justify-items-center w-full max-w-[320px] mx-auto mb-6">
+        <div className="grid grid-cols-1 justify-items-center w-full max-w-[320px] mx-auto mb-8">
           {topLeads.map((lead, index) => (
             <div
               key={lead.name}
@@ -60,6 +64,7 @@ const OutTeam = () => {
                 img={lead.img}
                 name={lead.name}
                 position={lead.position}
+                university={lead.university}
                 index={index}
                 hoveredIndex={topLeadHoveredIndex}
                 in_link={lead.in_link}
@@ -68,7 +73,7 @@ const OutTeam = () => {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center w-full max-w-2xl mx-auto mb-10 md:mb-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center w-full max-w-2xl mx-auto mb-16 md:mb-20">
           {subLeads.map((lead, index) => (
             <div
               key={lead.name}
@@ -80,6 +85,7 @@ const OutTeam = () => {
                 img={lead.img}
                 name={lead.name}
                 position={lead.position}
+                university={lead.university}
                 index={index}
                 hoveredIndex={subLeadHoveredIndex}
                 in_link={lead.in_link}
@@ -88,7 +94,7 @@ const OutTeam = () => {
           ))}
         </div>
 
-        <h2 className="text-center font-bold text-[175%] md:text-[200%] text-white mt-10 mb-8 chess-heading-underline self-center">
+        <h2 className="text-center font-bold text-[175%] md:text-[200%] text-white mb-8 chess-heading-underline self-center">
           Vice Chairs
         </h2>
         <div className="flex flex-wrap w-full gap-y-10 justify-center">
@@ -103,6 +109,7 @@ const OutTeam = () => {
                 img={lead.img}
                 name={lead.name}
                 position={lead.position}
+                university={lead.university}
                 index={index}
                 hoveredIndex={vcHoveredIndex}
                 in_link={lead.in_link}
@@ -127,6 +134,7 @@ const OutTeam = () => {
                 img={coordinator.img}
                 name={coordinator.name}
                 position={coordinator.position}
+                university={coordinator.university}
                 hoveredIndex={coordinatorHoveredIndex}
                 in_link={coordinator.in_link}
               />
@@ -134,8 +142,8 @@ const OutTeam = () => {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
-export default OutTeam;
+export default OrganizingCommitee2026;

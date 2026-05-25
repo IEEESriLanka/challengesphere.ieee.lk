@@ -1,78 +1,83 @@
 import React from "react";
+import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import logo from "../../assets/logos/logo.png";
-import facebookIcon from "../../assets/socialMedia/facebook.png";
-import instagramIcon from "../../assets/socialMedia/instagram.svg";
-import whatsappIcon from "../../assets/socialMedia/whatsapp.svg";
+
+const socials = [
+  {
+    href: "https://www.facebook.com/IEEESriLanka",
+    label: "Facebook",
+    icon: FaFacebookF,
+  },
+  {
+    href: "https://www.instagram.com/ieeesrilanka/",
+    label: "Instagram",
+    icon: FaInstagram,
+  },
+  {
+    href: "https://chat.whatsapp.com/I5vOXfOmzMG3REUXzCBBwd",
+    label: "WhatsApp",
+    icon: FaWhatsapp,
+  },
+];
 
 const Footer = () => {
   return (
-    <div className="flex flex-col w-full h-fit bg-background-white-2 md:px-[10%] pt-[4%] pb-[1%] px-[0.75%] mt-1">
-      <div className="w-full flex flex-col md:flex-row items-center justify-between">
-        <div className="flex flex-col md:flex-row items-center w-full md:w-[70%] lg:w-[80%]">
-          <img
-            src={logo}
-            alt="challengesphere logo"
-            className="w-[12%] md:w-[12%] lg:w-[8%]"
-          />
-          <div className="flex flex-col pl-3">
-            <p className="font-semibold text-[120%] md:text-[110%] lg:text-[150%] text-center md:text-start cursor-default">
-              Challenge Sphere
-            </p>
-            <p className="font-light mt-[-2%] text-[100%] md:text-[100%] lg:text-[120%] text-center md:text-start cursor-default">
-              Where Limits Shatter and New Horizons Arise
-            </p>
+    <footer className="relative bg-chess-bg-2 border-t border-chess-border">
+      <div className="absolute inset-0 chess-grid-overlay" aria-hidden />
+      <div className="relative flex flex-col w-full px-[5%] md:px-[10%] pt-10 pb-6 text-text-white">
+        <div className="w-full flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-5">
+            <img
+              src={logo}
+              alt="ChallengeSphere logo"
+              className="h-14 md:h-16 w-auto drop-shadow-[0_4px_18px_rgba(5,221,255,0.18)]"
+            />
+            <div className="flex flex-col">
+              <p className="font-semibold text-white text-lg md:text-xl lg:text-2xl text-center md:text-start">
+                Challenge Sphere
+              </p>
+              <p className="font-light text-chess-muted text-sm md:text-base text-center md:text-start">
+                Where Limits Shatter and New Horizons Arise
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-row gap-3">
+            {socials.map(({ href, label, icon: Icon }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={label}
+                className="flex items-center justify-center h-11 w-11 rounded-full border border-chess-border bg-chess-surface text-text-white hover:text-chess-cyan hover:border-chess-cyan hover:shadow-chess-glow transition-all"
+              >
+                <Icon className="text-lg" />
+              </a>
+            ))}
           </div>
         </div>
-        <div className="flex flex-row gap-x-10 w-full justify-center md:justify-between mt-5 md:mt-0 md:w-[30%] lg:w-[20%] px-2">
-          <a
-            href="https://www.facebook.com/IEEESriLanka"
-            target="_blank"
-            className="w-[10%] md:w-[18%] lg:w-[16%]"
-          >
-            <img
-              src={facebookIcon}
-              className="transition-transform transform hover:scale-125 duration-200 cursor-pointer"
-            />
-          </a>
-          <a
-            href="https://www.instagram.com/ieeesrilanka/"
-            target="_blank"
-            className="w-[10%] md:w-[18%] lg:w-[16%]"
-          >
-            <img
-              src={instagramIcon}
-              className="transition-transform transform hover:scale-125 duration-200 cursor-pointer"
-            />
-          </a>
-          <a
-            href="https://chat.whatsapp.com/I5vOXfOmzMG3REUXzCBBwd"
-            target="_blank"
-            className="w-[10%] md:w-[18%] lg:w-[16%]"
-          >
-            <img
-              src={whatsappIcon}
-              className="transition-transform transform hover:scale-125 duration-200 cursor-pointer"
-            />
-          </a>
+
+        <div className="h-px w-full bg-chess-border mt-8" />
+
+        <div className="w-full text-center mt-4 text-base font-normal text-chess-muted">
+          <p className="font-medium text-xs md:text-sm cursor-default">
+            © 2026 IEEE Sri Lanka Challenge Sphere | All Rights Reserved
+          </p>
+          <p className="text-xs md:text-sm mt-1 pb-1 cursor-default">
+            Designed & Developed by{" "}
+            <a
+              href="https://www.rusirasandul.online/"
+              className="font-medium text-chess-cyan hover:text-chess-cyan-soft"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Rusira Sandul
+            </a>
+          </p>
         </div>
       </div>
-      <div className="h-1 w-full bg-background-white-1 mt-6" />
-      <div className="w-full text-center mt-2 text-base font-normal">
-        <p className="font-medium text-[80%] md:text-[100%] cursor-default">
-          © 2026 IEEE Sri Lanka Challenge Sphere | All Rights Reserved
-        </p>
-        <p className="text-[80%] md:text-[100%] -mt-1 md:mt-0 pb-1 cursor-default">
-          Designed & Developed by {" "}
-          <a
-            href="https://www.rusirasandul.online/"
-            className="font-medium"
-            target="_blank"
-          >
-            Rusira Sandul
-          </a>
-        </p>
-      </div>
-    </div>
+    </footer>
   );
 };
 

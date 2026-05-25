@@ -2,6 +2,127 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ============================================================
+   CHESS THEME — Global base
+   ============================================================ */
+html,
+body,
+#root {
+  background-color: #020511;
+  color: #e6eaf2;
+  font-family: "Poppins", system-ui, sans-serif;
+}
+
+::selection {
+  background: rgba(5, 221, 255, 0.35);
+  color: #ffffff;
+}
+
+/* Chess background pattern overlay (subtle grid like the hero) */
+.chess-grid-overlay {
+  background-image:
+    linear-gradient(to right, rgba(31, 41, 55, 0.6) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(31, 41, 55, 0.6) 1px, transparent 1px);
+  background-size: 4rem 4rem;
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+/* Reusable cyan section heading underline */
+.chess-heading-underline {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.6rem;
+}
+.chess-heading-underline::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #05ddff, transparent);
+  border-radius: 9999px;
+}
+
+/* ============================================================
+   Hero text effects (Chess landing page)
+   ============================================================ */
+.hero-text-gradient {
+  background: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    #c2f7ff 25%,
+    #05ddff 50%,
+    #c2f7ff 75%,
+    #ffffff 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: shimmer 7s linear infinite;
+  filter: drop-shadow(0 4px 18px rgba(5, 221, 255, 0.25))
+    drop-shadow(0 6px 24px rgba(0, 0, 0, 0.85));
+}
+
+.hero-text-glow {
+  text-shadow: 0 0 20px rgba(5, 221, 255, 0.45),
+    0 0 40px rgba(5, 221, 255, 0.25),
+    0 4px 12px rgba(0, 0, 0, 0.85);
+  animation: glow-pulse 4.5s ease-in-out infinite;
+}
+
+/* Soft radial cyan halo placed behind the king */
+.hero-aurora {
+  background: radial-gradient(
+    ellipse 60% 60% at 50% 55%,
+    rgba(5, 221, 255, 0.25) 0%,
+    rgba(5, 221, 255, 0.08) 35%,
+    transparent 70%
+  );
+  animation: aurora-pulse 7s ease-in-out infinite;
+  filter: blur(20px);
+}
+
+/* Floating particle dots */
+.hero-particle {
+  position: absolute;
+  bottom: -10vh;
+  width: 4px;
+  height: 4px;
+  border-radius: 9999px;
+  background: rgba(5, 221, 255, 0.85);
+  box-shadow: 0 0 8px rgba(5, 221, 255, 0.85),
+    0 0 16px rgba(5, 221, 255, 0.4);
+  animation: float-up linear infinite;
+  will-change: transform, opacity;
+}
+
+/* Glassy card surface used across the dark theme */
+.chess-card {
+  background: linear-gradient(
+    180deg,
+    rgba(16, 26, 52, 0.85) 0%,
+    rgba(10, 17, 36, 0.85) 100%
+  );
+  border: 1px solid rgba(31, 42, 68, 0.9);
+  border-radius: 1rem;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.chess-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(5, 221, 255, 0.45);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.65),
+    0 0 24px rgba(5, 221, 255, 0.18);
+}
+
 /* GSAP ScrollTrigger pin wrapper — keep hero clipped and sized to one viewport */
 .pin-spacer {
   overflow: hidden !important;
@@ -12,6 +133,50 @@
 .pin-spacer > #home {
   max-height: 100vh;
   overflow: hidden;
+}
+
+/* ============================================================
+   react-vertical-timeline dark overrides
+   ============================================================ */
+.vertical-timeline-element-content {
+  background: linear-gradient(
+    180deg,
+    rgba(16, 26, 52, 0.9) 0%,
+    rgba(10, 17, 36, 0.9) 100%
+  ) !important;
+  color: #e6eaf2 !important;
+  border: 1px solid rgba(31, 42, 68, 0.9) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55) !important;
+}
+
+.vertical-timeline-element-content-arrow {
+  border-right-color: rgba(5, 221, 255, 0.7) !important;
+}
+
+/* ============================================================
+   react-image-gallery dark overrides
+   ============================================================ */
+.image-gallery,
+.image-gallery-content,
+.image-gallery-slide-wrapper,
+.image-gallery-swipe,
+.image-gallery-slide {
+  background: transparent !important;
+}
+.image-gallery-thumbnails-wrapper,
+.image-gallery-thumbnails {
+  background: transparent !important;
+}
+.image-gallery-thumbnail {
+  border: 2px solid transparent !important;
+}
+.image-gallery-thumbnail.active,
+.image-gallery-thumbnail:hover {
+  border-color: #05ddff !important;
+}
+.image-gallery-icon {
+  color: #05ddff !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.8));
 }
 
 .timeline {

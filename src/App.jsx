@@ -4,6 +4,7 @@ import Index from "./pages/Index/Index";
 import Footer from "./Components/Footer/Footer";
 import ChallengePage from "./pages/Challenges/ChallengePage";
 import OrganizingCommitee2024 from "./pages/OrganizingCommitee/OrganizingCommitee2024";
+import OrganizingCommitee2026 from "./pages/OrganizingCommitee/OrganizingCommitee2026";
 import NavBar from "./Components/NavBar/NavBar";
 import Achievements from "./pages/Highlights/Achievements";
 import ElevateSession from "./pages/Highlights/ElevateSession";
@@ -56,6 +57,10 @@ const App = () => {
         <Route
           path="/organitioncommittee2024"
           element={<OrganizingCommitee2024 />}
+        />
+        <Route
+          path="/organitioncommittee2026"
+          element={<OrganizingCommitee2026 />}
         />
         <Route
           path="/highlights/elevatesession"

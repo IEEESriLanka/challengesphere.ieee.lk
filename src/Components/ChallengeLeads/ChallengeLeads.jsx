@@ -137,28 +137,49 @@ const ChallengeLeads = () => {
   ];
 
   return (
-    <div className="flex flex-col w-full h-fit bg-background-white-1 md:px-[10%] py-[10%] sm:py-[2%] cursor-default">
-      <p className="text-text-black font-bold text-[250%] md:text-[350%] text-center pb-[3%]">
-        Challenges Leads
-      </p>
-      <div className="tb:block hidden">
-        <VerticalTimeline lineColor="#006791">
+    <section id="challengeleads" className="relative bg-chess-bg">
+      <div className="absolute inset-0 chess-grid-overlay" aria-hidden />
+      <div className="relative flex flex-col w-full h-fit md:px-[10%] py-16 sm:py-20 cursor-default">
+        <p className="text-white font-bold text-[200%] sm:text-[250%] md:text-[350%] text-center pb-10 chess-heading-underline self-center">
+          Challenges Leads
+        </p>
+        <div className="tb:block hidden">
+          <VerticalTimeline lineColor="#05ddff">
+            {challenges.map((challenge, index) => (
+              <VerticalTimelineElement
+                key={index}
+                position={index % 2 === 0 ? "left" : "right"}
+                iconStyle={{
+                  background: "transparent",
+                  boxShadow: "none",
+                }}
+                contentStyle={{
+                  background:
+                    "linear-gradient(180deg, rgba(16,26,52,0.9) 0%, rgba(10,17,36,0.9) 100%)",
+                  color: "#E6EAF2",
+                  border: "1px solid rgba(31,42,68,0.9)",
+                  boxShadow: "0 10px 30px rgba(0,0,0,0.55)",
+                }}
+                contentArrowStyle={{
+                  background: "transparent",
+                  borderRight: "12px solid #05ddff",
+                }}
+              >
+                <ChallengeCard
+                  index={index}
+                  title={challenge.title}
+                  badge={challenge.badge}
+                  leads={challenge.leads}
+                />
+              </VerticalTimelineElement>
+            ))}
+          </VerticalTimeline>
+        </div>
+        <div className="tb:hidden px-[5%] w-full flex flex-col justify-center items-center">
           {challenges.map((challenge, index) => (
-            <VerticalTimelineElement
+            <div
               key={index}
-              position={index % 2 === 0 ? "left" : "right"}
-              iconStyle={{
-                background: "transparent",
-                boxShadow: "none",
-              }}
-              contentStyle={{
-                background: "#f0f8ff",
-                color: "#000",
-              }}
-              contentArrowStyle={{
-                background: "transparent",
-                borderRight: "12px solid #006791",
-              }}
+              className="w-full flex flex-col pt-10 chess-card p-4 mt-6"
             >
               <ChallengeCard
                 index={index}
@@ -166,23 +187,11 @@ const ChallengeLeads = () => {
                 badge={challenge.badge}
                 leads={challenge.leads}
               />
-            </VerticalTimelineElement>
+            </div>
           ))}
-        </VerticalTimeline>
+        </div>
       </div>
-      <div className="tb:hidden px-[5%] w-full flex flex-col justify-center items-center">
-        {challenges.map((challenge, index) => (
-          <div className="w-full flex flex-col pt-10">
-            <ChallengeCard
-              index={index}
-              title={challenge.title}
-              badge={challenge.badge}
-              leads={challenge.leads}
-            />
-          </div>
-        ))}
-      </div>
-    </div>
+    </section>
   );
 };
 

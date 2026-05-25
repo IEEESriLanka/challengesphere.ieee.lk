@@ -115,79 +115,90 @@ const ChallengePage = () => {
   const { bgColor, hoverColor } = getChallengeColors(challenge.title);
 
   return (
-    <div className="flex flex-col w-full h-full px-[5%] pt-20 lg:pt-28 pb-14 lg:px-[10%] cursor-default">
-      <button
-        className="flex items-center font-semibold text-lg md:text-xl"
-        onClick={() => navigate("/#challenges")}
-      >
-        <GoArrowLeft className="text-base md:text-2xl mr-2" />
-        Back to home page
-      </button>
-      <div className="flex flex-col w-full items-center h-full">
-        <p className="text-3xl md:text-5xl font-semibold mb-4 md:mb-10 text-center mt-5">
-          {challenge.title}
-        </p>
-        <img
-          src={challenge.image}
-          alt={`${challenge.title} Logo`}
-          className="w-auto md:h-60 h-52 mb-4 md:mb-5"
-        />
-        <p className="text-center text-lg md:text-xl md:px-[15%] mb-4 md:mb-5">
-          {challenge.description}
-        </p>
-        <div className="text-center text-lg md:text-xl md:px-[15%] pt-[1%]">
-          {challenge.status === "opened" && (
-            <div className="flex flex-col items-center gap-y-8">
-              <p>
-                Registration is <b>open</b> for the {challenge.title}.
-              </p>
-              {challenge.deadline && (
-                <div className="flex flex-row gap-x-5 items-center">
-                  <IoCalendarSharp className="text-4xl" />
-                  <p>
-                    Registration Deadline:{" "}
-                    <span className="font-semibold" style={{ color: bgColor }}>
-                      {challenge.deadline}
-                    </span>
-                  </p>
-                </div>
-              )}
-              <Link
-                to={challenge.form_link}
-                target="_blank"
-                className="text-white font-semibold text-2xl px-4 py-3 rounded-xl"
-                style={{
-                  backgroundColor: hover ? hoverColor : bgColor,
-                  transition: "background-color 0.3s ease",
-                }}
-                onMouseEnter={() => setHover(true)}
-                onMouseLeave={() => setHover(false)}
-              >
-                Register Now
-              </Link>
-            </div>
-          )}
-          {challenge.status === "closed" && (
-            <div className="flex flex-col items-center gap-y-8">
-              <p>
-                Registration is <b className="text-red">closed</b> for the{" "}
-                {challenge.title}.
-              </p>
-              <Link
-                className="text-white font-semibold text-2xl px-4 py-2 rounded-xl opacity-60"
-                style={{ backgroundColor: bgColor }}
-                disabled
-                title="Registration is closed"
-              >
-                Register Now
-              </Link>
-            </div>
-          )}
-          {challenge.status === "soon" && (
-            <p className="text-red font-medium">
-              Stay tuned, registrations will open soon!
-            </p>
-          )}
+    <div className="relative min-h-screen bg-chess-bg-2 text-text-white">
+      <div className="absolute inset-0 chess-grid-overlay" aria-hidden />
+      <div className="relative flex flex-col w-full px-[5%] pt-24 lg:pt-32 pb-14 lg:px-[10%] cursor-default">
+        <button
+          className="flex items-center font-semibold text-lg md:text-xl text-text-white hover:text-chess-cyan transition-colors"
+          onClick={() => navigate("/#challenges")}
+        >
+          <GoArrowLeft className="text-base md:text-2xl mr-2" />
+          Back to home page
+        </button>
+        <div className="flex flex-col w-full items-center h-full mt-6">
+          <p className="text-3xl md:text-5xl font-semibold mb-4 md:mb-10 text-center mt-5 text-white chess-heading-underline">
+            {challenge.title}
+          </p>
+          <img
+            src={challenge.image}
+            alt={`${challenge.title} Logo`}
+            className="w-auto md:h-60 h-52 mb-6 drop-shadow-[0_8px_30px_rgba(5,221,255,0.2)]"
+          />
+          <p className="text-center text-base md:text-lg md:px-[15%] mb-6 text-chess-muted leading-relaxed">
+            {challenge.description}
+          </p>
+          <div className="text-center text-lg md:text-xl md:px-[15%] pt-2">
+            {challenge.status === "opened" && (
+              <div className="flex flex-col items-center gap-y-6 chess-card p-6 md:p-8 max-w-xl mx-auto">
+                <p className="text-text-white">
+                  Registration is{" "}
+                  <b className="text-chess-cyan">open</b> for the{" "}
+                  {challenge.title}.
+                </p>
+                {challenge.deadline && (
+                  <div className="flex flex-row gap-x-4 items-center text-text-white">
+                    <IoCalendarSharp className="text-3xl text-chess-cyan" />
+                    <p>
+                      Registration Deadline:{" "}
+                      <span
+                        className="font-semibold"
+                        style={{ color: bgColor }}
+                      >
+                        {challenge.deadline}
+                      </span>
+                    </p>
+                  </div>
+                )}
+                <Link
+                  to={challenge.form_link}
+                  target="_blank"
+                  className="text-white font-semibold text-xl md:text-2xl px-6 py-3 rounded-xl shadow-chess-card"
+                  style={{
+                    backgroundColor: hover ? hoverColor : bgColor,
+                    transition: "background-color 0.3s ease",
+                  }}
+                  onMouseEnter={() => setHover(true)}
+                  onMouseLeave={() => setHover(false)}
+                >
+                  Register Now
+                </Link>
+              </div>
+            )}
+            {challenge.status === "closed" && (
+              <div className="flex flex-col items-center gap-y-6 chess-card p-6 md:p-8 max-w-xl mx-auto">
+                <p className="text-text-white">
+                  Registration is <b className="text-red">closed</b> for the{" "}
+                  {challenge.title}.
+                </p>
+                <button
+                  type="button"
+                  className="text-white font-semibold text-xl md:text-2xl px-4 py-2 rounded-xl opacity-60 cursor-not-allowed"
+                  style={{ backgroundColor: bgColor }}
+                  disabled
+                  title="Registration is closed"
+                >
+                  Register Now
+                </button>
+              </div>
+            )}
+            {challenge.status === "soon" && (
+              <div className="chess-card p-6 md:p-8 max-w-xl mx-auto">
+                <p className="text-chess-cyan font-medium">
+                  Stay tuned, registrations will open soon!
+                </p>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>

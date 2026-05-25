@@ -57,7 +57,7 @@ const Index = () => {
     <div className="relative flex flex-col bg-[#020511]">
       <Home />
 
-      <div className="relative z-30 bg-[#020511] shadow-[0_-20px_50px_rgba(2,5,17,0.9)]">
+      <div className="relative z-30 bg-[#020511] shadow-[0_-30px_60px_rgba(2,5,17,0.95)]">
         <Challenges />
         <OutTeam />
         <ChallengeLeads />

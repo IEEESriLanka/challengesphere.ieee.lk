@@ -1,69 +1,49 @@
-import React, { Suspense, lazy, useEffect, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import bgImg from "../../assets/home/bg.webp";
-import IEEELogo from "../../assets/logos/ieeesls.svg";
-import MobileHeroLayers from "./MobileHeroLayers";
-
-const HeroCanvas = lazy(() => import("./HeroCanvas"));
+import IEEELogo from "../../assets/logos/IEEE SL Logo - Horizontal - White.svg";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const DESKTOP_QUERY = "(min-width: 1025px)";
-
-function HeroCanvasFallback() {
-  return (
-    <div
-      className="absolute inset-0 z-10 flex items-center justify-center bg-transparent"
-      aria-hidden
-    >
-      <div className="h-8 w-8 animate-pulse rounded-full border-2 border-white/20 border-t-light-blue2" />
-    </div>
-  );
-}
+const PARTICLE_COUNT = 14;
 
 const Home = () => {
   const pinContainerRef = useRef(null);
-  const ieeeTextRef = useRef(null);
-  const sphereTextRef = useRef(null);
-  const logoRef = useRef(null);
-  const globeMeshRef = useRef(null);
-  const buildTimelineRef = useRef(null);
+  const bgRef = useRef(null);
+  const auroraRef = useRef(null);
+  const ieeeBlockRef = useRef(null);
+  const sphereBlockRef = useRef(null);
+  const bottomRef = useRef(null);
 
-  const [isDesktop, setIsDesktop] = useState(() =>
-    typeof window !== "undefined"
-      ? window.matchMedia(DESKTOP_QUERY).matches
-      : true
+  // Pre-compute particle parameters so they stay stable across renders
+  const particles = useMemo(
+    () =>
+      Array.from({ length: PARTICLE_COUNT }, (_, i) => {
+        const left = Math.random() * 100;
+        const drift = (Math.random() * 80 - 40).toFixed(1);
+        const duration = 12 + Math.random() * 14;
+        const delay = -(Math.random() * duration);
+        const size = 2 + Math.random() * 4;
+        return { id: i, left, drift, duration, delay, size };
+      }),
+    []
   );
-
-  useEffect(() => {
-    const mq = window.matchMedia(DESKTOP_QUERY);
-    const onChange = (event) => setIsDesktop(event.matches);
-    mq.addEventListener("change", onChange);
-    return () => mq.removeEventListener("change", onChange);
-  }, []);
 
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
     ).matches;
 
-    if (prefersReducedMotion) {
-      return undefined;
-    }
+    if (prefersReducedMotion || !pinContainerRef.current) return undefined;
 
-    let scrollTimeline;
-
-    const buildTimeline = (globeMesh, desktop) => {
-      scrollTimeline?.scrollTrigger?.kill();
-      scrollTimeline?.kill();
-
-      scrollTimeline = gsap.timeline({
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({
         scrollTrigger: {
           trigger: pinContainerRef.current,
           start: "top top",
-          end: desktop ? "+=200%" : "+=120%",
+          end: "+=160%",
           scrub: 1.1,
           pin: true,
           anticipatePin: 1,
@@ -72,47 +52,58 @@ const Home = () => {
         },
       });
 
-      if (globeMesh && desktop) {
-        scrollTimeline.to(
-          globeMesh.rotation,
+      if (bgRef.current) {
+        tl.to(
+          bgRef.current,
           {
-            z: Math.PI * 0.8,
+            scale: 1.15,
             ease: "none",
-            duration: 4.5,
+            duration: 4,
           },
           0
         );
       }
 
-      scrollTimeline
-        .to(
-          ieeeTextRef.current,
+      if (auroraRef.current) {
+        tl.to(
+          auroraRef.current,
           {
             opacity: 0,
-            y: -60,
-            scale: 0.9,
-            duration: 1.5,
-            ease: "power2.out",
+            scale: 1.3,
+            ease: "power2.in",
+            duration: 2,
           },
-          0
-        )
+          0.2
+        );
+      }
+
+      tl.to(
+        ieeeBlockRef.current,
+        {
+          opacity: 0,
+          y: -100,
+          scale: 0.9,
+          duration: 1.5,
+          ease: "power2.out",
+        },
+        0
+      )
         .to(
-          sphereTextRef.current,
+          sphereBlockRef.current,
           {
             opacity: 0,
             scale: 0.85,
-            y: 30,
+            y: 60,
             duration: 1.5,
             ease: "power2.inOut",
           },
           0.2
         )
         .to(
-          logoRef.current,
+          bottomRef.current,
           {
             opacity: 0,
-            scale: 0.9,
-            y: 50,
+            y: 80,
             duration: 1.2,
             ease: "power2.in",
           },
@@ -120,95 +111,103 @@ const Home = () => {
         );
 
       ScrollTrigger.refresh();
-    };
-
-    const mm = gsap.matchMedia();
-
-    mm.add(
-      {
-        isDesktop: DESKTOP_QUERY,
-        isMobile: "(max-width: 1024px)",
-      },
-      (context) => {
-        const desktop = Boolean(context.conditions.isDesktop);
-        buildTimelineRef.current = (mesh) => buildTimeline(mesh, desktop);
-        buildTimeline(globeMeshRef.current, desktop);
-      }
-    );
+    }, pinContainerRef);
 
     const refreshScroll = () => ScrollTrigger.refresh();
     window.addEventListener("resize", refreshScroll);
-    requestAnimationFrame(refreshScroll);
 
     return () => {
-      buildTimelineRef.current = null;
-      scrollTimeline?.scrollTrigger?.kill();
-      scrollTimeline?.kill();
-      mm.revert();
       window.removeEventListener("resize", refreshScroll);
+      ctx.revert();
     };
   }, []);
-
-  const handleGlobeReady = (mesh) => {
-    globeMeshRef.current = mesh;
-    buildTimelineRef.current?.(mesh);
-  };
 
   return (
     <section
       id="home"
       ref={pinContainerRef}
-      className="relative z-0 isolate h-screen w-full max-h-screen overflow-hidden bg-[#020511]"
+      className="relative z-10 isolate h-screen w-full max-h-screen overflow-hidden bg-chess-bg"
     >
+      {/* Background image + grid + vignette + cyan halo behind king */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      <img
-        src={bgImg}
-        className="absolute inset-0 h-full w-full object-cover object-center select-none"
-        alt=""
-        aria-hidden
-        fetchPriority="high"
-        decoding="async"
-      />
-      <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#1f2937_1px,transparent_1px),linear-gradient(to_bottom,#1f2937_1px,transparent_1px)] bg-[size:4rem_4rem]" />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#01040d]/25 via-transparent to-[#01040d]/70" />
+        <img
+          ref={bgRef}
+          src={bgImg}
+          className="absolute inset-0 h-full w-full object-cover object-center select-none will-change-transform"
+          alt=""
+          aria-hidden
+          fetchPriority="high"
+          decoding="async"
+        />
+        <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#1f2937_1px,transparent_1px),linear-gradient(to_bottom,#1f2937_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none" />
+        <div
+          ref={auroraRef}
+          className="absolute inset-0 hero-aurora pointer-events-none"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#01040d]/50 via-transparent to-[#01040d]/90 pointer-events-none" />
 
-      {isDesktop ? (
-        <Suspense fallback={<HeroCanvasFallback />}>
-          <HeroCanvas globeRef={globeMeshRef} onGlobeReady={handleGlobeReady} />
-        </Suspense>
-      ) : (
-        <MobileHeroLayers />
-      )}
+        {/* Floating cyan particles */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {particles.map((p) => (
+            <span
+              key={p.id}
+              className="hero-particle"
+              style={{
+                left: `${p.left}%`,
+                width: `${p.size}px`,
+                height: `${p.size}px`,
+                animationDuration: `${p.duration}s`,
+                animationDelay: `${p.delay}s`,
+                "--drift": `${p.drift}px`,
+              }}
+            />
+          ))}
+        </div>
       </div>
 
-      <div className="absolute inset-0 z-20 flex flex-col items-center justify-between py-10 sm:py-12 pointer-events-none select-none">
-        <p
-          ref={ieeeTextRef}
-          className="mt-20 sm:mt-24 text-white text-6xl sm:text-7xl lg:text-8xl font-black tracking-[0.2em] drop-shadow-[0_4px_12px_rgba(0,0,0,0.85)]"
-        >
-          IEEE
-        </p>
-
+      {/* Foreground content — single-viewport hero */}
+      <div
+        className="absolute inset-0 z-20 flex flex-col items-center justify-evenly pt-20 sm:pt-24 pb-4 sm:pb-6 pointer-events-none select-none"
+        style={{ perspective: "1200px" }}
+      >
+        {/* Top block: eyebrow + IEEE */}
         <div
-          ref={sphereTextRef}
-          className="flex flex-col items-center px-4 text-center mt-8 sm:mt-12"
+          ref={ieeeBlockRef}
+          className="flex flex-col items-center px-4 text-center"
         >
-          <h1 className="text-white text-4xl sm:text-5xl lg:text-8xl font-extrabold uppercase tracking-wide drop-shadow-[0_5px_15px_rgba(0,0,0,0.85)]">
-            Challenge Sphere
-          </h1>
-          <p className="mt-2 text-white text-3xl sm:text-4xl lg:text-6xl font-bold tracking-widest drop-shadow-[0_5px_10px_rgba(0,0,0,0.85)]">
-            2026
-          </p>
+          <span className="text-chess-cyan tracking-[0.4em] text-[10px] sm:text-xs font-semibold uppercase mb-2 drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
+            IEEE Sri Lanka Section Presents
+          </span>
+          <h2 className="text-white font-black tracking-[0.15em] leading-none hero-text-glow whitespace-nowrap text-[clamp(3rem,11vw,10rem)]">
+            IEEE
+          </h2>
+          <div className="mt-3 h-[2px] w-24 sm:w-36 bg-gradient-to-r from-transparent via-chess-cyan to-transparent origin-center animate-line-grow" />
         </div>
 
+        {/* Middle block: Challenge Sphere 2026 */}
         <div
-          ref={logoRef}
-          className="mb-3 sm:mb-4 flex w-full justify-center"
+          ref={sphereBlockRef}
+          className="flex flex-col items-center px-4 text-center"
         >
+          <h1 className="font-extrabold uppercase tracking-tight leading-none hero-text-gradient whitespace-nowrap text-[clamp(1.75rem,6.5vw,7rem)]">
+            Challenge Sphere
+          </h1>
+
+          <div className="flex items-center gap-3 sm:gap-5 mt-3 sm:mt-4">
+            <span className="h-[2px] w-10 sm:w-16 bg-gradient-to-r from-transparent to-chess-cyan" />
+            <p className="text-white font-bold tracking-[0.25em] hero-text-glow whitespace-nowrap text-[clamp(1.5rem,4.5vw,4.5rem)]">
+              2026
+            </p>
+            <span className="h-[2px] w-10 sm:w-16 bg-gradient-to-l from-transparent to-chess-cyan" />
+          </div>
+        </div>
+
+        {/* Bottom block: IEEE SLS logo */}
+        <div ref={bottomRef} className="flex flex-col items-center">
           <img
             src={IEEELogo}
             alt="IEEE Sri Lanka Section"
-            className="w-40 sm:w-44 lg:w-[200px] opacity-90 drop-shadow-[0_4px_10px_rgba(0,0,0,0.55)]"
+            className="w-64 sm:w-72 md:w-80 lg:w-96 xl:w-[28rem] drop-shadow-[0_4px_14px_rgba(0,0,0,0.75)]"
             loading="eager"
             decoding="async"
           />
