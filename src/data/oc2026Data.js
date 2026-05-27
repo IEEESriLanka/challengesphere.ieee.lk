@@ -30,11 +30,7 @@ export function normalizeMemberLink(link) {
   return `https://${link}`;
 }
 
-/**
- * Optional per-member image tweaks (inside the circular avatar):
- *   imagePosition: "50% 30%"  — move focal point (left/right, up/down)
- *   imageScale: 1.15          — zoom in slightly (1 = default)
- */
+
 export const oc2026Data = [
   {
     name: "Neranjana Rashmi",
