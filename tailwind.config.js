@@ -103,6 +103,10 @@ export default {
           "0%": { transform: "scaleX(0)" },
           "100%": { transform: "scaleX(1)" },
         },
+        "float-y": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
       },
       animation: {
         scroll: "scroll 10s linear infinite",
@@ -112,6 +116,7 @@ export default {
         "scroll-dot": "scroll-dot 1.8s ease-in-out infinite",
         shimmer: "shimmer 7s linear infinite",
         "line-grow": "line-grow 1.2s cubic-bezier(0.16,1,0.3,1) forwards",
+        "float-y": "float-y 2.5s ease-in-out infinite",
       },
       screens: {
         tb: "480px",

@@ -24,6 +24,8 @@ const OrganizingCommitee2026 = () => {
     position: member.position,
     university: member.university,
     in_link: normalizeMemberLink(member.linkedin),
+    imagePosition: member.imagePosition,
+    imageScale: member.imageScale,
   });
 
   const topLeads = oc2026TopLead.map(mapToCard);
@@ -61,19 +63,15 @@ const OrganizingCommitee2026 = () => {
               onMouseLeave={() => setTopLeadHoveredIndex(null)}
             >
               <TeamCard
-                img={lead.img}
-                name={lead.name}
-                position={lead.position}
-                university={lead.university}
+                {...lead}
                 index={index}
                 hoveredIndex={topLeadHoveredIndex}
-                in_link={lead.in_link}
               />
             </div>
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center w-full max-w-2xl mx-auto mb-16 md:mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center w-full max-w-5xl mx-auto mb-16 md:mb-20">
           {subLeads.map((lead, index) => (
             <div
               key={lead.name}
@@ -82,13 +80,9 @@ const OrganizingCommitee2026 = () => {
               onMouseLeave={() => setSubLeadHoveredIndex(null)}
             >
               <TeamCard
-                img={lead.img}
-                name={lead.name}
-                position={lead.position}
-                university={lead.university}
+                {...lead}
                 index={index}
                 hoveredIndex={subLeadHoveredIndex}
-                in_link={lead.in_link}
               />
             </div>
           ))}
@@ -106,13 +100,9 @@ const OrganizingCommitee2026 = () => {
               onMouseLeave={() => setVcHoveredIndex(null)}
             >
               <TeamCard
-                img={lead.img}
-                name={lead.name}
-                position={lead.position}
-                university={lead.university}
+                {...lead}
                 index={index}
                 hoveredIndex={vcHoveredIndex}
-                in_link={lead.in_link}
               />
             </div>
           ))}
@@ -130,13 +120,9 @@ const OrganizingCommitee2026 = () => {
               onMouseLeave={() => setCoordinatorHoveredIndex(null)}
             >
               <TeamCard
+                {...coordinator}
                 index={index}
-                img={coordinator.img}
-                name={coordinator.name}
-                position={coordinator.position}
-                university={coordinator.university}
                 hoveredIndex={coordinatorHoveredIndex}
-                in_link={coordinator.in_link}
               />
             </div>
           ))}

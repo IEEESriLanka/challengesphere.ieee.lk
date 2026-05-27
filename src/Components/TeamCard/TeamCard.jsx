@@ -10,6 +10,10 @@ const TeamCard = ({
   hoveredIndex,
   index,
   in_link,
+  /** Fine-tune crop inside the circle, e.g. "50% 20%" (horizontal vertical) */
+  imagePosition = "center center",
+  /** Zoom slightly, e.g. 1.1 = 110% */
+  imageScale = 1,
 }) => {
   const isHovered = hoveredIndex === index;
 
@@ -21,16 +25,25 @@ const TeamCard = ({
             isHovered ? "opacity-70" : "opacity-30"
           } bg-chess-cyan/30`}
         />
-        <img
-          src={img}
-          alt={name}
-          loading="lazy"
-          className={`relative w-full h-full rounded-full object-cover object-center ring-2 transition-all duration-300 ${
+        <div
+          className={`relative w-full h-full overflow-hidden rounded-full ring-2 transition-all duration-300 ${
             isHovered
               ? "ring-chess-cyan shadow-[0_0_24px_rgba(5,221,255,0.35)]"
               : "ring-chess-border"
           }`}
-        />
+        >
+          <img
+            src={img}
+            alt={name}
+            loading="lazy"
+            className="w-full h-full object-cover"
+            style={{
+              objectPosition: imagePosition,
+              transformOrigin: imagePosition,
+              transform: imageScale !== 1 ? `scale(${imageScale})` : undefined,
+            }}
+          />
+        </div>
       </div>
       <div className="flex flex-col w-full items-center mt-3">
         <p className="font-semibold w-full text-[110%] sm:text-[120%] text-center text-white">

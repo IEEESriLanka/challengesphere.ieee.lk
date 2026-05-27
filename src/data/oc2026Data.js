@@ -30,6 +30,11 @@ export function normalizeMemberLink(link) {
   return `https://${link}`;
 }
 
+/**
+ * Optional per-member image tweaks (inside the circular avatar):
+ *   imagePosition: "50% 30%"  — move focal point (left/right, up/down)
+ *   imageScale: 1.15          — zoom in slightly (1 = default)
+ */
 export const oc2026Data = [
   {
     name: "Neranjana Rashmi",
@@ -38,6 +43,10 @@ export const oc2026Data = [
     img: neranjanaImg,
     university: null,
     linkedin: "https://www.linkedin.com/in/neranjana-rashmi",
+    imagePosition: "50% 25%",
+    imageScale: 1.1,
+    // imagePosition: "50% 25%",
+    // imageScale: 1.1,
   },
   {
     name: "Dr. Sidath Ravindra Liyanage",
@@ -47,6 +56,8 @@ export const oc2026Data = [
     img: sidathImg,
     university: null,
     linkedin: "https://www.linkedin.com/in/sidathliyanage",
+    imagePosition: "50% 1%",
+    imageScale: 1.09,
   },
   {
     name: "Methara Minsandhi Hewavithana",
@@ -63,6 +74,8 @@ export const oc2026Data = [
     img: bosiluImg,
     university: "Sri Lanka Technological Campus (SLTC)",
     linkedin: "mailto:bosilunisalitha12345@gmail.com",
+    imagePosition: "50% 12%",
+    imageScale: 2.1,
   },
   {
     name: "Kanushan Thavendren",
@@ -81,9 +94,9 @@ export const oc2026Data = [
     linkedin: "https://www.linkedin.com/in/virajmunaweera/",
   },
   {
-    name: "Hewa Welengodage Rusira Sandul",
+    name: "Rusira Sandul",
     role: "Website",
-    position: "Website Coordinator",
+    position: "Coordinator",
     img: rusiraImg,
     university: "University of Sri Jayewardenepura (USJP)",
     linkedin: "https://www.linkedin.com/in/rusira-sandul-b6bb87292",
@@ -91,15 +104,17 @@ export const oc2026Data = [
   {
     name: "Suwarnadaran Pathmanathan",
     role: "Design",
-    position: "Design Coordinator",
+    position: "Coordinator",
     img: suwarnadaranImg,
     university: "Curtin University",
     linkedin: "https://www.linkedin.com/in/suwarnadaran-pathmanathan",
+    imagePosition: "45% 12%",
+    imageScale: 1.2,
   },
   {
-    name: "Weerathunga Arachchige Thuhina Nimnadira",
+    name: "Thuhina Nimnadira",
     role: "Design",
-    position: "Design Coordinator",
+    position: "Coordinator",
     img: thuhinaImg,
     university: "General Sir John Kotelawala Defence University (KDU)",
     linkedin: "mailto:nimnadirathuhina@gmail.com",
@@ -111,11 +126,13 @@ export const oc2026Data = [
     img: viduminiImg,
     university: null,
     linkedin: null,
+    imagePosition: "45% 12%",
+    imageScale: 1.2,
   },
   {
-    name: "Kammalpitiya Gangaaddarawaththe Tharidi Damsha Gangaaddarawaththa",
+    name: "Tharidi Damsha Gangaaddarawaththa",
     role: "Finance",
-    position: "Finance Coordinator",
+    position: "Coordinator",
     img: damshaImg,
     university: "General Sir John Kotelawala Defence University (KDU)",
     linkedin:
@@ -124,7 +141,7 @@ export const oc2026Data = [
   {
     name: "Upani Movinya Perera",
     role: "Finance",
-    position: "Finance Coordinator",
+    position: "Coordinator",
     img: upaniImg,
     university: "National School of Business Management (NSBM)",
     linkedin: "https://www.linkedin.com/in/upani-movinya-perera-883070326",
@@ -132,23 +149,25 @@ export const oc2026Data = [
   {
     name: "Madhawa Aloka",
     role: "Program",
-    position: "Program Coordinator",
+    position: "Coordinator",
     img: madhawaImg,
     university: "University of Colombo School of Computing (UCSC)",
     linkedin: "mailto:madawa.aloka@gmail.com",
+    imagePosition: "45% 12%",
+    imageScale: 1.2,
   },
   {
-    name: "Pitabeddara Vithanage Yasith Tharuka",
+    name: "Yasith Tharuka",
     role: "Program",
-    position: "Program Coordinator",
+    position: "Coordinator",
     img: yasithImg,
     university: "Sri Lanka Institute of Information Technology (SLIIT)",
     linkedin: "mailto:yasiththaruka08@gmail.com",
   },
   {
-    name: "Janandith Vidmal Senanayake",
+    name: "Vidmal Senanayake",
     role: "Program",
-    position: "Program Coordinator",
+    position: "Coordinator",
     img: vidmalImg,
     university: "University of Kelaniya (UOK)",
     linkedin: "http://linkedin.com/in/vidmal-senanayake",
@@ -163,7 +182,7 @@ export const oc2026Data = [
   },
 ];
 
-const LEAD_ROLES = new Set(["EAC Chair", "Project Chair", "Secretary"]);
+const LEAD_ROLES = new Set(["EAC Chair", "Project Chair", "Secretary", "Asst. Secretary"]);
 const VC_ROLES = new Set(["VC - PV", "VC - Program", "VC - Finance"]);
 
 /** 1st row: Dr. Sidath alone */
@@ -171,7 +190,7 @@ export const oc2026TopLead = oc2026Data.filter((m) => m.role === "EAC Chair");
 
 /** 2nd row: Project Chair and Secretary side-by-side */
 export const oc2026SubLeads = oc2026Data.filter(
-  (m) => m.role === "Project Chair" || m.role === "Secretary"
+  (m) => m.role === "Project Chair" || m.role === "Secretary" || m.role === "Asst. Secretary"
 );
 
 export const oc2026ViceChairs = oc2026Data.filter((m) => VC_ROLES.has(m.role));

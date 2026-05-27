@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { GoArrowLeft } from "react-icons/go";
-import { useNavigate, useLocation, Link } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 import AIChallengeLogo from "../../assets/logos/challenges/AI_Challenge.png";
 import ArduinoChallengeLogo from "../../assets/logos/challenges/Arduino_Challenge.png";
@@ -9,88 +9,85 @@ import ChipsChallengeLogo from "../../assets/logos/challenges/Chips_Challenge.pn
 import CommunicationsChallengeLogo from "../../assets/logos/challenges/Commnunication_Challenge.png";
 import HealthcareChallengeLogo from "../../assets/logos/challenges/Healthcare_Challenge.png";
 import RoboticsChallengeLogo from "../../assets/logos/challenges/Robotics_Challenge.png";
-import { IoCalendarSharp } from "react-icons/io5";
+
+import aiBackground from "../../assets/Backgrounds/AI Challenge.jpeg";
+import arduinoBackground from "../../assets/Backgrounds/Arduino Challenge.jpeg";
+import chipsBackground from "../../assets/Backgrounds/Chips Challenge.jpeg";
+import circuitsBackground from "../../assets/Backgrounds/Curcit Challenge.jpeg";
+import communicationsBackground from "../../assets/Backgrounds/Communication Challenge.jpeg";
+import healthcareBackground from "../../assets/Backgrounds/Medical Challenge.jpeg";
+import roboticsBackground from "../../assets/Backgrounds/Robotics Challenge.jpeg";
 
 const challenges = {
   "/aichallenge": {
     title: "Artificial Intelligence Challenge",
     image: AIChallengeLogo,
+    background: aiBackground,
     description:
       "AICSL 2025, the premier AI Challenge in Sri Lanka hosted by ChallengeSphere 2025, offers a structured pathway with hands-on experience to develop AI agent-based applications. The event features a series of workshops followed by a 24-hour event that includes a workshop to develop an AI agent and a 12-hour hackathon.",
-    status: "opened",
-    deadline: "7th June 2025, 11:59 PM",
-    form_link: "https://forms.gle/5uyq8YtART2pSnwK6",
   },
   "/arduinochallenge": {
     title: "Arduino Challenge",
     image: ArduinoChallengeLogo,
+    background: arduinoBackground,
     description:
       "If you are an individual or a team who is interested in Arduino, here's your chance to showcase your innovative skills in Sri Lanka's biggest Arduino competition. This challenge recognizes school students and undergraduate students who demonstrate exceptional skills in Arduino-based projects to solve real-world challenges.",
-    status: "opened",
-    deadline: "31st May 2025, 11:59 PM",
-    form_link: "https://forms.gle/XVze5EtW6uBntHug9",
   },
   "/chipschallenge": {
     title: "Chips Challenge",
     image: ChipsChallengeLogo,
+    background: chipsBackground,
     description:
       "This Challenge serves as the national selection for the International Microelectronics Olympiad in Armenia. This event in Sri Lanka allows students to demonstrate their knowledge in microelectronics and EDA software development through a one-hour closed-book exam.",
-    status: "opened",
-    deadline: "30th April 2025, 11:59 PM",
-    form_link: "https://forms.gle/aDNVoEYeSbQUWRsG8",
   },
   "/circuitschallenge": {
     title: "Circuits Challenge",
     image: CircuitsChallengeLogo,
+    background: circuitsBackground,
     description:
       "The Sri Lanka Circuits Challenge of the IEEE Sri Lanka ChallengeSphere 2025 is launched to facilitate innovation and open-ended electronic product design targeting the IEEE CASS Student Design Competition 2025-26.",
-    status: "soon",
   },
   "/communicationschallenge": {
     title: "Communications Challenge",
     image: CommunicationsChallengeLogo,
+    background: communicationsBackground,
     description:
       "The IEEE Communications Challenge of the IEEE Sri Lanka ChallengeSphere 2025 is launched to facilitate innovation and cutting-edge technology development in telecommunications, targeting undergraduate students. This competition invites participants to present their pioneering projects in the field of signal processing for communications, encouraging exploration and advancement in this critical area of technology.",
-    status: "soon",
   },
   "/healthcareinnovationchallenge": {
     title: "Healthcare Innovation Challenge",
     image: HealthcareChallengeLogo,
+    background: healthcareBackground,
     description:
       "If you're passionate about healthcare innovation and eager to make a positive impact on the world, the IEEE SL Challenge Sphere 2025 - Healthcare Challenge is the perfect opportunity for you. The IEEE Sri Lanka Challenge Sphere, a new initiative by the IEEE Sri Lanka Section, gathers students and recent graduates for a series of tech-oriented competitions designed to inspire and innovate.",
-      status: "opened",
-    deadline: "31st May 2025, 11:59 PM",
-    form_link: "https://forms.gle/1oEGGrM55io9DLsj8",
   },
   "/roboticschallenge": {
     title: "Robotics Challenge",
     image: RoboticsChallengeLogo,
+    background: roboticsBackground,
     description:
-      "If you're passionate about robotics and automation and eager to make a real-world impact, the IEEE Challenge Sphere 2025 -  Robotics Challenge is the perfect opportunity for you. This challenge recognizes IEEE Student and Graduate Student Members who demonstrate outstanding engineering skills in robotics to solve real-world challenges.",
-      status: "opened",
-    deadline: "27th April 2025, 11:59 PM",
-    form_link: "https://forms.gle/K98SZn7BpNLiDen48",
+      "If you're passionate about robotics and automation and eager to make a real-world impact, the IEEE Challenge Sphere 2025 - Robotics Challenge is the perfect opportunity for you. This challenge recognizes IEEE Student and Graduate Student Members who demonstrate outstanding engineering skills in robotics to solve real-world challenges.",
   },
 };
 
-const getChallengeColors = (title) => {
+const getChallengeAccent = (title) => {
   switch (title) {
     case "Artificial Intelligence Challenge":
-      return { bgColor: "#FF7719", hoverColor: "#EB4F06" };
+      return "#FF7719";
     case "Arduino Challenge":
-      return { bgColor: "#07989D", hoverColor: "#108185" };
+      return "#07989D";
     case "Chips Challenge":
-      return { bgColor: "#7469B6", hoverColor: "#504979" };
+      return "#7469B6";
     case "Circuits Challenge":
-      return { bgColor: "#4A9D70", hoverColor: "#2F7E54" };
+      return "#4A9D70";
     case "Communications Challenge":
-      return { bgColor: "#D74B61", hoverColor: "#8E2736" };
+      return "#D74B61";
     case "Healthcare Innovation Challenge":
-      return { bgColor: "#EA81B4", hoverColor: "#DD539B" };
+      return "#EA81B4";
     case "Robotics Challenge":
-      return { bgColor: "#5DA6BC", hoverColor: "#17687F" };
+      return "#5DA6BC";
     default:
-      return { bgColor: "#000", hoverColor: "#000" };
+      return "#05ddff";
   }
 };
 
@@ -99,8 +96,6 @@ const ChallengePage = () => {
   const location = useLocation();
 
   const challenge = challenges[location.pathname];
-
-  const [hover, setHover] = useState(false);
 
   useEffect(() => {
     if (!challenge) {
@@ -112,19 +107,31 @@ const ChallengePage = () => {
     return null;
   }
 
-  const { bgColor, hoverColor } = getChallengeColors(challenge.title);
+  const accent = getChallengeAccent(challenge.title);
 
   return (
-    <div className="relative min-h-screen bg-chess-bg-2 text-text-white">
-      <div className="absolute inset-0 chess-grid-overlay" aria-hidden />
-      <div className="relative flex flex-col w-full px-[5%] pt-24 lg:pt-32 pb-14 lg:px-[10%] cursor-default">
+    <div className="relative min-h-screen text-text-white overflow-hidden">
+      {/* Per-challenge full-screen background */}
+      <div className="absolute inset-0" aria-hidden>
+        <img
+          src={challenge.background}
+          alt=""
+          className="h-full w-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#020511]/85 via-[#020511]/70 to-[#020511]/92" />
+        <div className="absolute inset-0 chess-grid-overlay opacity-30" />
+      </div>
+
+      <div className="relative z-10 flex flex-col w-full px-[5%] pt-24 lg:pt-32 pb-14 lg:px-[10%] cursor-default">
         <button
+          type="button"
           className="flex items-center font-semibold text-lg md:text-xl text-text-white hover:text-chess-cyan transition-colors"
           onClick={() => navigate("/#challenges")}
         >
           <GoArrowLeft className="text-base md:text-2xl mr-2" />
           Back to home page
         </button>
+
         <div className="flex flex-col w-full items-center h-full mt-6">
           <p className="text-3xl md:text-5xl font-semibold mb-4 md:mb-10 text-center mt-5 text-white chess-heading-underline">
             {challenge.title}
@@ -137,67 +144,24 @@ const ChallengePage = () => {
           <p className="text-center text-base md:text-lg md:px-[15%] mb-6 text-chess-muted leading-relaxed">
             {challenge.description}
           </p>
+
           <div className="text-center text-lg md:text-xl md:px-[15%] pt-2">
-            {challenge.status === "opened" && (
-              <div className="flex flex-col items-center gap-y-6 chess-card p-6 md:p-8 max-w-xl mx-auto">
-                <p className="text-text-white">
-                  Registration is{" "}
-                  <b className="text-chess-cyan">open</b> for the{" "}
-                  {challenge.title}.
-                </p>
-                {challenge.deadline && (
-                  <div className="flex flex-row gap-x-4 items-center text-text-white">
-                    <IoCalendarSharp className="text-3xl text-chess-cyan" />
-                    <p>
-                      Registration Deadline:{" "}
-                      <span
-                        className="font-semibold"
-                        style={{ color: bgColor }}
-                      >
-                        {challenge.deadline}
-                      </span>
-                    </p>
-                  </div>
-                )}
-                <Link
-                  to={challenge.form_link}
-                  target="_blank"
-                  className="text-white font-semibold text-xl md:text-2xl px-6 py-3 rounded-xl shadow-chess-card"
-                  style={{
-                    backgroundColor: hover ? hoverColor : bgColor,
-                    transition: "background-color 0.3s ease",
-                  }}
-                  onMouseEnter={() => setHover(true)}
-                  onMouseLeave={() => setHover(false)}
-                >
-                  Register Now
-                </Link>
-              </div>
-            )}
-            {challenge.status === "closed" && (
-              <div className="flex flex-col items-center gap-y-6 chess-card p-6 md:p-8 max-w-xl mx-auto">
-                <p className="text-text-white">
-                  Registration is <b className="text-red">closed</b> for the{" "}
-                  {challenge.title}.
-                </p>
-                <button
-                  type="button"
-                  className="text-white font-semibold text-xl md:text-2xl px-4 py-2 rounded-xl opacity-60 cursor-not-allowed"
-                  style={{ backgroundColor: bgColor }}
-                  disabled
-                  title="Registration is closed"
-                >
-                  Register Now
-                </button>
-              </div>
-            )}
-            {challenge.status === "soon" && (
-              <div className="chess-card p-6 md:p-8 max-w-xl mx-auto">
-                <p className="text-chess-cyan font-medium">
-                  Stay tuned, registrations will open soon!
-                </p>
-              </div>
-            )}
+            <div className="flex flex-col items-center gap-y-6 chess-card p-6 md:p-8 max-w-xl mx-auto">
+              <p className="text-text-white">
+                Registration for the{" "}
+                <b className="text-chess-cyan">{challenge.title}</b> will open
+                shortly.
+              </p>
+              <button
+                type="button"
+                disabled
+                className="text-white font-semibold text-lg md:text-xl px-6 py-3 rounded-xl shadow-chess-card opacity-70 cursor-not-allowed tracking-wide"
+                style={{ backgroundColor: accent }}
+                title="Registration starting soon"
+              >
+                Registration Starting Soon
+              </button>
+            </div>
           </div>
         </div>
       </div>
