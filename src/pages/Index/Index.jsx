@@ -4,6 +4,8 @@ import Challenges from "../../Components/Challenges/Challenges";
 import OutTeam from "../../Components/OurTeam/OurTeam";
 import ChallengeLeads from "../../Components/ChallengeLeads/ChallengeLeads";
 import SponsorBar from "../../Components/SponsorBar/SponsorBar";
+import SiteBackground from "../../Components/Layout/SiteBackground";
+import Footer from "../../Components/Footer/Footer";
 import { useLocation } from "react-router-dom";
 
 const Index = () => {
@@ -55,11 +57,17 @@ const Index = () => {
 
   return (
     <div className="relative flex flex-col">
+      {/* Landing — keeps its own hero background */}
       <Home />
-      <Challenges />
-      <OutTeam />
-      <ChallengeLeads />
-      <SponsorBar />
+
+      {/* Everything below the hero shares Challenge Sphere Bg */}
+      <SiteBackground>
+        <Challenges />
+        <OutTeam />
+        <ChallengeLeads />
+        <SponsorBar />
+        <Footer />
+      </SiteBackground>
     </div>
   );
 };

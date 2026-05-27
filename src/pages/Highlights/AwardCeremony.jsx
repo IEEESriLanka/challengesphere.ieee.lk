@@ -16,80 +16,50 @@ import { useNavigate } from "react-router-dom";
 import { GoArrowLeft } from "react-icons/go";
 
 const galleryImages = [
-  {
-    original: first,
-    thumbnail: first,
-  },
-  {
-    original: second,
-    thumbnail: second,
-  },
-  {
-    original: third,
-    thumbnail: third,
-  },
-  {
-    original: fourth,
-    thumbnail: fourth,
-  },
-
-  {
-    original: fifth,
-    thumbnail: fifth,
-  },
-  {
-    original: sixth,
-    thumbnail: sixth,
-  },
-  {
-    original: seventh,
-    thumbnail: seventh,
-  },
-  {
-    original: eighth,
-    thumbnail: eighth,
-  },
-  {
-    original: nineth,
-    thumbnail: nineth,
-  },
-  {
-    original: tenth,
-    thumbnail: tenth,
-  },
-  {
-    original: eleventh,
-    thumbnail: eleventh,
-  },
+  { original: first, thumbnail: first },
+  { original: second, thumbnail: second },
+  { original: third, thumbnail: third },
+  { original: fourth, thumbnail: fourth },
+  { original: fifth, thumbnail: fifth },
+  { original: sixth, thumbnail: sixth },
+  { original: seventh, thumbnail: seventh },
+  { original: eighth, thumbnail: eighth },
+  { original: nineth, thumbnail: nineth },
+  { original: tenth, thumbnail: tenth },
+  { original: eleventh, thumbnail: eleventh },
 ];
 
 const AwardCeremony = () => {
   const navigate = useNavigate();
   return (
-    <div className="bg-light-blue-50 px-[5%] pt-20 lg:pt-28 pb-14 lg:px-[10%] cursor-default">
-      <button
-        className="flex items-center font-semibold text-lg md:text-xl pt-5"
-        onClick={() => navigate("/#home")}
-      >
-        <GoArrowLeft className="text-base md:text-2xl mr-2" />
-        Back to home page
-      </button>
-      <div className="max-w-5xl mx-auto">
-        <h1 className="text-2xl lg:text-5xl pt-10 font-bold text-center text-light-blue-600 mb-6">
-          IEEE Challenge Sphere 2024 <br /> Awards Ceremony Highlights
-        </h1>
-        <ImageGallery items={galleryImages} />
-        <p className="text-lg text-light-blue-700 mb-4">
-          Held on 22nd October at Hotel Ramada Colombo, the IEEE Challenge
-          Sphere 2024 Awards Ceremony celebrated innovation, talent, and
-          collaboration. The evening brought together brilliant minds, industry
-          leaders, and rising changemakers in a vibrant atmosphere of
-          recognition and connection.
-        </p>
-        <p className="text-lg text-light-blue-700 mb-4">
-          Swipe through the gallery to revisit the moments that made
-          it unforgettable!
-        </p>
+    <div className="relative min-h-screen text-text-white">
+      <div className="relative px-[5%] pt-24 lg:pt-32 pb-14 lg:px-[10%] cursor-default">
+        <button
+          className="flex items-center font-semibold text-lg md:text-xl text-text-white hover:text-chess-cyan transition-colors"
+          onClick={() => navigate("/#home")}
+        >
+          <GoArrowLeft className="text-base md:text-2xl mr-2" />
+          Back to home page
+        </button>
+        <div className="max-w-5xl mx-auto">
+          <h1 className="text-2xl lg:text-4xl pt-10 font-bold text-center text-white chess-heading-underline mx-auto block w-fit mb-8">
+            IEEE Challenge Sphere 2024 <br /> Awards Ceremony Highlights
+          </h1>
+          <div className="chess-card p-2 md:p-3 mb-8">
+            <ImageGallery items={galleryImages} showPlayButton={false} />
+          </div>
+          <p className="text-base md:text-lg text-chess-muted mb-4 leading-relaxed">
+            Held on 22nd October at Hotel Ramada Colombo, the IEEE Challenge
+            Sphere 2024 Awards Ceremony celebrated innovation, talent, and
+            collaboration. The evening brought together brilliant minds,
+            industry leaders, and rising changemakers in a vibrant atmosphere of
+            recognition and connection.
+          </p>
+          <p className="text-base md:text-lg text-chess-muted mb-4 leading-relaxed">
+            Swipe through the gallery to revisit the moments that made it
+            unforgettable!
+          </p>
+        </div>
       </div>
     </div>
   );

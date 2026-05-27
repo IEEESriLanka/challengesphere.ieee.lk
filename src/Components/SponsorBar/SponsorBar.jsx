@@ -1,38 +1,32 @@
 import React from "react";
 import LogoSliderBar from "../LogoSliderBar/LogoSliderBar";
-import IEEESLLogo from "../../assets/logos/ieeesls-colored.svg";
-import IESChapter from "../../assets/logos/sponsors/ies_chapter.png";
-import Synopsys from "../../assets/logos/sponsors/synopsys.png";
+import SLSECHorizontalLogo from "../../assets/logos/IEEE SL Logo - Horizontal - White.svg";
 
 const SponsorBar = () => {
   return (
-    <section id="sponsor">
-      <div className="flex flex-col w-full bg-background-white-2 items-center py-[2%] cursor-default">
-        <div className="flex flex-col w-full items-center">
-          <p className="text-2xl sm:text-3xl font-bold text-center text-text-black">
+    <section id="sponsor" className="relative">
+      <div className="relative flex flex-col w-full items-center py-16 sm:py-20 cursor-default">
+        <div className="flex flex-col w-full items-center px-4">
+          <p className="text-2xl sm:text-3xl font-bold text-center text-white chess-heading-underline">
             An Initiative By
           </p>
-          <img src={IEEESLLogo} className="w-auto h-12 sm:h-16 mt-2" />
-        </div>
-        <div className="flex flex-col lg:flex-row w-full lg:w-8/12 justify-center my-8">
-          <div className="flex flex-col w-full lg:w-1/2 items-center">
-            <p className="text-2xl sm:text-3xl font-bold text-center text-text-black">
-              Platinum Sponsor
-            </p>
-            <img src={Synopsys} className="w-auto h-12 sm:h-16 mt-4" />
-          </div>
-          <div className="flex flex-col w-full lg:w-1/2 items-center mt-8 lg:mt-0">
-            <p className="text-2xl sm:text-3xl font-bold text-center text-text-black">
-              Student Branch Support
-            </p>
-            <img src={IESChapter} className="w-auto h-16 sm:h-20 mt-2" />
+          {/* Use the current SLSEC wordmark on a dark glass surface so it stays readable. */}
+          <div className="mt-6 bg-white/[0.04] rounded-2xl px-6 py-4 chess-card">
+            <img
+              src={SLSECHorizontalLogo}
+              className="w-auto h-10 sm:h-14"
+              alt="IEEE Sri Lanka Section"
+            />
           </div>
         </div>
-        <div className="flex flex-col w-full items-center">
-          <p className="text-2xl sm:text-3xl font-bold text-center text-text-black">
+
+        <div className="flex flex-col w-full items-center px-4">
+          <p className="text-2xl sm:text-3xl font-bold text-center text-white chess-heading-underline">
             In Collaboration with
           </p>
-          <LogoSliderBar />
+          <div className="mt-6 w-full">
+            <LogoSliderBar />
+          </div>
         </div>
       </div>
     </section>

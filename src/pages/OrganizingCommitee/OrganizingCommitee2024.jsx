@@ -173,86 +173,107 @@ const OrganizingCommitee2024 = () => {
   ];
 
   return (
-    <div className="flex flex-col w-full h-full px-[5%] pt-20 lg:pt-28 pb-14 lg:px-[10%] cursor-default">
-      <button
-        className="flex items-center font-semibold text-lg md:text-xl"
-        onClick={() => navigate("/#Home")}
-      >
-        <GoArrowLeft className="text-base md:text-2xl mr-2" />
-        Back to home page
-      </button>
-      <div className="pt-10" />
-      <p className="text-text-black font-bold text-[250%] lg:text-[350%] text-center pb-[5%]">
-        Our Team
-      </p>
+    <div className="relative min-h-screen text-text-white">
+      <div className="relative flex flex-col w-full px-[5%] pt-24 lg:pt-32 pb-14 lg:px-[10%] cursor-default">
+        <button
+          className="flex items-center font-semibold text-lg md:text-xl text-text-white hover:text-chess-cyan transition-colors"
+          onClick={() => navigate("/#home")}
+        >
+          <GoArrowLeft className="text-base md:text-2xl mr-2" />
+          Back to home page
+        </button>
 
-      <h2 className="md:hidden text-center font-bold text-[175%]">Chairs</h2>
-      <div className="flex flex-wrap w-full gap-y-5 md:gap-x-10 justify-center">
-        {Leads.map((lead, index) => (
-          <div className="flex flex-row w-full md:w-1/4 tb:w-1/2">
-            <TeamCard
+        <p className="text-white font-bold text-[200%] sm:text-[250%] lg:text-[350%] text-center mt-10 chess-heading-underline self-center">
+          Organizing Committee 2024
+        </p>
+
+        <h2 className="text-center font-bold text-[150%] md:text-[175%] text-chess-cyan mt-10 mb-6">
+          Chairs
+        </h2>
+        <div className="flex flex-wrap w-full gap-y-5 md:gap-x-10 justify-center">
+          {Leads.map((lead, index) => (
+            <div
               key={index}
-              img={lead.img}
-              name={lead.name}
-              position={lead.position}
-            />
-          </div>
-        ))}
-      </div>
+              className="flex flex-row w-full md:w-1/4 tb:w-1/2"
+            >
+              <TeamCard
+                img={lead.img}
+                name={lead.name}
+                position={lead.position}
+              />
+            </div>
+          ))}
+        </div>
 
-      <h2 className="md:hidden text-center font-bold text-[175%] mt-10">
-        Vice Chairs
-      </h2>
-      <div className="flex flex-wrap w-full gap-y-10 justify-center md:mt-14">
-        {VC.map((lead, index) => (
-          <div className="flex w-full tb:w-1/2 md:w-1/4">
-            <TeamCard
+        <h2 className="text-center font-bold text-[175%] md:text-[200%] text-white mt-16 mb-8 chess-heading-underline self-center">
+          Vice Chairs
+        </h2>
+        <div className="flex flex-wrap w-full gap-y-10 justify-center">
+          {VC.map((lead, index) => (
+            <div key={index} className="flex w-full tb:w-1/2 md:w-1/4">
+              <TeamCard
+                img={lead.img}
+                name={lead.name}
+                position={lead.position}
+              />
+            </div>
+          ))}
+        </div>
+
+        <h2 className="text-center font-bold text-[175%] md:text-[200%] text-white mt-16 mb-8 chess-heading-underline self-center">
+          Coordinators
+        </h2>
+        <div className="flex flex-wrap w-full gap-y-10 justify-center">
+          {Coordinators.map((coordinator, index) => (
+            <div
               key={index}
-              img={lead.img}
-              name={lead.name}
-              position={lead.position}
-            />
-          </div>
-        ))}
-      </div>
+              className="flex w-full tb:w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5"
+            >
+              <TeamCard img={coordinator.img} name={coordinator.name} />
+            </div>
+          ))}
+        </div>
 
-      <h2 className="text-center font-bold text-[175%] md:text-[200%] mt-16">
-        Coordinators
-      </h2>
-      <div className="flex flex-wrap w-full gap-y-10 justify-center mt-5">
-        {Coordinators.map((coordinator, index) => (
-          <div className="flex w-full tb:w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5">
-            <TeamCard
-              key={index}
-              img={coordinator.img}
-              name={coordinator.name}
-            />
-          </div>
-        ))}
-      </div>
-
-      <div className="pt-10" />
-      <p className="text-text-black font-bold text-[250%] lg:text-[350%] text-center pb-[5%]">
-        Challenges Leads
-      </p>
-      <div className="tb:block hidden">
-        <VerticalTimeline lineColor="#006791">
+        <p className="text-white font-bold text-[200%] sm:text-[250%] lg:text-[350%] text-center mt-20 pb-10 chess-heading-underline self-center">
+          Challenges Leads
+        </p>
+        <div className="tb:block hidden">
+          <VerticalTimeline lineColor="#05ddff">
+            {challenges.map((challenge, index) => (
+              <VerticalTimelineElement
+                key={index}
+                position={index % 2 === 0 ? "left" : "right"}
+                iconStyle={{
+                  background: "transparent",
+                  boxShadow: "none",
+                }}
+                contentStyle={{
+                  background:
+                    "linear-gradient(180deg, rgba(16,26,52,0.9) 0%, rgba(10,17,36,0.9) 100%)",
+                  color: "#E6EAF2",
+                  border: "1px solid rgba(31,42,68,0.9)",
+                  boxShadow: "0 10px 30px rgba(0,0,0,0.55)",
+                }}
+                contentArrowStyle={{
+                  background: "transparent",
+                  borderRight: "12px solid #05ddff",
+                }}
+              >
+                <ChallengeCard
+                  index={index}
+                  title={challenge.title}
+                  badge={challenge.badge}
+                  leads={challenge.leads}
+                />
+              </VerticalTimelineElement>
+            ))}
+          </VerticalTimeline>
+        </div>
+        <div className="tb:hidden px-[5%] w-full flex flex-col justify-center items-center">
           {challenges.map((challenge, index) => (
-            <VerticalTimelineElement
+            <div
               key={index}
-              position={index % 2 === 0 ? "left" : "right"}
-              iconStyle={{
-                background: "transparent",
-                boxShadow: "none",
-              }}
-              contentStyle={{
-                background: "#f0f8ff",
-                color: "#000",
-              }}
-              contentArrowStyle={{
-                background: "transparent",
-                borderRight: "12px solid #006791",
-              }}
+              className="w-full flex flex-col chess-card p-4 mt-6"
             >
               <ChallengeCard
                 index={index}
@@ -260,21 +281,9 @@ const OrganizingCommitee2024 = () => {
                 badge={challenge.badge}
                 leads={challenge.leads}
               />
-            </VerticalTimelineElement>
+            </div>
           ))}
-        </VerticalTimeline>
-      </div>
-      <div className="tb:hidden px-[5%] w-full flex flex-col justify-center items-center">
-        {challenges.map((challenge, index) => (
-          <div className="w-full flex flex-col pt-10">
-            <ChallengeCard
-              index={index}
-              title={challenge.title}
-              badge={challenge.badge}
-              leads={challenge.leads}
-            />
-          </div>
-        ))}
+        </div>
       </div>
     </div>
   );

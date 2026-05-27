@@ -23,7 +23,7 @@ const LogoSliderBar = () => {
   ];
 
   return (
-    <div className="relative overflow-hidden bg-gray-100 py-4 sm:max-w-[80%] mx-auto w-full">
+    <div className="relative overflow-hidden bg-white/95 backdrop-blur rounded-2xl border border-chess-border py-4 sm:max-w-[80%] mx-auto w-full shadow-chess-card">
       <div className="flex w-max animate-marquee items-center">
         {[...collaborations, ...collaborations].map((collaboration, index) => (
           <img
