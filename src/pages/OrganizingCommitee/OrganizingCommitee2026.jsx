@@ -34,8 +34,7 @@ const OrganizingCommitee2026 = () => {
   const coordinators = oc2026Coordinators.map(mapToCard);
 
   return (
-    <div className="relative min-h-screen bg-chess-bg-2 text-text-white">
-      <div className="absolute inset-0 chess-grid-overlay" aria-hidden />
+    <div className="relative min-h-screen text-text-white">
       <div className="relative flex flex-col w-full px-[5%] pt-24 lg:pt-32 pb-14 lg:px-[10%] cursor-default">
         <button
           type="button"

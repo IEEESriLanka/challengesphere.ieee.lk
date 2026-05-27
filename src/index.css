@@ -18,6 +18,43 @@ body,
   color: #ffffff;
 }
 
+/* Inner-page shell — same dark chess atmosphere as the landing hero (no image) */
+.chess-section-shell {
+  position: relative;
+  background-color: #020511;
+  background-image: linear-gradient(
+    180deg,
+    #01040d 0%,
+    #020511 45%,
+    #01040d 100%
+  );
+}
+
+.chess-section-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse 70% 50% at 50% 0%,
+    rgba(5, 221, 255, 0.12) 0%,
+    rgba(5, 221, 255, 0.04) 40%,
+    transparent 70%
+  );
+}
+
+.chess-section-shell::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(to right, rgba(31, 41, 55, 0.55) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(31, 41, 55, 0.55) 1px, transparent 1px);
+  background-size: 4rem 4rem;
+  opacity: 0.1;
+}
+
 /* Chess background pattern overlay (subtle grid like the hero) */
 .chess-grid-overlay {
   background-image:

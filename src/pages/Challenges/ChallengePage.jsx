@@ -10,61 +10,46 @@ import CommunicationsChallengeLogo from "../../assets/logos/challenges/Commnunic
 import HealthcareChallengeLogo from "../../assets/logos/challenges/Healthcare_Challenge.png";
 import RoboticsChallengeLogo from "../../assets/logos/challenges/Robotics_Challenge.png";
 
-import aiBackground from "../../assets/Backgrounds/AI Challenge.jpeg";
-import arduinoBackground from "../../assets/Backgrounds/Arduino Challenge.jpeg";
-import chipsBackground from "../../assets/Backgrounds/Chips Challenge.jpeg";
-import circuitsBackground from "../../assets/Backgrounds/Curcit Challenge.jpeg";
-import communicationsBackground from "../../assets/Backgrounds/Communication Challenge.jpeg";
-import healthcareBackground from "../../assets/Backgrounds/Medical Challenge.jpeg";
-import roboticsBackground from "../../assets/Backgrounds/Robotics Challenge.jpeg";
-
 const challenges = {
   "/aichallenge": {
     title: "Artificial Intelligence Challenge",
     image: AIChallengeLogo,
-    background: aiBackground,
     description:
       "AICSL 2025, the premier AI Challenge in Sri Lanka hosted by ChallengeSphere 2025, offers a structured pathway with hands-on experience to develop AI agent-based applications. The event features a series of workshops followed by a 24-hour event that includes a workshop to develop an AI agent and a 12-hour hackathon.",
   },
   "/arduinochallenge": {
     title: "Arduino Challenge",
     image: ArduinoChallengeLogo,
-    background: arduinoBackground,
     description:
       "If you are an individual or a team who is interested in Arduino, here's your chance to showcase your innovative skills in Sri Lanka's biggest Arduino competition. This challenge recognizes school students and undergraduate students who demonstrate exceptional skills in Arduino-based projects to solve real-world challenges.",
   },
   "/chipschallenge": {
     title: "Chips Challenge",
     image: ChipsChallengeLogo,
-    background: chipsBackground,
     description:
       "This Challenge serves as the national selection for the International Microelectronics Olympiad in Armenia. This event in Sri Lanka allows students to demonstrate their knowledge in microelectronics and EDA software development through a one-hour closed-book exam.",
   },
   "/circuitschallenge": {
     title: "Circuits Challenge",
     image: CircuitsChallengeLogo,
-    background: circuitsBackground,
     description:
       "The Sri Lanka Circuits Challenge of the IEEE Sri Lanka ChallengeSphere 2025 is launched to facilitate innovation and open-ended electronic product design targeting the IEEE CASS Student Design Competition 2025-26.",
   },
   "/communicationschallenge": {
     title: "Communications Challenge",
     image: CommunicationsChallengeLogo,
-    background: communicationsBackground,
     description:
       "The IEEE Communications Challenge of the IEEE Sri Lanka ChallengeSphere 2025 is launched to facilitate innovation and cutting-edge technology development in telecommunications, targeting undergraduate students. This competition invites participants to present their pioneering projects in the field of signal processing for communications, encouraging exploration and advancement in this critical area of technology.",
   },
   "/healthcareinnovationchallenge": {
     title: "Healthcare Innovation Challenge",
     image: HealthcareChallengeLogo,
-    background: healthcareBackground,
     description:
       "If you're passionate about healthcare innovation and eager to make a positive impact on the world, the IEEE SL Challenge Sphere 2025 - Healthcare Challenge is the perfect opportunity for you. The IEEE Sri Lanka Challenge Sphere, a new initiative by the IEEE Sri Lanka Section, gathers students and recent graduates for a series of tech-oriented competitions designed to inspire and innovate.",
   },
   "/roboticschallenge": {
     title: "Robotics Challenge",
     image: RoboticsChallengeLogo,
-    background: roboticsBackground,
     description:
       "If you're passionate about robotics and automation and eager to make a real-world impact, the IEEE Challenge Sphere 2025 - Robotics Challenge is the perfect opportunity for you. This challenge recognizes IEEE Student and Graduate Student Members who demonstrate outstanding engineering skills in robotics to solve real-world challenges.",
   },
@@ -110,19 +95,8 @@ const ChallengePage = () => {
   const accent = getChallengeAccent(challenge.title);
 
   return (
-    <div className="relative min-h-screen text-text-white overflow-hidden">
-      {/* Per-challenge full-screen background */}
-      <div className="absolute inset-0" aria-hidden>
-        <img
-          src={challenge.background}
-          alt=""
-          className="h-full w-full object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#020511]/85 via-[#020511]/70 to-[#020511]/92" />
-        <div className="absolute inset-0 chess-grid-overlay opacity-30" />
-      </div>
-
-      <div className="relative z-10 flex flex-col w-full px-[5%] pt-24 lg:pt-32 pb-14 lg:px-[10%] cursor-default">
+    <div className="relative min-h-screen text-text-white">
+      <div className="flex flex-col w-full px-[5%] pt-24 lg:pt-32 pb-14 lg:px-[10%] cursor-default">
         <button
           type="button"
           className="flex items-center font-semibold text-lg md:text-xl text-text-white hover:text-chess-cyan transition-colors"

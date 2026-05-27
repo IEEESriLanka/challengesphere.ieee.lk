@@ -31,8 +31,7 @@ const OutTeam = () => {
   const coordinators = oc2026Coordinators.map(mapToCard);
 
   return (
-    <section id="ourteam" className="relative bg-chess-bg-2">
-      <div className="absolute inset-0 chess-grid-overlay" aria-hidden />
+    <section id="ourteam" className="relative">
       <div className="relative flex flex-col w-full h-fit px-[5%] lg:px-[10%] py-16 sm:py-20 cursor-default">
         <p className="text-white font-bold text-[200%] sm:text-[250%] lg:text-[350%] text-center chess-heading-underline self-center">
           Our Team

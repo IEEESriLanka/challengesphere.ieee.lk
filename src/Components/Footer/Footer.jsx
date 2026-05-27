@@ -22,8 +22,7 @@ const socials = [
 
 const Footer = () => {
   return (
-    <footer className="relative bg-chess-bg-2 border-t border-chess-border">
-      <div className="absolute inset-0 chess-grid-overlay" aria-hidden />
+    <footer className="relative border-t border-chess-border bg-[#01040d]/60 backdrop-blur-sm">
       <div className="relative flex flex-col w-full px-[5%] md:px-[10%] pt-10 pb-6 text-text-white">
         <div className="w-full flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex flex-col md:flex-row items-center gap-4 md:gap-5">

@@ -76,8 +76,7 @@ const Challenges = () => {
   const size = useMemo(() => computeSize(vw), [vw]);
 
   return (
-    <section id="challenges" className="relative bg-chess-bg-2">
-      <div className="absolute inset-0 chess-grid-overlay" aria-hidden />
+    <section id="challenges" className="relative">
       <div className="relative flex flex-col w-full h-fit px-[5%] md:px-[10%] py-16 sm:py-20 cursor-default">
         <p className="text-white font-bold text-[200%] sm:text-[250%] md:text-[350%] text-center pb-2 chess-heading-underline self-center">
           Challenges

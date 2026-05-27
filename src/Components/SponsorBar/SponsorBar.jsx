@@ -4,8 +4,7 @@ import SLSECHorizontalLogo from "../../assets/logos/IEEE SL Logo - Horizontal - 
 
 const SponsorBar = () => {
   return (
-    <section id="sponsor" className="relative bg-chess-bg-2">
-      <div className="absolute inset-0 chess-grid-overlay" aria-hidden />
+    <section id="sponsor" className="relative">
       <div className="relative flex flex-col w-full items-center py-16 sm:py-20 cursor-default">
         <div className="flex flex-col w-full items-center px-4">
           <p className="text-2xl sm:text-3xl font-bold text-center text-white chess-heading-underline">

@@ -6,8 +6,7 @@ import { GoArrowLeft } from "react-icons/go";
 const Achievements = () => {
   const navigate = useNavigate();
   return (
-    <div className="relative min-h-screen bg-chess-bg-2 text-text-white">
-      <div className="absolute inset-0 chess-grid-overlay" aria-hidden />
+    <div className="relative min-h-screen text-text-white">
       <div className="relative px-[5%] pt-24 lg:pt-32 pb-14 lg:px-[10%] cursor-default">
         <button
           className="flex items-center font-semibold text-lg md:text-xl text-text-white hover:text-chess-cyan transition-colors"
