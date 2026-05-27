@@ -29,7 +29,7 @@ const App = () => {
         <Route
           path="/aichallenge"
           element={
-            <PageShell>
+            <PageShell bare>
               <ChallengePage />
             </PageShell>
           }
@@ -37,7 +37,7 @@ const App = () => {
         <Route
           path="/arduinochallenge"
           element={
-            <PageShell>
+            <PageShell bare>
               <ChallengePage />
             </PageShell>
           }
@@ -45,7 +45,7 @@ const App = () => {
         <Route
           path="/chipschallenge"
           element={
-            <PageShell>
+            <PageShell bare>
               <ChallengePage />
             </PageShell>
           }
@@ -53,7 +53,7 @@ const App = () => {
         <Route
           path="/communicationschallenge"
           element={
-            <PageShell>
+            <PageShell bare>
               <ChallengePage />
             </PageShell>
           }
@@ -61,7 +61,7 @@ const App = () => {
         <Route
           path="/circuitschallenge"
           element={
-            <PageShell>
+            <PageShell bare>
               <ChallengePage />
             </PageShell>
           }
@@ -69,7 +69,7 @@ const App = () => {
         <Route
           path="/healthcareinnovationchallenge"
           element={
-            <PageShell>
+            <PageShell bare>
               <ChallengePage />
             </PageShell>
           }
@@ -77,7 +77,7 @@ const App = () => {
         <Route
           path="/roboticschallenge"
           element={
-            <PageShell>
+            <PageShell bare>
               <ChallengePage />
             </PageShell>
           }

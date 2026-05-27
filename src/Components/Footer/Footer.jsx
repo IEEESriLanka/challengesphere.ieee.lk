@@ -1,6 +1,6 @@
 import React from "react";
 import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
-import logo from "../../assets/logos/logo.png";
+const logo = `${import.meta.env.BASE_URL}logo.png`;
 
 const socials = [
   {
