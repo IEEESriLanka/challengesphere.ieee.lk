@@ -39,14 +39,18 @@ const OrganizingCommitee2026 = () => {
         <button
           type="button"
           className="flex items-center font-semibold text-lg md:text-xl text-text-white hover:text-chess-cyan transition-colors"
-          onClick={() => navigate("/#home")}
+          onClick={() => navigate("/")}
         >
           <GoArrowLeft className="text-base md:text-2xl mr-2" />
           Back to home page
         </button>
 
         <p className="text-white font-bold text-[200%] sm:text-[250%] lg:text-[350%] text-center mt-10 chess-heading-underline self-center">
-          Organizing Committee 2026
+          Our Team — Organizing Committee 2026
+        </p>
+        <p className="text-center text-chess-muted text-sm sm:text-base mt-4 max-w-2xl mx-auto">
+          Meet the Challenge Sphere 2026 organizing committee leading tracks,
+          operations, and delivery across the national competition series.
         </p>
 
         <h2 className="text-center font-bold text-[150%] md:text-[175%] text-chess-cyan mt-10 mb-6">

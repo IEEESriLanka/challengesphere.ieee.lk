@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import AIChallenge from "../../assets/logos/challenges/AI_Challenge.png";
 import ChipsChallenge from "../../assets/logos/challenges/Chips_Challenge.png";
@@ -81,9 +81,17 @@ const Challenges = () => {
         <p className="text-white font-bold text-[200%] sm:text-[250%] md:text-[350%] text-center pb-2 chess-heading-underline self-center">
           Challenges
         </p>
-        <p className="text-center text-chess-muted text-sm sm:text-base mt-4 mb-8 max-w-2xl mx-auto">
+        <p className="text-center text-chess-muted text-sm sm:text-base mt-4 mb-4 max-w-2xl mx-auto">
           Seven flagship arenas — pick your battlefield. Drag the ring, tap a
           badge to bring it to the front, then click again to dive in.
+        </p>
+        <p className="text-center text-chess-muted/90 text-xs sm:text-sm mb-8 max-w-xl mx-auto">
+          National winners have advanced to the International Microelectronics
+          Olympiad and crowned Arduino Challenge champions — see{" "}
+          <Link to="/#achievements" className="text-chess-cyan hover:underline">
+            achievements
+          </Link>{" "}
+          below.
         </p>
 
         <RingCarousel3D

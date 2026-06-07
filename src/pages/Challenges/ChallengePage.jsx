@@ -18,6 +18,9 @@ import communicationsBackground from "../../assets/Backgrounds/Communication Cha
 import healthcareBackground from "../../assets/Backgrounds/Medical Challenge.jpeg";
 import roboticsBackground from "../../assets/Backgrounds/Robotics Challenge.jpeg";
 
+import ChallengeAchievementBlock from "../../Components/Achievements/ChallengeAchievementBlock";
+import { getAchievementForPath } from "../../data/achievementsData";
+
 const challenges = {
   "/aichallenge": {
     title: "Artificial Intelligence Challenge",
@@ -108,6 +111,7 @@ const ChallengePage = () => {
   }
 
   const accent = getChallengeAccent(challenge.title);
+  const achievement = getAchievementForPath(location.pathname);
 
   return (
     <div className="relative min-h-screen text-text-white overflow-hidden">
@@ -143,6 +147,11 @@ const ChallengePage = () => {
           <p className="text-center text-base md:text-lg md:px-[15%] mb-6 text-chess-muted leading-relaxed">
             {challenge.description}
           </p>
+
+          <ChallengeAchievementBlock
+            achievement={achievement}
+            accent={accent}
+          />
 
           <div className="text-center text-lg md:text-xl md:px-[15%] pt-2">
             <div className="flex flex-col items-center gap-y-6 chess-card p-6 md:p-8 max-w-xl mx-auto">

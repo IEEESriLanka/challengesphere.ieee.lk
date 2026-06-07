@@ -1,29 +1,6 @@
 import React, { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
-
-const menuItem = {
-  Challenges: [
-    { name: "AI Challenge", link: "/aichallenge" },
-    { name: "Chips Challenge", link: "/chipschallenge" },
-    { name: "Arduino Challenge", link: "/arduinochallenge" },
-    { name: "Robotics Challenge", link: "/roboticschallenge" },
-    { name: "Circuits Challenge", link: "/circuitschallenge" },
-    {
-      name: "Healthcare Innovation Challenge",
-      link: "/healthcareinnovationchallenge",
-    },
-    { name: "Communications Challenge", link: "/communicationschallenge" },
-  ],
-  "Our Highlights": [
-    { name: "Achievements", link: "/highlights/achievements" },
-    { name: "Elevate Session", link: "/highlights/elevatesession" },
-    { name: "Award Ceremony", link: "/highlights/awardceremony" },
-  ],
-  "Our Team": [
-    { name: "2026", link: "/organitioncommittee2026" },
-    { name: "2024", link: "/organitioncommittee2024" },
-  ],
-};
+import { siteNavLinks } from "../../data/siteNavLinks";
 
 const SideBar = ({ open, close }) => {
   const [heading, setHeading] = useState("");
@@ -35,49 +12,46 @@ const SideBar = ({ open, close }) => {
       }`}
     >
       <div className="flex flex-col gap-y-6 font-medium text-2xl px-6 text-text-white">
-        <a
-          className="cursor-pointer hover:text-chess-cyan transition-colors"
-          href="/#home"
-          onClick={() => close(false)}
-        >
-          Home
-        </a>
-        {Object.keys(menuItem).map((key) => (
-          <div key={key} className="flex flex-col">
-            <button
-              type="button"
-              className="flex items-center cursor-pointer hover:text-chess-cyan transition-colors text-left"
-              onClick={() => setHeading(heading !== key ? key : "")}
-            >
-              {key}
-              <FaChevronDown
-                className={`ml-2 mt-1 text-base transition-transform ${
-                  heading === key ? "rotate-180 text-chess-cyan" : ""
-                }`}
-              />
-            </button>
-            <div className={`${heading !== key && "hidden"} py-3 pl-6`}>
-              {menuItem[key].map(({ name, link }) => (
-                <div key={name} className="text-lg my-2.5">
-                  <a
-                    href={link}
-                    className="text-text-white hover:text-chess-cyan transition-colors"
-                    onClick={() => close(false)}
-                  >
-                    {name}
-                  </a>
-                </div>
-              ))}
+        {siteNavLinks.map((item) =>
+          item.subLinks ? (
+            <div key={item.name} className="flex flex-col">
+              <button
+                type="button"
+                className="flex items-center cursor-pointer hover:text-chess-cyan transition-colors text-left"
+                onClick={() => setHeading(heading !== item.name ? item.name : "")}
+              >
+                {item.name}
+                <FaChevronDown
+                  className={`ml-2 mt-1 text-base transition-transform ${
+                    heading === item.name ? "rotate-180 text-chess-cyan" : ""
+                  }`}
+                />
+              </button>
+              <div className={`${heading !== item.name && "hidden"} py-3 pl-6`}>
+                {item.subLinks.map(({ name, link }) => (
+                  <div key={name} className="text-lg my-2.5">
+                    <a
+                      href={link}
+                      className="text-text-white hover:text-chess-cyan transition-colors"
+                      onClick={() => close(false)}
+                    >
+                      {name}
+                    </a>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
-        <a
-          className="cursor-pointer hover:text-chess-cyan transition-colors"
-          href="/#sponsor"
-          onClick={() => close(false)}
-        >
-          Sponsors
-        </a>
+          ) : (
+            <a
+              key={item.name}
+              href={item.link}
+              className="cursor-pointer hover:text-chess-cyan transition-colors"
+              onClick={() => close(false)}
+            >
+              {item.name}
+            </a>
+          )
+        )}
       </div>
     </div>
   );
