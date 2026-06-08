@@ -43,14 +43,14 @@ const AwardCeremony = () => {
         </button>
         <div className="max-w-5xl mx-auto">
           <h1 className="text-2xl lg:text-4xl pt-10 font-bold text-center text-white chess-heading-underline mx-auto block w-fit mb-8">
-            IEEE Challenge Sphere 2025 <br /> Awards Ceremony Highlights
+            IEEE Challenge Sphere 2024 <br /> Awards Ceremony Highlights
           </h1>
           <div className="chess-card p-2 md:p-3 mb-8">
             <ImageGallery items={galleryImages} showPlayButton={false} />
           </div>
           <p className="text-base md:text-lg text-chess-muted mb-4 leading-relaxed">
             Held on 22nd October at Hotel Ramada Colombo, the IEEE Challenge
-            Sphere 2025 Awards Ceremony celebrated innovation, talent, and
+            Sphere 2024 Awards Ceremony celebrated innovation, talent, and
             collaboration. The evening brought together brilliant minds,
             industry leaders, and rising changemakers in a vibrant atmosphere of
             recognition and connection.
