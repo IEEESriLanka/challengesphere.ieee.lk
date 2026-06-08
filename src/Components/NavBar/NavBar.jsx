@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import logo from "../../assets/logos/logo.png";
+const logo = `${import.meta.env.BASE_URL}logo.png`;
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { RxCross2 } from "react-icons/rx";
 import SideBar from "../SideBar/SideBar";
@@ -48,7 +48,11 @@ const NavBar = () => {
           className="flex items-center cursor-pointer"
           aria-label="Go to home"
         >
-          <img src={logo} alt="ChallengeSphere logo" className="h-18 w-20" />
+          <img
+            src={logo}
+            alt="ChallengeSphere logo"
+            className="h-16 w-auto max-w-[5rem] object-contain"
+          />
         </button>
         <div className="flex flex-row gap-x-6 xl:gap-x-10 font-medium text-lg xl:text-xl items-center">
           <NavLinks />
@@ -65,7 +69,11 @@ const NavBar = () => {
             onClick={() => navigate("/#home")}
             aria-label="Go to home"
           >
-            <img src={logo} alt="ChallengeSphere logo" className="h-14 w-18" />
+            <img
+              src={logo}
+              alt="ChallengeSphere logo"
+              className="h-14 w-auto max-w-[4.5rem] object-contain"
+            />
           </button>
           <button
             type="button"
