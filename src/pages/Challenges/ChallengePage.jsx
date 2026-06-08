@@ -35,6 +35,7 @@ const challenges = {
     background: arduinoBackground,
     description:
       "If you are an individual or a team who is interested in Arduino, here's your chance to showcase your innovative skills in Sri Lanka's biggest Arduino competition. This challenge recognizes school students and undergraduate students who demonstrate exceptional skills in Arduino-based projects to solve real-world challenges.",
+    registrationLink: "https://forms.gle/o3SYZWFv71AYbVdg9",
   },
   "/chipschallenge": {
     title: "Chips Challenge",
@@ -155,20 +156,42 @@ const ChallengePage = () => {
 
           <div className="text-center text-lg md:text-xl md:px-[15%] pt-2">
             <div className="flex flex-col items-center gap-y-6 chess-card p-6 md:p-8 max-w-xl mx-auto">
-              <p className="text-text-white">
-                Registration for the{" "}
-                <b className="text-chess-cyan">{challenge.title}</b> will open
-                shortly.
-              </p>
-              <button
-                type="button"
-                disabled
-                className="text-white font-semibold text-lg md:text-xl px-6 py-3 rounded-xl shadow-chess-card opacity-70 cursor-not-allowed tracking-wide"
-                style={{ backgroundColor: accent }}
-                title="Registration starting soon"
-              >
-                Registration Starting Soon
-              </button>
+              {challenge.registrationLink ? (
+                <>
+                  <p className="text-text-white">
+                    Registration for the{" "}
+                    <b className="text-chess-cyan">{challenge.title}</b> is now
+                    open!
+                  </p>
+                  <a
+                    href={challenge.registrationLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-white font-semibold text-lg md:text-xl px-6 py-3 rounded-xl shadow-chess-card hover:opacity-90 hover:scale-105 transition-all tracking-wide"
+                    style={{ backgroundColor: accent }}
+                    title="Register now"
+                  >
+                    Register Now
+                  </a>
+                </>
+              ) : (
+                <>
+                  <p className="text-text-white">
+                    Registration for the{" "}
+                    <b className="text-chess-cyan">{challenge.title}</b> will
+                    open shortly.
+                  </p>
+                  <button
+                    type="button"
+                    disabled
+                    className="text-white font-semibold text-lg md:text-xl px-6 py-3 rounded-xl shadow-chess-card opacity-70 cursor-not-allowed tracking-wide"
+                    style={{ backgroundColor: accent }}
+                    title="Registration starting soon"
+                  >
+                    Registration Starting Soon
+                  </button>
+                </>
+              )}
             </div>
           </div>
         </div>
