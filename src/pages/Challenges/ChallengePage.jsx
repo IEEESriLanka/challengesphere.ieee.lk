@@ -43,6 +43,7 @@ const challenges = {
     background: chipsBackground,
     description:
       "This Challenge serves as the national selection for the International Microelectronics Olympiad in Armenia. This event in Sri Lanka allows students to demonstrate their knowledge in microelectronics and EDA software development through a one-hour closed-book exam.",
+    registrationLink: "https://forms.gle/nG91C9FNioFa3Nda9",
   },
   "/circuitschallenge": {
     title: "Circuits Challenge",
