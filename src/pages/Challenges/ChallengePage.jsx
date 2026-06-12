@@ -19,6 +19,7 @@ import healthcareBackground from "../../assets/Backgrounds/Medical Challenge.jpe
 import roboticsBackground from "../../assets/Backgrounds/Robotics Challenge.jpeg";
 
 import ChallengeAchievementBlock from "../../Components/Achievements/ChallengeAchievementBlock";
+import ChipsChallengeGuidelines from "../../Components/Challenges/ChipsChallengeGuidelines";
 import { getAchievementForPath } from "../../data/achievementsData";
 
 const challenges = {
@@ -199,6 +200,9 @@ const ChallengePage = () => {
           {challenge.registrationLink ? (
             <>
               {registrationBlock}
+              {location.pathname === "/chipschallenge" && (
+                <ChipsChallengeGuidelines accent={accent} />
+              )}
               {achievement && <div className="mt-8 w-full">{achievementBlock}</div>}
             </>
           ) : (
