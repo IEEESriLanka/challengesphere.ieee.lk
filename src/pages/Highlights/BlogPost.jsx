@@ -4,6 +4,8 @@ import "react-image-gallery/styles/css/image-gallery.css";
 import { useNavigate, useParams } from "react-router-dom";
 import { GoArrowLeft } from "react-icons/go";
 
+import BlogHeroCover from "../../Components/Blogs/BlogHeroCover";
+import BlogPostContent from "../../Components/Blogs/BlogPostContent";
 import { getBlogBySlug } from "../../data/blogsData";
 
 const BlogPost = () => {
@@ -37,12 +39,19 @@ const BlogPost = () => {
         </button>
 
         <article className="max-w-5xl mx-auto">
-          <time className="block text-chess-cyan text-sm tracking-wide font-medium pt-10">
+          {post.topic && (
+            <span className="inline-block mt-10 mb-3 px-3 py-1 rounded-full text-xs font-semibold tracking-wide border border-chess-cyan/40 text-chess-cyan bg-chess-cyan/10">
+              {post.topic}
+            </span>
+          )}
+          <time className="block text-chess-cyan text-sm tracking-wide font-medium">
             {post.date}
           </time>
           <h1 className="text-2xl lg:text-4xl font-bold text-white chess-heading-underline w-fit mt-3 mb-8">
             {post.title}
           </h1>
+
+          {post.coverImage && <BlogHeroCover title={post.title} />}
 
           {galleryItems.length > 0 && (
             <div className="chess-card p-2 md:p-3 mb-8">
@@ -50,16 +59,7 @@ const BlogPost = () => {
             </div>
           )}
 
-          <div className="space-y-4">
-            {post.paragraphs.map((paragraph, index) => (
-              <p
-                key={index}
-                className="text-base md:text-lg text-chess-muted text-justify leading-relaxed"
-              >
-                {paragraph}
-              </p>
-            ))}
-          </div>
+          <BlogPostContent post={post} />
         </article>
       </div>
     </div>
