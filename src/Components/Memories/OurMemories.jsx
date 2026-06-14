@@ -2,7 +2,11 @@ import React, { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 
 import MemoryLightbox from "./MemoryLightbox";
-import { memoryAlbums, memoryImages } from "../../data/memoriesData";
+import {
+  getMemoryPreviewImages,
+  memoryAlbums,
+  memoryImages,
+} from "../../data/memoriesData";
 
 const OurMemories = ({
   showViewAll = true,
@@ -15,13 +19,13 @@ const OurMemories = ({
   const isPreview = limit != null;
 
   const filtered = useMemo(() => {
+    if (limit != null) {
+      return getMemoryPreviewImages(limit);
+    }
     let list =
       activeAlbum === "All"
         ? memoryImages
         : memoryImages.filter((img) => img.album === activeAlbum);
-    if (limit != null) {
-      list = list.slice(0, limit);
-    }
     return list;
   }, [activeAlbum, limit]);
 
@@ -36,8 +40,9 @@ const OurMemories = ({
           Our Memories
         </p>
         <p className="text-center text-chess-muted text-sm sm:text-base mt-4 mb-8 max-w-2xl mx-auto">
-          Snapshots from Challenge Sphere events — award nights, elevate sessions,
-          and moments across the arena.
+          Snapshots from Challenge Sphere events — the 2026 launch at IEEE
+          Education Week, award nights, elevate sessions, and moments across the
+          arena.
         </p>
 
         {memoryAlbums.length > 1 && !isPreview && (
