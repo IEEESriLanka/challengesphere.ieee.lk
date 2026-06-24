@@ -59,6 +59,8 @@ const challenges = {
     background: communicationsBackground,
     description:
       "The IEEE Communications Challenge of the IEEE Sri Lanka ChallengeSphere 2025 is launched to facilitate innovation and cutting-edge technology development in telecommunications, targeting undergraduate students. This competition invites participants to present their pioneering projects in the field of signal processing for communications, encouraging exploration and advancement in this critical area of technology.",
+    registrationLink:
+      "https://docs.google.com/forms/d/e/1FAIpQLSdZVr8JuxrALf57TM1ta8yO0p3INx2Gu_Oqr1hEnHsmBGkirg/viewform?usp=sharing&ouid=111594001975528211350",
   },
   "/healthcareinnovationchallenge": {
     title: "Healthcare Innovation Challenge",
