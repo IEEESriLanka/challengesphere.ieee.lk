@@ -20,6 +20,7 @@ import roboticsBackground from "../../assets/Backgrounds/Robotics Challenge.jpeg
 
 import ChallengeAchievementBlock from "../../Components/Achievements/ChallengeAchievementBlock";
 import ChipsChallengeGuidelines from "../../Components/Challenges/ChipsChallengeGuidelines";
+import CommunicationsChallengeGuidelines from "../../Components/Challenges/CommunicationsChallengeGuidelines";
 import { getAchievementForPath } from "../../data/achievementsData";
 
 const challenges = {
@@ -58,7 +59,7 @@ const challenges = {
     image: CommunicationsChallengeLogo,
     background: communicationsBackground,
     description:
-      "The IEEE Communications Challenge of the IEEE Sri Lanka ChallengeSphere 2025 is launched to facilitate innovation and cutting-edge technology development in telecommunications, targeting undergraduate students. This competition invites participants to present their pioneering projects in the field of signal processing for communications, encouraging exploration and advancement in this critical area of technology.",
+      "Communications Challenge 2026 is a four-month open-ended undergraduate competition jointly organized by IEEE ComSoc and IEEE Signal Processing Society Sri Lanka Chapters. Teams identify SDG-aligned real-world problems and develop innovative solutions where telecommunications and signal processing form the technical core.",
     registrationLink:
       "https://docs.google.com/forms/d/e/1FAIpQLSdZVr8JuxrALf57TM1ta8yO0p3INx2Gu_Oqr1hEnHsmBGkirg/viewform?usp=sharing&ouid=111594001975528211350",
   },
@@ -204,6 +205,9 @@ const ChallengePage = () => {
               {registrationBlock}
               {location.pathname === "/chipschallenge" && (
                 <ChipsChallengeGuidelines accent={accent} />
+              )}
+              {location.pathname === "/communicationschallenge" && (
+                <CommunicationsChallengeGuidelines accent={accent} />
               )}
               {achievement && <div className="mt-8 w-full">{achievementBlock}</div>}
             </>
