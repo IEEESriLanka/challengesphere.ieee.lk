@@ -21,6 +21,7 @@ import roboticsBackground from "../../assets/Backgrounds/Robotics Challenge.jpeg
 import ChallengeAchievementBlock from "../../Components/Achievements/ChallengeAchievementBlock";
 import ChipsChallengeGuidelines from "../../Components/Challenges/ChipsChallengeGuidelines";
 import CommunicationsChallengeGuidelines from "../../Components/Challenges/CommunicationsChallengeGuidelines";
+import ArduinoChallengeGuidelines from "../../Components/Challenges/ArduinoChallengeGuidelines";
 import { getAchievementForPath } from "../../data/achievementsData";
 
 const challenges = {
@@ -36,7 +37,7 @@ const challenges = {
     image: ArduinoChallengeLogo,
     background: arduinoBackground,
     description:
-      "If you are an individual or a team who is interested in Arduino, here's your chance to showcase your innovative skills in Sri Lanka's biggest Arduino competition. This challenge recognizes school students and undergraduate students who demonstrate exceptional skills in Arduino-based projects to solve real-world challenges.",
+      "SLAC 2026 is a premier national-level innovation competition organized by the IEEE Industrial Electronics Society Student Branch Chapter of SLTC, in collaboration with the IEEE Sri Lanka Challenge Sphere. Building upon its award-winning legacy as the Best Technical Chapter Project (IEEE SL Section Awards 2024), SLAC 2026 invites school students and undergraduates to design innovative Arduino-based solutions addressing real-world challenges under the theme: 'Smart Solutions to Daily Challenges'.",
     registrationLink: "https://forms.gle/o3SYZWFv71AYbVdg9",
   },
   "/chipschallenge": {
@@ -203,6 +204,9 @@ const ChallengePage = () => {
           {challenge.registrationLink ? (
             <>
               {registrationBlock}
+              {location.pathname === "/arduinochallenge" && (
+                <ArduinoChallengeGuidelines />
+              )}
               {location.pathname === "/chipschallenge" && (
                 <ChipsChallengeGuidelines accent={accent} />
               )}
